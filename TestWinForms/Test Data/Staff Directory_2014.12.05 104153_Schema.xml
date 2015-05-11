@@ -1,0 +1,50 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Staff_x0020_Directory" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Staff_x0020_Directory" msdata:Locale="en-US">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Title" type="xs:string" minOccurs="0" />
+              <xs:element name="Personal_x005F_x0020_Name" msdata:Caption="Personal Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Division" type="xs:string" minOccurs="0" />
+              <xs:element name="Designation" type="xs:string" minOccurs="0" />
+              <xs:element name="Unit" type="xs:string" minOccurs="0" />
+              <xs:element name="Rank" type="xs:string" minOccurs="0" />
+              <xs:element name="Email" type="xs:string" minOccurs="0" />
+              <xs:element name="Blog" type="xs:string" minOccurs="0" />
+              <xs:element name="Calendar" type="xs:string" minOccurs="0" />
+              <xs:element name="Room_x005F_x0020_Number" msdata:Caption="Room Number" type="xs:string" minOccurs="0" />
+              <xs:element name="Office_x005F_x0020_Number" msdata:Caption="Office Number" type="xs:string" minOccurs="0" />
+              <xs:element name="Fax_x005F_x0020_Number" msdata:Caption="Fax Number" type="xs:string" minOccurs="0" />
+              <xs:element name="Mobile_x005F_x0020_Number" msdata:Caption="Mobile Number" type="xs:string" minOccurs="0" />
+              <xs:element name="Membership" type="xs:string" minOccurs="0" />
+              <xs:element name="Training_x005F_x0020_History" msdata:Caption="Training History" type="xs:string" minOccurs="0" />
+              <xs:element name="Previous_x005F_x0020_Work_x005F_x0020__x0026" msdata:Caption="Previous Work &amp; Experience/Postings" type="xs:string" minOccurs="0" />
+              <xs:element name="Favorite_x005F_x0020_Contacts" msdata:Caption="Favorite Contacts" type="xs:string" minOccurs="0" />
+              <xs:element name="Photo" type="xs:string" minOccurs="0" />
+              <xs:element name="Section" type="xs:string" minOccurs="0" />
+              <xs:element name="Personal_x005F_x0020_Id" msdata:Caption="Personal Id" type="xs:string" minOccurs="0" />
+              <xs:element name="Status" type="xs:string" minOccurs="0" />
+              <xs:element name="Competencies" type="xs:string" minOccurs="0" />
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="ContentType" msdata:Caption="Content Type" type="xs:string" minOccurs="0" />
+              <xs:element name="Modified" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Created" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Author" msdata:Caption="Created By" type="xs:string" minOccurs="0" />
+              <xs:element name="Editor" msdata:Caption="Modified By" type="xs:string" minOccurs="0" />
+              <xs:element name="_UIVersionString" msdata:Caption="Version" type="xs:string" minOccurs="0" />
+              <xs:element name="Attachments" type="xs:string" minOccurs="0" />
+              <xs:element name="LinkTitleNoMenu" msdata:Caption="Title" type="xs:string" minOccurs="0" />
+              <xs:element name="LinkTitle" msdata:Caption="Title" type="xs:string" minOccurs="0" />
+              <xs:element name="DocIcon" msdata:Caption="Type" type="xs:string" minOccurs="0" />
+              <xs:element name="ItemChildCount" msdata:Caption="Item Child Count" type="xs:string" minOccurs="0" />
+              <xs:element name="FolderChildCount" msdata:Caption="Folder Child Count" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

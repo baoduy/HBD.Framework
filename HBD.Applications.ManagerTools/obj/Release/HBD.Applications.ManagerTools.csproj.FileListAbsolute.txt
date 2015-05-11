@@ -1,0 +1,17 @@
+D:\Steven\HBD.Framework\HBD.Applications.ManagerTools\obj\Release\HBD.Applications.ManagerTools.csprojResolveAssemblyReference.cache
+D:\Steven\HBD.Framework\HBD.Applications.ManagerTools\obj\Release\HBD.Applications.ManagerTools.Main.resources
+D:\Steven\HBD.Framework\HBD.Applications.ManagerTools\obj\Release\HBD.Applications.ManagerTools.Properties.Resources.resources
+D:\Steven\HBD.Framework\HBD.Applications.ManagerTools\obj\Release\HBD.Applications.ManagerTools.csproj.GenerateResource.Cache
+D:\Steven\HBD.Framework\!Applications\ManagerTools\ReadMe\HBD.Framework.Log.xml
+D:\Steven\HBD.Framework\!Applications\ManagerTools\ReadMe\HBD.Libraries.Unity.xml
+D:\Steven\HBD.Framework\!Applications\ManagerTools\ReadMe\HBD.Framework.Plugin.xsd
+D:\Steven\HBD.Framework\!Applications\ManagerTools\Icons\CSV.png
+D:\Steven\HBD.Framework\!Applications\ManagerTools\Icons\Excel.png
+D:\Steven\HBD.Framework\!Applications\ManagerTools\Icons\Sharepoint.png
+D:\Steven\HBD.Framework\!Applications\ManagerTools\Icons\View.png
+D:\Steven\HBD.Framework\!Applications\ManagerTools\Icons\XML.png
+D:\Steven\HBD.Framework\!Applications\ManagerTools\HBD.Applications.ManagerTools.exe.config
+D:\Steven\HBD.Framework\!Applications\ManagerTools\HBD.Applications.ManagerTools.exe
+D:\Steven\HBD.Framework\!Applications\ManagerTools\HBD.Applications.ManagerTools.pdb
+D:\Steven\HBD.Framework\HBD.Applications.ManagerTools\obj\Release\HBD.Applications.ManagerTools.exe
+D:\Steven\HBD.Framework\HBD.Applications.ManagerTools\obj\Release\HBD.Applications.ManagerTools.pdb

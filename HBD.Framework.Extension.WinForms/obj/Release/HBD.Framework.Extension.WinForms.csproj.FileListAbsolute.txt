@@ -1,0 +1,5 @@
+D:\Steven\HBD.Framework\HBD.Framework.Extension.WinForms\obj\Release\HBD.Framework.Extension.WinForms.csprojResolveAssemblyReference.cache
+D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Extension.WinForms.dll
+D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Extension.WinForms.pdb
+D:\Steven\HBD.Framework\HBD.Framework.Extension.WinForms\obj\Release\HBD.Framework.Extension.WinForms.dll
+D:\Steven\HBD.Framework\HBD.Framework.Extension.WinForms\obj\Release\HBD.Framework.Extension.WinForms.pdb

@@ -1,0 +1,5 @@
+D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Data.Comparison.dll
+D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Data.Comparison.pdb
+D:\Steven\HBD.Framework\HBD.Framework.Data.Comparison\obj\Release\HBD.Framework.Data.Comparison.csprojResolveAssemblyReference.cache
+D:\Steven\HBD.Framework\HBD.Framework.Data.Comparison\obj\Release\HBD.Framework.Data.Comparison.dll
+D:\Steven\HBD.Framework\HBD.Framework.Data.Comparison\obj\Release\HBD.Framework.Data.Comparison.pdb

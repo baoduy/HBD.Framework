@@ -1,0 +1,13 @@
+D:\Steven\HBD.Framework\HBD.WinForms.Controls.Comparison\obj\Release\HBD.WinForms.Controls.Comparison.csprojResolveAssemblyReference.cache
+D:\Steven\HBD.Framework\HBD.WinForms.Controls.Comparison\obj\Release\HBD.WinForms.Controls.Comparison.ComparisionDataGrids.resources
+D:\Steven\HBD.Framework\HBD.WinForms.Controls.Comparison\obj\Release\HBD.WinForms.Controls.Comparison.ComparisonView.resources
+D:\Steven\HBD.Framework\HBD.WinForms.Controls.Comparison\obj\Release\HBD.WinForms.Controls.Comparison.FieldComparisonControl.resources
+D:\Steven\HBD.Framework\HBD.WinForms.Controls.Comparison\obj\Release\HBD.WinForms.Controls.Comparison.FieldComparisonCollectionControl.resources
+D:\Steven\HBD.Framework\HBD.WinForms.Controls.Comparison\obj\Release\HBD.WinForms.Controls.Comparison.DoubleDataGrids.resources
+D:\Steven\HBD.Framework\HBD.WinForms.Controls.Comparison\obj\Release\HBD.WinForms.Controls.Comparison.ListColumnComparision.resources
+D:\Steven\HBD.Framework\HBD.WinForms.Controls.Comparison\obj\Release\HBD.WinForms.Controls.Comparison.MultiBrowserComparisonControl.resources
+D:\Steven\HBD.Framework\HBD.WinForms.Controls.Comparison\obj\Release\HBD.WinForms.Controls.Comparison.csproj.GenerateResource.Cache
+D:\Steven\HBD.Framework\!Libraries\HBD.WinForms.Controls.Comparison.dll
+D:\Steven\HBD.Framework\!Libraries\HBD.WinForms.Controls.Comparison.pdb
+D:\Steven\HBD.Framework\HBD.WinForms.Controls.Comparison\obj\Release\HBD.WinForms.Controls.Comparison.dll
+D:\Steven\HBD.Framework\HBD.WinForms.Controls.Comparison\obj\Release\HBD.WinForms.Controls.Comparison.pdb

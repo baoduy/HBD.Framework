@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="HBD.Configuration.EmailCollectionSection" type="HBD.Libraries.Net.Email.Configuration.EmailCollectionSection,HBD.Libraries.Net.Email"/>
+  </configSections>
+
+  <system.net>
+    <mailSettings>
+      <smtp from="SRSSystem@hbd.com" deliveryMethod="Network">
+        <network host="192.168.10.102" port="25" userName="baoduy@hbd.com" password="1"/>
+      </smtp>
+    </mailSettings>
+  </system.net>
+  
+  <HBD.Configuration.EmailCollectionSection defaultTemplate="">
+    <emailTemplates>
+      <clear/>
+      <add name="1"
+           emailTo="steven@hbd.com"
+           subject="1"
+           isBodyHtml="false"
+           body="
+Hello All
+Each (sub-)component can have one or more own sub-components and so
+on... there is a static solution needed because the xml file is
+usually written by hand. writing it by using to many references makes
+it more likely to make a mistake and more difficult to locate an
+error.
+
+i really hope you can help me with that. i didn't find a real hint
+yet. :(
+
+Mfg,
+Christian Rühl"/>
+      <add name="2"
+           emailTo="baoduy@hbd.com"
+           subject="2"
+           isBodyHtml="true"
+           body="Hello All
+Generate advanced XSLT stylesheets, web pages and reports using intuitive drag-and-drop functionality, intelligent entry-helpers, and more. 
+See how easy it is to work with XSLT in this tool from the makers of XMLSpy. Features include:
+
+Thanks
+Steven"/>
+    </emailTemplates>
+  </HBD.Configuration.EmailCollectionSection>
+</configuration>

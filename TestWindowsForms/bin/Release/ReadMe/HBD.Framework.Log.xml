@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="loggingConfiguration" type="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings, Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="true" />
+  </configSections>
+
+  <loggingConfiguration name="HBD.Log" tracingEnabled="true" defaultCategory="General">
+    <listeners>
+      <add name="Trace Rolling Flat File Trace Listener" type="Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.RollingFlatFileTraceListener, Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+        listenerDataType="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.RollingFlatFileTraceListenerData, Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+        fileName="Logs\Traces\trace.log" formatter="Trace Text Formatter"
+        rollFileExistsBehavior="Increment" rollInterval="Day" rollSizeKB="5120"
+        maxArchivedFiles="10" />
+      <add name="Error Rolling Flat File Trace Listener" type="Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.RollingFlatFileTraceListener, Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+        listenerDataType="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.RollingFlatFileTraceListenerData, Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+        fileName="Logs\Errors\Error.log" formatter="Error Text Formatter"
+        rollFileExistsBehavior="Increment" rollInterval="Day" rollSizeKB="5120"
+        maxArchivedFiles="10" />
+    </listeners>
+    <formatters>
+      <add type="Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter, Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+        template="Timestamp: {timestamp}{newline}&#xA;Message: {message}{newline}&#xA;Category: {category}{newline}&#xA;App Domain: {localAppDomain}{newline}&#xA;ProcessId: {localProcessId}{newline}&#xA;Process Name: {localProcessName}{newline}"
+        name="Trace Text Formatter" />
+      <add type="Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter, Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+        template="Timestamp: {timestamp}{newline}&#xA;Message: {message}{newline}&#xA;Category: {category}{newline}&#xA;ProcessId: {localProcessId}{newline}&#xA;Process Name: {localProcessName}{newline}"
+        name="Error Text Formatter" />
+    </formatters>
+    <categorySources>
+      <add switchValue="All" name="General">
+        <listeners>
+          <add name="Trace Rolling Flat File Trace Listener" />
+        </listeners>
+      </add>
+      <add switchValue="All" name="Error">
+        <listeners>
+          <add name="Error Rolling Flat File Trace Listener" />
+        </listeners>
+      </add>
+    </categorySources>
+    <specialSources>
+      <allEvents switchValue="Off" name="All Events">
+        <listeners>
+          <add name="Trace Rolling Flat File Trace Listener" />
+        </listeners>
+      </allEvents>
+      <notProcessed switchValue="Off" name="Unprocessed Category">
+        <listeners>
+          <add name="Trace Rolling Flat File Trace Listener" />
+        </listeners>
+      </notProcessed>
+      <errors switchValue="Off" name="Logging Errors &amp; Warnings">
+        <listeners>
+          <add name="Error Rolling Flat File Trace Listener" />
+        </listeners>
+      </errors>
+    </specialSources>
+  </loggingConfiguration>
+</configuration>

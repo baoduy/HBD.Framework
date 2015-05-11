@@ -1,0 +1,7 @@
+D:\Steven\HBD.Framework\HBD.Framework.Data.IIS\obj\Release\HBD.Framework.Data.IIS.csproj.ResolveComReference.cache
+D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Data.IIS.dll
+D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Data.IIS.pdb
+D:\Steven\HBD.Framework\HBD.Framework.Data.IIS\obj\Release\Interop.MSUtil.dll
+D:\Steven\HBD.Framework\HBD.Framework.Data.IIS\obj\Release\HBD.Framework.Data.IIS.dll
+D:\Steven\HBD.Framework\HBD.Framework.Data.IIS\obj\Release\HBD.Framework.Data.IIS.pdb
+D:\Steven\HBD.Framework\HBD.Framework.Data.IIS\obj\Release\HBD.Framework.Data.IIS.csprojResolveAssemblyReference.cache

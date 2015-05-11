@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="unity" type="Microsoft.Practices.Unity.Configuration.UnityConfigurationSection, Microsoft.Practices.Unity.Configuration"/>
+  </configSections>
+
+  <!--Simple Mapping with HBD.Libraries.Unity.AliasMappingSection-->
+  <HBD.Libraries.Unity.AliasMappingSection>
+    <alias name="OrganizationUnitBiz"
+           interface="HBD.Web.SSO.BIZInterface.IOrganizationUnitBiz,HBD.Web.SSO.BIZInterface"
+           mapTo="HBD.Web.SSO.BIZ.OrganizationUnitBiz,HBD.Web.SSO.BIZ"/>
+  </HBD.Libraries.Unity.AliasMappingSection>
+  
+  <!--Using orginal unity configuration-->
+  <unity xmlns="http://schemas.microsoft.com/practices/2010/unity">
+    <!--1 The alias configuration-->
+
+    <!--BEGIN Define the alias for interfaces and Instances For BIZ Layer-->
+    <alias alias="IContactBIZ" type="BIZInterface.IContactBIZ, BIZInterface" />
+    <alias alias="ContactBIZ" type="BIZ.ContactBIZ, BIZ" />
+    <alias alias="IShopBIZ" type="BIZInterface.IShopBIZ, BIZInterface" />
+    <alias alias="ShopBIZ" type="BIZ.ShopBIZ, BIZ" />
+    <!--END Define the alias for interfaces and Instances For BIZ Layer-->
+
+    <!--BEGIN Define the alias for interfaces and Instances For DAL Layer-->
+    <alias alias="IContactDAL" type="DALInterface.IContactDAL, DALInterface" />
+    <alias alias="ContactDAL" type="DAL.ContactDAL, DAL" />
+    <alias alias="IShopDAL" type="DALInterface.IShopDAL, DALInterface" />
+    <alias alias="ShopDAL" type="DAL.ShopDAL, DAL" />
+    <!--END Define the alias for interfaces and Instances For DAL Layer-->
+
+    <!--2. The alias mapping configuration-->
+    <container>
+      <!--BEGIN Mapping the BIZ alias-->
+      <register type="IContactBIZ" mapTo="ContactBIZ">
+      </register>
+      <register type="IShopBIZ" mapTo="ShopBIZ">
+      </register>
+      <!--END Mapping the BIZ alias-->
+
+      <!--BEGIN Mapping the DAL alias-->
+      <register type="IContactDAL" mapTo="ContactDAL">
+      </register>
+      <register type="IShopDAL" mapTo="ShopDAL">
+      </register>
+      <!--END Mapping the DAL alias-->
+    </container>
+  </unity>
+
+</configuration>

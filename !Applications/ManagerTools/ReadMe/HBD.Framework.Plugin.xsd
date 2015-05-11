@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HBD.Framework.Plugin"
+    targetNamespace="http://tempuri.org/HBD.Framework.Plugin.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/HBD.Framework.Plugin.xsd"
+    xmlns:mstns="http://tempuri.org/HBD.Framework.Plugin.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="HBD.Framework.Plugin" type="PluginSection"></xs:element>
+
+  <xs:complexType name="PluginSection">
+    <xs:choice minOccurs="1" maxOccurs="unbounded">
+      <xs:element name="WinFormPlugin" type="PluginGroupCollection"/>
+      <xs:element name="FeaturePlugin" type="PluginGroupCollection"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="PluginGroupCollection">
+    <xs:choice minOccurs="1" maxOccurs="unbounded">
+      <xs:element name="add" type="PluginElementGroup"/>
+      <xs:element name="remove" type="Remove"/>
+      <xs:element name="clear" type="Clear"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="PluginElementGroup">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="Plugins" type="PluginElementCollection"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string"></xs:attribute>
+    <xs:attribute name="icon" type="xs:string"></xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="PluginElementCollection">
+    <xs:choice minOccurs="1" maxOccurs="unbounded">
+      <xs:element name="add" type="PluginElement"/>
+      <xs:element name="remove" type="Remove"/>
+      <xs:element name="clear" type="Clear"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="PluginElement">
+    <xs:attribute name="name" type="xs:string"></xs:attribute>
+    <xs:attribute name="title" type="xs:string"></xs:attribute>
+    <xs:attribute name="icon" type="xs:string"></xs:attribute>
+    <xs:attribute name="assemblyFile" type="xs:string"></xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="Remove">
+    <xs:attribute name="name" type="xs:string"></xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="Clear"/>
+
+</xs:schema>

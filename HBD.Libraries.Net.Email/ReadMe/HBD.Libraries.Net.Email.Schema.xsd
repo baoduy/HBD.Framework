@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HBD.Libraries.Net.Email.Schema"
+    targetNamespace="http://tempuri.org/HBD.Libraries.Net.Email.Schema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/HBD.Libraries.Net.Email.Schema.xsd"
+    xmlns:mstns="http://tempuri.org/HBD.Libraries.Net.Email.Schema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="HBD.Configuration.EmailCollectionSection" type="EmailCollectionSection"></xs:element>
+  
+  <xs:complexType name="EmailCollectionSection">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="emailTemplates" type="EmailTemplateCollectionElement"/>
+    </xs:sequence>
+    <xs:attribute name="defaultTemplate" type="xs:string"/>
+  </xs:complexType>
+  
+  <xs:complexType name="EmailTemplateCollectionElement">
+    <xs:choice minOccurs="1" maxOccurs="unbounded">
+      <xs:element name="add" type="EmailTemplateElement"/>
+      <xs:element name="remove" type="Remove"/>
+      <xs:element name="clear" type="Clear"/>
+    </xs:choice>
+  </xs:complexType>
+  
+  <xs:complexType name="EmailTemplateElement">
+    <xs:attribute name="name" type="xs:string"></xs:attribute>
+    <xs:attribute name="emailTo" type="xs:string"></xs:attribute>
+    <xs:attribute name="ccTo" type="xs:string"></xs:attribute>
+    <xs:attribute name="bccTo" type="xs:string"></xs:attribute>
+    <xs:attribute name="subject" type="xs:string"></xs:attribute>
+    <xs:attribute name="body" type="xs:string"></xs:attribute>
+    <xs:attribute name="isBodyHtml" type="xs:boolean"></xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="Remove">
+    <xs:attribute name="name" type="xs:string"></xs:attribute>
+  </xs:complexType>
+  
+  <xs:complexType name="Clear"/>
+</xs:schema>

@@ -1,0 +1,6 @@
+D:\Steven\HBD.Framework\HBD.Framework.AD\obj\Release\HBD.Framework.AD.csprojResolveAssemblyReference.cache
+D:\Steven\HBD.Framework\!Libraries\ReadMe\HBD.Framework.Log.xml
+D:\Steven\HBD.Framework\!Libraries\HBD.Framework.AD.dll
+D:\Steven\HBD.Framework\!Libraries\HBD.Framework.AD.pdb
+D:\Steven\HBD.Framework\HBD.Framework.AD\obj\Release\HBD.Framework.AD.dll
+D:\Steven\HBD.Framework\HBD.Framework.AD\obj\Release\HBD.Framework.AD.pdb

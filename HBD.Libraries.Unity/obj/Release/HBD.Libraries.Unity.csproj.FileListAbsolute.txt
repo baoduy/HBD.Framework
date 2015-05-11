@@ -1,0 +1,6 @@
+D:\Steven\HBD.Framework\HBD.Libraries.Unity\obj\Release\HBD.Libraries.Unity.csprojResolveAssemblyReference.cache
+D:\Steven\HBD.Framework\!Libraries\ReadMe\HBD.Libraries.Unity.xml
+D:\Steven\HBD.Framework\!Libraries\HBD.Libraries.Unity.dll
+D:\Steven\HBD.Framework\!Libraries\HBD.Libraries.Unity.pdb
+D:\Steven\HBD.Framework\HBD.Libraries.Unity\obj\Release\HBD.Libraries.Unity.dll
+D:\Steven\HBD.Framework\HBD.Libraries.Unity\obj\Release\HBD.Libraries.Unity.pdb

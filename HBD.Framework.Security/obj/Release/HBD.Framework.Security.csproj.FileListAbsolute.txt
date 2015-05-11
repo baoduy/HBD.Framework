@@ -1,0 +1,5 @@
+D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Security.dll
+D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Security.pdb
+D:\Steven\HBD.Framework\HBD.Framework.Security\obj\Release\HBD.Framework.Security.csprojResolveAssemblyReference.cache
+D:\Steven\HBD.Framework\HBD.Framework.Security\obj\Release\HBD.Framework.Security.dll
+D:\Steven\HBD.Framework\HBD.Framework.Security\obj\Release\HBD.Framework.Security.pdb

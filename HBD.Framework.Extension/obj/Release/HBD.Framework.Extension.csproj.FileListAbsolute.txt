@@ -1,0 +1,5 @@
+D:\Steven\HBD.Framework\HBD.Framework.Extension\obj\Release\HBD.Framework.Extension.csprojResolveAssemblyReference.cache
+D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Extension.dll
+D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Extension.pdb
+D:\Steven\HBD.Framework\HBD.Framework.Extension\obj\Release\HBD.Framework.Extension.dll
+D:\Steven\HBD.Framework\HBD.Framework.Extension\obj\Release\HBD.Framework.Extension.pdb

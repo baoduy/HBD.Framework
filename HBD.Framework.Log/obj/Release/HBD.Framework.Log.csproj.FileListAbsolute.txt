@@ -1,0 +1,4 @@
+D:\Steven\HBD.Framework\!Libraries\ReadMe\HBD.Framework.Log.xml
+D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Log.dll
+D:\Steven\HBD.Framework\HBD.Framework.Log\obj\Release\HBD.Framework.Log.dll
+D:\Steven\HBD.Framework\HBD.Framework.Log\obj\Release\HBD.Framework.Log.csprojResolveAssemblyReference.cache

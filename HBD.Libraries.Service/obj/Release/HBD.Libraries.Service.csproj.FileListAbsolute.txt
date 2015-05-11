@@ -1,0 +1,8 @@
+D:\Steven\HBD.Framework\HBD.Libraries.Service\obj\Release\HBD.Libraries.Service.csprojResolveAssemblyReference.cache
+D:\Steven\HBD.Framework\!Libraries\ReadMe\HBD.Framework.Log.xml
+D:\Steven\HBD.Framework\!Libraries\ReadMe\HBD.Libraries.Unity.xml
+D:\Steven\HBD.Framework\!Libraries\ReadMe\HBD.Libraries.Service.xml
+D:\Steven\HBD.Framework\!Libraries\HBD.Libraries.Service.dll
+D:\Steven\HBD.Framework\!Libraries\HBD.Libraries.Service.pdb
+D:\Steven\HBD.Framework\HBD.Libraries.Service\obj\Release\HBD.Libraries.Service.dll
+D:\Steven\HBD.Framework\HBD.Libraries.Service\obj\Release\HBD.Libraries.Service.pdb

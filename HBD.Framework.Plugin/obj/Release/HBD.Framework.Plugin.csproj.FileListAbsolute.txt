@@ -1,0 +1,8 @@
+D:\Steven\HBD.Framework\HBD.Framework.Plugin\obj\Release\HBD.Framework.Plugin.csprojResolveAssemblyReference.cache
+D:\Steven\HBD.Framework\!Libraries\ReadMe\HBD.Framework.Log.xml
+D:\Steven\HBD.Framework\!Libraries\ReadMe\HBD.Libraries.Unity.xml
+D:\Steven\HBD.Framework\!Libraries\ReadMe\HBD.Framework.Plugin.xsd
+D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Plugin.dll
+D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Plugin.pdb
+D:\Steven\HBD.Framework\HBD.Framework.Plugin\obj\Release\HBD.Framework.Plugin.dll
+D:\Steven\HBD.Framework\HBD.Framework.Plugin\obj\Release\HBD.Framework.Plugin.pdb
