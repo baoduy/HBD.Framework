@@ -2,3 +2,8 @@ D:\Steven\HBD.Framework\!Libraries\HBD.Framework.OpenXML.dll
 D:\Steven\HBD.Framework\!Libraries\HBD.Framework.OpenXML.pdb
 D:\Steven\HBD.Framework\HBD.Framework.OpenXML\obj\Release\HBD.Framework.OpenXML.dll
 D:\Steven\HBD.Framework\HBD.Framework.OpenXML\obj\Release\HBD.Framework.OpenXML.pdb
+Z:\Steven\HBD.Framework\!Libraries\HBD.Framework.OpenXML.dll
+Z:\Steven\HBD.Framework\!Libraries\HBD.Framework.OpenXML.pdb
+Z:\Steven\HBD.Framework\HBD.Framework.OpenXML\obj\Release\HBD.Framework.OpenXML.csprojResolveAssemblyReference.cache
+Z:\Steven\HBD.Framework\HBD.Framework.OpenXML\obj\Release\HBD.Framework.OpenXML.dll
+Z:\Steven\HBD.Framework\HBD.Framework.OpenXML\obj\Release\HBD.Framework.OpenXML.pdb

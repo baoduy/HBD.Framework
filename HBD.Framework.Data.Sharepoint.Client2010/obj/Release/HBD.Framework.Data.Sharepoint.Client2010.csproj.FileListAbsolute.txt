@@ -1,6 +1,0 @@
-D:\Steven\HBD.Framework\HBD.Framework.Data.Sharepoint.Client2010\obj\Release\HBD.Framework.Data.Sharepoint.Client2010.csprojResolveAssemblyReference.cache
-D:\Steven\HBD.Framework\!Libraries\ReadMe\HBD.Framework.Log.xml
-D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Data.Sharepoint.Client2010.dll
-D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Data.Sharepoint.Client2010.pdb
-D:\Steven\HBD.Framework\HBD.Framework.Data.Sharepoint.Client2010\obj\Release\HBD.Framework.Data.Sharepoint.Client2010.dll
-D:\Steven\HBD.Framework\HBD.Framework.Data.Sharepoint.Client2010\obj\Release\HBD.Framework.Data.Sharepoint.Client2010.pdb

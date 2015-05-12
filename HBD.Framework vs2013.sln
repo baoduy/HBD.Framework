@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.AD", "HBD.Framework.AD\HBD.Framework.AD.csproj", "{54E9932D-EDD0-4BA3-8A07-F3D248E8136B}"
 EndProject
@@ -20,8 +20,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.WinForms.Controls", "HBD.WinForms.Controls\HBD.WinForms.Controls.csproj", "{884F5502-622F-4DF8-A902-5BE6FCFBF12D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.WinForms.Controls.Comparison", "HBD.WinForms.Controls.Comparison\HBD.WinForms.Controls.Comparison.csproj", "{22C6A04F-5AA2-4019-BEE9-432939C7BBE2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.WinForms.Controls.Sharepoint", "HBD.WinForms.Controls.Sharepoint\HBD.WinForms.Controls.Sharepoint.csproj", "{9426DE64-B041-4643-9DD8-0B6324863AD0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.OpenXML", "HBD.Framework.OpenXML\HBD.Framework.OpenXML.csproj", "{1CBE85AE-39C0-41CE-BF30-92B205369EDB}"
 EndProject
@@ -54,13 +52,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Test.Framework.Data.Sharepoint", "HBD.Test.Framework.Data.Sharepoint\HBD.Test.Framework.Data.Sharepoint.csproj", "{E74C3FCF-ACF0-4343-9220-372A62E0BE11}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.Security", "HBD.Framework.Security\HBD.Framework.Security.csproj", "{8530B745-2A0A-49EE-B4AF-1B886D5FE4A0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.Data.Sharepoint.Client2010", "HBD.Framework.Data.Sharepoint.Client2010\HBD.Framework.Data.Sharepoint.Client2010.csproj", "{C3C22CD8-8FC4-434D-9AAC-AEE842B77D5F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.Data.Sharepoint.Server2010", "HBD.Framework.Data.Sharepoint.Server2010\HBD.Framework.Data.Sharepoint.Server2010.csproj", "{398CD6FA-8D70-49EB-84C9-30B5F0A973CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.Data.Comparison", "HBD.Framework.Data.Comparison\HBD.Framework.Data.Comparison.csproj", "{5EE96B2D-8B51-4883-9B24-1F068432279F}"
 EndProject
@@ -144,14 +136,6 @@ Global
 		{22C6A04F-5AA2-4019-BEE9-432939C7BBE2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{22C6A04F-5AA2-4019-BEE9-432939C7BBE2}.Release|x64.ActiveCfg = Release|x64
 		{22C6A04F-5AA2-4019-BEE9-432939C7BBE2}.Release|x64.Build.0 = Release|x64
-		{9426DE64-B041-4643-9DD8-0B6324863AD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9426DE64-B041-4643-9DD8-0B6324863AD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9426DE64-B041-4643-9DD8-0B6324863AD0}.Debug|x64.ActiveCfg = Debug|x64
-		{9426DE64-B041-4643-9DD8-0B6324863AD0}.Debug|x64.Build.0 = Debug|x64
-		{9426DE64-B041-4643-9DD8-0B6324863AD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9426DE64-B041-4643-9DD8-0B6324863AD0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9426DE64-B041-4643-9DD8-0B6324863AD0}.Release|x64.ActiveCfg = Release|x64
-		{9426DE64-B041-4643-9DD8-0B6324863AD0}.Release|x64.Build.0 = Release|x64
 		{1CBE85AE-39C0-41CE-BF30-92B205369EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1CBE85AE-39C0-41CE-BF30-92B205369EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CBE85AE-39C0-41CE-BF30-92B205369EDB}.Debug|x64.ActiveCfg = Debug|x64
@@ -230,30 +214,12 @@ Global
 		{47F55FE0-F144-4EAC-BB87-6FE36040A56E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47F55FE0-F144-4EAC-BB87-6FE36040A56E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{47F55FE0-F144-4EAC-BB87-6FE36040A56E}.Release|x64.ActiveCfg = Release|Any CPU
-		{E74C3FCF-ACF0-4343-9220-372A62E0BE11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E74C3FCF-ACF0-4343-9220-372A62E0BE11}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E74C3FCF-ACF0-4343-9220-372A62E0BE11}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{E74C3FCF-ACF0-4343-9220-372A62E0BE11}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E74C3FCF-ACF0-4343-9220-372A62E0BE11}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E74C3FCF-ACF0-4343-9220-372A62E0BE11}.Release|x64.ActiveCfg = Release|Any CPU
 		{8530B745-2A0A-49EE-B4AF-1B886D5FE4A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8530B745-2A0A-49EE-B4AF-1B886D5FE4A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8530B745-2A0A-49EE-B4AF-1B886D5FE4A0}.Debug|x64.ActiveCfg = Debug|Any CPU
 		{8530B745-2A0A-49EE-B4AF-1B886D5FE4A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8530B745-2A0A-49EE-B4AF-1B886D5FE4A0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8530B745-2A0A-49EE-B4AF-1B886D5FE4A0}.Release|x64.ActiveCfg = Release|Any CPU
-		{C3C22CD8-8FC4-434D-9AAC-AEE842B77D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3C22CD8-8FC4-434D-9AAC-AEE842B77D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C3C22CD8-8FC4-434D-9AAC-AEE842B77D5F}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{C3C22CD8-8FC4-434D-9AAC-AEE842B77D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C3C22CD8-8FC4-434D-9AAC-AEE842B77D5F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C3C22CD8-8FC4-434D-9AAC-AEE842B77D5F}.Release|x64.ActiveCfg = Release|Any CPU
-		{398CD6FA-8D70-49EB-84C9-30B5F0A973CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{398CD6FA-8D70-49EB-84C9-30B5F0A973CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{398CD6FA-8D70-49EB-84C9-30B5F0A973CD}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{398CD6FA-8D70-49EB-84C9-30B5F0A973CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{398CD6FA-8D70-49EB-84C9-30B5F0A973CD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{398CD6FA-8D70-49EB-84C9-30B5F0A973CD}.Release|x64.ActiveCfg = Release|Any CPU
 		{5EE96B2D-8B51-4883-9B24-1F068432279F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5EE96B2D-8B51-4883-9B24-1F068432279F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EE96B2D-8B51-4883-9B24-1F068432279F}.Debug|x64.ActiveCfg = Debug|x64
@@ -268,7 +234,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{47F55FE0-F144-4EAC-BB87-6FE36040A56E} = {63EDBCEA-EC0A-4CA3-9653-9740009D1152}
-		{E74C3FCF-ACF0-4343-9220-372A62E0BE11} = {63EDBCEA-EC0A-4CA3-9653-9740009D1152}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = HBD.Framework.vsmdi

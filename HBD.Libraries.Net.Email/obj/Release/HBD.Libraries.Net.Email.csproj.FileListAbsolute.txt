@@ -6,3 +6,11 @@ D:\Steven\HBD.Framework\!Libraries\HBD.Libraries.Net.Email.dll
 D:\Steven\HBD.Framework\!Libraries\HBD.Libraries.Net.Email.pdb
 D:\Steven\HBD.Framework\HBD.Libraries.Net.Email\obj\Release\HBD.Libraries.Net.Email.dll
 D:\Steven\HBD.Framework\HBD.Libraries.Net.Email\obj\Release\HBD.Libraries.Net.Email.pdb
+Z:\Steven\HBD.Framework\!Libraries\ReadMe\HBD.Framework.Log.xml
+Z:\Steven\HBD.Framework\!Libraries\ReadMe\HBD.Libraries.Net.Email.Schema.xsd
+Z:\Steven\HBD.Framework\!Libraries\ReadMe\HBD.Libraries.Net.Email Sample.xml
+Z:\Steven\HBD.Framework\!Libraries\HBD.Libraries.Net.Email.dll
+Z:\Steven\HBD.Framework\!Libraries\HBD.Libraries.Net.Email.pdb
+Z:\Steven\HBD.Framework\HBD.Libraries.Net.Email\obj\Release\HBD.Libraries.Net.Email.csprojResolveAssemblyReference.cache
+Z:\Steven\HBD.Framework\HBD.Libraries.Net.Email\obj\Release\HBD.Libraries.Net.Email.dll
+Z:\Steven\HBD.Framework\HBD.Libraries.Net.Email\obj\Release\HBD.Libraries.Net.Email.pdb

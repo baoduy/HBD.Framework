@@ -3,3 +3,8 @@ D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Extension.WinForms.dll
 D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Extension.WinForms.pdb
 D:\Steven\HBD.Framework\HBD.Framework.Extension.WinForms\obj\Release\HBD.Framework.Extension.WinForms.dll
 D:\Steven\HBD.Framework\HBD.Framework.Extension.WinForms\obj\Release\HBD.Framework.Extension.WinForms.pdb
+Z:\Steven\HBD.Framework\!Libraries\HBD.Framework.Extension.WinForms.dll
+Z:\Steven\HBD.Framework\!Libraries\HBD.Framework.Extension.WinForms.pdb
+Z:\Steven\HBD.Framework\HBD.Framework.Extension.WinForms\obj\Release\HBD.Framework.Extension.WinForms.csprojResolveAssemblyReference.cache
+Z:\Steven\HBD.Framework\HBD.Framework.Extension.WinForms\obj\Release\HBD.Framework.Extension.WinForms.dll
+Z:\Steven\HBD.Framework\HBD.Framework.Extension.WinForms\obj\Release\HBD.Framework.Extension.WinForms.pdb
