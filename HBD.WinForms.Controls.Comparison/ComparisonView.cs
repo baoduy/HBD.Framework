@@ -258,15 +258,6 @@ namespace HBD.WinForms.Controls.Comparison
         #endregion
 
         #region IHBDViewBase
-        public void LoadState(System.Collections.Specialized.StringCollection collection)
-        {
-
-        }
-
-        public void SaveState(System.Collections.Specialized.StringCollection collection)
-        {
-
-        }
         #endregion
 
         protected override IList<ControlStates.ControlState> GetListControlState()

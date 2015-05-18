@@ -23,7 +23,7 @@ namespace HBD.Framework.Core
         public void Dispose()
         { }
 
-        object System.Collections.IEnumerator.Current
+        object IEnumerator.Current
         {
             get { return this._items.Current; }
         }

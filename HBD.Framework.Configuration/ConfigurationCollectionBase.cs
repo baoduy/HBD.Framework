@@ -18,7 +18,7 @@ namespace HBD.Framework.Configuration
         }
 
         public TElement this[int index]
-        { get { return (TElement)base.BaseGet(index); } }
+        { get { return (TElement)base.BaseGet(index);  } }
 
         public TElement this[string name]
         {

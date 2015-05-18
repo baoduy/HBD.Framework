@@ -16,7 +16,7 @@ namespace HBD.WinForms.Controls.Core
         public HBDToolStripControlHost() : base(typeof(TControl).CreateInstance() as Control) { }
 
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden), DefaultValue(null)]
-        public new TControl ChildControl
+        public TControl ChildControl
         {
             get { return (TControl)base.Control; }
         }

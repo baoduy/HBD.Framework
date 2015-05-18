@@ -12,3 +12,4 @@ Z:\Steven\HBD.Framework\HBD.Framework.Data.IIS\obj\Release\HBD.Framework.Data.II
 Z:\Steven\HBD.Framework\!Libraries\HBD.Framework.Data.IIS.dll
 Z:\Steven\HBD.Framework\!Libraries\HBD.Framework.Data.IIS.pdb
 Z:\Steven\HBD.Framework\HBD.Framework.Data.IIS\obj\Release\Interop.MSUtil.dll
+Z:\Steven\HBD.Framework\!Libraries\ReadMe\HBD.Framework.Log.xml

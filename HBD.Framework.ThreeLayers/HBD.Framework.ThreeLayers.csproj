@@ -43,9 +43,17 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\!Libraries\HBD.Framework.Core.dll</HintPath>
     </Reference>
+    <Reference Include="HBD.Framework.Extension, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!Libraries\HBD.Framework.Extension.dll</HintPath>
+    </Reference>
     <Reference Include="HBD.Framework.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\!Libraries\HBD.Framework.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="HBD.Libraries.Unity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\!Libraries\HBD.Libraries.Unity.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -90,16 +98,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HBD.Framework.Extension\HBD.Framework.Extension.csproj">
-      <Project>{62343c4c-1925-446e-b403-a247cf539989}</Project>
-      <Name>HBD.Framework.Extension</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HBD.Libraries.Unity\HBD.Libraries.Unity.csproj">
-      <Project>{5506f675-87a3-44fa-8c35-eafeda24a678}</Project>
-      <Name>HBD.Libraries.Unity</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="POCO Templates\BIZ.tt">

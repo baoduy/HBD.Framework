@@ -2,6 +2,7 @@
 using System.Configuration;
 using System.Globalization;
 using System.ServiceModel.Configuration;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Configuration;
 using System.Web.Hosting;
@@ -27,9 +28,7 @@ namespace HBD.Framework.Configuration
         public static TSection GetSection<TSection>() where TSection : ConfigurationSectionBase, new()
         {
             var section = System.Configuration.ConfigurationManager.GetSection(new TSection().SectionName);
-            if (section != null)
-                return (TSection)section;
-            return default(TSection);
+            return section as TSection ?? default(TSection);
         }
 
         public static TSectionGroup GetSectionGroup<TSectionGroup>() where TSectionGroup : ConfigurationSectionGroup, new()

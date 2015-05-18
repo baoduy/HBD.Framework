@@ -35,7 +35,6 @@ D:\Steven\HBD.Framework\HBD.Framework.ThreeLayers\bin\Debug\EntityFramework.SqlS
 D:\Steven\HBD.Framework\HBD.Framework.ThreeLayers\bin\Debug\ReadMe\HBD.Libraries.Unity.xml
 D:\Steven\HBD.Framework\HBD.Framework.ThreeLayers\bin\Debug\HBD.Framework.OpenXML.dll
 D:\Steven\HBD.Framework\HBD.Framework.ThreeLayers\bin\Debug\HBD.Framework.OpenXML.pdb
-Z:\Steven\HBD.Framework\HBD.Framework.ThreeLayers\bin\Debug\ReadMe\HBD.Libraries.Unity.xml
 Z:\Steven\HBD.Framework\HBD.Framework.ThreeLayers\bin\Debug\HBD.Framework.ThreeLayers.dll
 Z:\Steven\HBD.Framework\HBD.Framework.ThreeLayers\bin\Debug\HBD.Framework.ThreeLayers.pdb
 Z:\Steven\HBD.Framework\HBD.Framework.ThreeLayers\bin\Debug\EntityFramework.dll
@@ -69,6 +68,6 @@ Z:\Steven\HBD.Framework\HBD.Framework.ThreeLayers\bin\Debug\Microsoft.Practices.
 Z:\Steven\HBD.Framework\HBD.Framework.ThreeLayers\bin\Debug\HBD.Framework.OpenXML.pdb
 Z:\Steven\HBD.Framework\HBD.Framework.ThreeLayers\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.pdb
 Z:\Steven\HBD.Framework\HBD.Framework.ThreeLayers\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
-Z:\Steven\HBD.Framework\HBD.Framework.ThreeLayers\obj\Debug\HBD.Framework.ThreeLayers.csprojResolveAssemblyReference.cache
 Z:\Steven\HBD.Framework\HBD.Framework.ThreeLayers\obj\Debug\HBD.Framework.ThreeLayers.dll
 Z:\Steven\HBD.Framework\HBD.Framework.ThreeLayers\obj\Debug\HBD.Framework.ThreeLayers.pdb
+Z:\Steven\HBD.Framework\HBD.Framework.ThreeLayers\obj\Debug\HBD.Framework.ThreeLayers.csprojResolveAssemblyReference.cache

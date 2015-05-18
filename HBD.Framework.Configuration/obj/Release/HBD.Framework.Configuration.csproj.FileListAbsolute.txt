@@ -3,7 +3,6 @@ D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Configuration.dll
 D:\Steven\HBD.Framework\!Libraries\HBD.Framework.Configuration.pdb
 D:\Steven\HBD.Framework\HBD.Framework.Configuration\obj\Release\HBD.Framework.Configuration.dll
 D:\Steven\HBD.Framework\HBD.Framework.Configuration\obj\Release\HBD.Framework.Configuration.pdb
-Z:\Steven\HBD.Framework\!Libraries\ReadMe\HBD.Framework.Log.xml
 Z:\Steven\HBD.Framework\!Libraries\HBD.Framework.Configuration.dll
 Z:\Steven\HBD.Framework\!Libraries\HBD.Framework.Configuration.pdb
 Z:\Steven\HBD.Framework\HBD.Framework.Configuration\obj\Release\HBD.Framework.Configuration.csprojResolveAssemblyReference.cache

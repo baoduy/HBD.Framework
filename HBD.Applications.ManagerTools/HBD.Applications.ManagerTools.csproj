@@ -154,10 +154,6 @@
       <Project>{96AC28E1-649A-4081-88A1-4774AD29F5EF}</Project>
       <Name>HBD.Framework.Configuration</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HBD.Framework.Data.Sharepoint\HBD.Framework.Data.Sharepoint.csproj">
-      <Project>{e16027b3-9f19-486d-bd6f-33f5441d5344}</Project>
-      <Name>HBD.Framework.Data.Sharepoint</Name>
-    </ProjectReference>
     <ProjectReference Include="..\HBD.Framework.Extension.WinForms\HBD.Framework.Extension.WinForms.csproj">
       <Project>{C99A9B6C-332F-467F-8C85-C09F8D94D877}</Project>
       <Name>HBD.Framework.Extension.WinForms</Name>

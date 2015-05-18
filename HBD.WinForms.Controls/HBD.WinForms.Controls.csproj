@@ -277,10 +277,6 @@
       <Project>{081B87F6-A2DB-42D1-9A97-44A2C936C784}</Project>
       <Name>HBD.Framework.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HBD.Framework.Data.Sharepoint\HBD.Framework.Data.Sharepoint.csproj">
-      <Project>{E16027B3-9F19-486D-BD6F-33F5441D5344}</Project>
-      <Name>HBD.Framework.Data.Sharepoint</Name>
-    </ProjectReference>
     <ProjectReference Include="..\HBD.Framework.Data\HBD.Framework.Data.csproj">
       <Project>{3A043EBC-3614-41CE-959A-D993119493BB}</Project>
       <Name>HBD.Framework.Data</Name>

@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.Configuration
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.Data", "HBD.Framework.Data\HBD.Framework.Data.csproj", "{3A043EBC-3614-41CE-959A-D993119493BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.Data.Sharepoint", "HBD.Framework.Data.Sharepoint\HBD.Framework.Data.Sharepoint.csproj", "{E16027B3-9F19-486D-BD6F-33F5441D5344}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.Extension", "HBD.Framework.Extension\HBD.Framework.Extension.csproj", "{62343C4C-1925-446E-B403-A247CF539989}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.Extension.WinForms", "HBD.Framework.Extension.WinForms\HBD.Framework.Extension.WinForms.csproj", "{C99A9B6C-332F-467F-8C85-C09F8D94D877}"
@@ -88,14 +86,6 @@ Global
 		{3A043EBC-3614-41CE-959A-D993119493BB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3A043EBC-3614-41CE-959A-D993119493BB}.Release|x64.ActiveCfg = Release|x64
 		{3A043EBC-3614-41CE-959A-D993119493BB}.Release|x64.Build.0 = Release|x64
-		{E16027B3-9F19-486D-BD6F-33F5441D5344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E16027B3-9F19-486D-BD6F-33F5441D5344}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E16027B3-9F19-486D-BD6F-33F5441D5344}.Debug|x64.ActiveCfg = Debug|x64
-		{E16027B3-9F19-486D-BD6F-33F5441D5344}.Debug|x64.Build.0 = Debug|x64
-		{E16027B3-9F19-486D-BD6F-33F5441D5344}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E16027B3-9F19-486D-BD6F-33F5441D5344}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E16027B3-9F19-486D-BD6F-33F5441D5344}.Release|x64.ActiveCfg = Release|x64
-		{E16027B3-9F19-486D-BD6F-33F5441D5344}.Release|x64.Build.0 = Release|x64
 		{62343C4C-1925-446E-B403-A247CF539989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{62343C4C-1925-446E-B403-A247CF539989}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62343C4C-1925-446E-B403-A247CF539989}.Debug|x64.ActiveCfg = Debug|x64

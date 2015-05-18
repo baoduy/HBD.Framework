@@ -1,15 +1,9 @@
-﻿using HBD.Framework.Configuration;
-using HBD.Libraries.Net.Email.Configuration;
+﻿using HBD.Libraries.Net.Email.Configuration;
 using System;
-using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Net.Configuration;
 using System.Net.Mail;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Xml.Linq;
-using System.Linq;
 using HBD.Framework.Core;
 using HBD.Framework.Log;
 

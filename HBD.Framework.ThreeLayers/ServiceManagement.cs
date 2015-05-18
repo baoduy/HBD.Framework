@@ -56,7 +56,7 @@ namespace HBD.Framework.ThreeLayers
             catch (Exception ex)
             {
 #if DEBUG
-                throw;
+                throw ex;
 #else
                 Log.LogManager.Write(ex);
 #endif

@@ -27,7 +27,7 @@ namespace HBD.Libraries.Service
                 var serviceName = typeof(TInterface).FullName;
 
                 //Get Web configuration
-                var configFile = HBD.Framework.Configuration.ConfigurationManager.OpenConfiguration();
+                var configFile = Framework.Configuration.ConfigurationManager.OpenConfiguration();
                 var serviceSection = ServiceModelSectionGroup.GetSectionGroup(configFile);
 
                 if (serviceSection != null)
