@@ -6,12 +6,13 @@ using HBD.Libraries.Unity.ExtensionConfiguration;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
 using Microsoft.Practices.Unity.InterceptionExtension;
+using System.Threading.Tasks;
 
 namespace HBD.Libraries.Unity
 {
     public static class UnityManager
     {
-        static volatile IUnityContainer _container;
+        static readonly IUnityContainer _container;
         public static IUnityContainer Container
         {
             get { return _container; }
@@ -48,22 +49,22 @@ namespace HBD.Libraries.Unity
             {
                 using (var impersonate = WindowsIdentity.Impersonate(IntPtr.Zero))
                 {
-                    foreach (var item in section.AliasMapping)
-                    {
-                        try
-                        {
-                            var inface = Framework.Core.AssemblyExtension.GetType( item.Interface );
-                            var objClass = Framework.Core.AssemblyExtension.GetType( item.MapTo );
+                    Parallel.ForEach(section.AliasMapping, (item) =>
+                     {
+                         try
+                         {
+                             var inface = Framework.Core.AssemblyExtension.GetType(item.Interface);
+                             var objClass = Framework.Core.AssemblyExtension.GetType(item.MapTo);
 
-                            if ( inface == null || objClass == null )
-                                LogManager.Write( string.Format( "Cannot load alias interface '{0}' and mapping class '{1}'.", item.Interface, item.MapTo ), LogManager.LogCategories.Error );
-                            else if ( !inface.IsInterface || !objClass.IsClass )
-                                LogManager.Write( string.Format( "The alias interface '{0}' must be a Interface Instance and mapping class '{1}' must be a Class Instance.", item.Interface, item.MapTo ), LogManager.LogCategories.Error );
-                            else _container.RegisterResolveWithLogingInjection( inface, objClass, null );
-                        }
-                        catch ( Exception ex )
-                        { LogManager.Write( ex ); }
-                    }
+                             if (inface == null || objClass == null)
+                                 LogManager.Write(string.Format("Cannot load alias interface '{0}' and mapping class '{1}'.", item.Interface, item.MapTo), LogManager.LogCategories.Error);
+                             else if (!inface.IsInterface || !objClass.IsClass)
+                                 LogManager.Write(string.Format("The alias interface '{0}' must be a Interface Instance and mapping class '{1}' must be a Class Instance.", item.Interface, item.MapTo), LogManager.LogCategories.Error);
+                             else _container.RegisterResolveWithLogingInjection(inface, objClass, null);
+                         }
+                         catch (Exception ex)
+                         { LogManager.Write(ex); }
+                     });
                 }
             }
         }

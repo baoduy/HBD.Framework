@@ -1,5 +1,4 @@
 ﻿using HBD.Framework.Core;
-using System;
 using System.Collections.Generic;
 using System.Configuration;
 
@@ -18,17 +17,11 @@ namespace HBD.Framework.Configuration
         }
 
         public TElement this[int index]
-        { get { return (TElement)base.BaseGet(index);  } }
+        { get { return base.BaseGet(index) as TElement; } }
 
-        public TElement this[string name]
+        public new TElement this[string name]
         {
-            get
-            {
-                foreach (TElement temp in this)
-                    if (temp.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase))
-                        return temp;
-                return null;
-            }
+            get { return base.BaseGet(name) as TElement; }
         }
 
         public new IEnumerator<TElement> GetEnumerator()
