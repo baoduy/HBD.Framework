@@ -1,0 +1,9 @@
+﻿{
+  "Title": "HBD Window Forms Shell", //The title will be display in the Main Window.
+  "Logo": "Resources\\Shell.ico",
+  "Environment": "DEV", //Environment DEV,DVx,SITx,UATx and PRD.
+  "ModulePath": "./Modules", //Default folder is Modules
+  // The binaries that will be imported to Mef.
+  // If it is just file name then the root folder will be from AppDomain.CurrentDomain.BaseDirectory.
+  "ImportedBinaries": null
+}

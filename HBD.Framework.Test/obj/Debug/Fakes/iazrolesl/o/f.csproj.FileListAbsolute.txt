@@ -1,0 +1,2 @@
+C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework.Test\obj\Debug\Fakes\iazrolesl\b\Interop.AZROLESLib.1.0.0.0.Fakes.xml
+C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework.Test\obj\Debug\Fakes\iazrolesl\o\f.csprojResolveAssemblyReference.cache

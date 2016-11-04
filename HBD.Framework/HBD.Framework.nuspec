@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>HBD.Framework</id>
+    <version>1.0.3</version>
+    <title>HBD.Framework</title>
+    <authors>Duy, Hoang</authors>
+    <owners>Duy, Hoang</owners>
+    <description>
+      The helpfull library for .Net developers
+    </description>
+    <releaseNotes>
+    </releaseNotes>
+    <summary>
+      The helpfull library for .Net developers which support:
+      - Caching
+      - Csv Adapter that allow to interact with Csv files.
+      - Excel Adapter that allow to interact with Xml Excel format files.
+      - Sql Adapter that allow to interact with Sql servers.
+      - OleDb Adapter that allow to interact with Data files.
+      - The common extension methods that will help developers to save time when wring the code.
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://github.com/baoduy/HBD.Framework</projectUrl>
+    <iconUrl>http://www.gravatar.com/avatar/ab5364407cf5b1f10ea02750a1927573.jpg?s=24</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://opensource.org/licenses/MS-PL</licenseUrl>
+    <copyright>Copyright © 2016</copyright>
+    <dependencies></dependencies>
+    <references></references>
+    <tags></tags>
+  </metadata>
+  <files>
+    <!--<file src="bin\Release\HBD.Framework.dll" target="lib\net461" />-->
+    <!--<file src="tools\" target="tools" />
+    <file src="content\" target="content" />-->
+  </files>
+</package>

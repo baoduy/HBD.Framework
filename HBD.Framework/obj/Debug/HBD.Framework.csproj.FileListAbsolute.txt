@@ -1,0 +1,13 @@
+C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework\bin\Debug\HBD.Framework.dll.config
+C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework\bin\Debug\HBD.Framework.dll
+C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework\bin\Debug\HBD.Framework.pdb
+C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework\bin\Debug\DocumentFormat.OpenXml.dll
+C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework\bin\Debug\Newtonsoft.Json.dll
+C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework\bin\Debug\Newtonsoft.Json.xml
+C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework\obj\Debug\HBD.Framework.csprojResolveAssemblyReference.cache
+C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework\obj\Debug\HBD.Framework.Properties.Resource.resources
+C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework\obj\Debug\HBD.Framework.csproj.GenerateResource.Cache
+C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework\obj\Debug\HBD.Framework.dll
+C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework\obj\Debug\HBD.Framework.pdb
+C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework\obj\Debug\Interop.AZROLESLib.dll
+C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework\obj\Debug\HBD.Framework.csproj.ResolveComReference.cache
