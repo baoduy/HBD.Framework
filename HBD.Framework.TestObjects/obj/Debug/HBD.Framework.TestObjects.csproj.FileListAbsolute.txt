@@ -1,6 +1,0 @@
-C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework.TestObjects\bin\Debug\HBD.Framework.TestObjects.dll
-C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework.TestObjects\bin\Debug\HBD.Framework.TestObjects.pdb
-C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework.TestObjects\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
-C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework.TestObjects\obj\Debug\HBD.Framework.TestObjects.csprojResolveAssemblyReference.cache
-C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework.TestObjects\obj\Debug\HBD.Framework.TestObjects.dll
-C:\!Coding\TFS\HBD\.Net 4.6.x\HBD.Framework\HBD.Framework.TestObjects\obj\Debug\HBD.Framework.TestObjects.pdb
