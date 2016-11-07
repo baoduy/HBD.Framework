@@ -34,4 +34,16 @@ Global
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Security.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Security.AzMan.5.0.505.0\lib\NET35
 	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://steven2412.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = HBD.Framework\\HBD.Framework.csproj
+		SccProjectName1 = HBD.Framework
+		SccLocalPath1 = HBD.Framework
+		SccProjectUniqueName2 = HBD.Framework.Test\\HBD.Framework.Test.csproj
+		SccProjectName2 = HBD.Framework.Test
+		SccLocalPath2 = HBD.Framework.Test
+	EndGlobalSection
 EndGlobal

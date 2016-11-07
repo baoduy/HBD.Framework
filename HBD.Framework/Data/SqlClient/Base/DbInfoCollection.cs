@@ -23,7 +23,7 @@ namespace HBD.Framework.Data.SqlClient.Base
             base.Add(item);
         }
 
-        public new void AddRange(IEnumerable<TDbInfo> collection)
+        public void AddRange(IEnumerable<TDbInfo> collection)
         {
             if (collection == null) return;
             foreach (var c in collection) Add(c);
