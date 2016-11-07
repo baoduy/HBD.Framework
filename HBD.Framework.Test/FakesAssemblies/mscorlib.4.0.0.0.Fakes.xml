@@ -14791,8 +14791,14 @@
         <member name="P:System.IO.Fakes.ShimDirectory.InternalMoveStringStringBoolean">
             <summary>Sets the shim of Directory.InternalMove(String sourceDirName, String destDirName, Boolean checkHost)</summary>
         </member>
+        <member name="P:System.IO.Fakes.ShimDirectory.LegacyGetCurrentDirectory">
+            <summary>Sets the shim of Directory.LegacyGetCurrentDirectory()</summary>
+        </member>
         <member name="P:System.IO.Fakes.ShimDirectory.MoveStringString">
             <summary>Sets the shim of Directory.Move(String sourceDirName, String destDirName)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimDirectory.NewGetCurrentDirectory">
+            <summary>Sets the shim of Directory.NewGetCurrentDirectory()</summary>
         </member>
         <member name="P:System.IO.Fakes.ShimDirectory.OpenHandleString">
             <summary>Sets the shim of Directory.OpenHandle(String path)</summary>
@@ -16822,14 +16828,14 @@
         <member name="P:System.IO.Fakes.ShimPath.HasExtensionString">
             <summary>Sets the shim of Path.HasExtension(String path)</summary>
         </member>
-        <member name="P:System.IO.Fakes.ShimPath.HasIllegalCharactersStringBoolean">
-            <summary>Sets the shim of Path.HasIllegalCharacters(String path, Boolean checkAdditional)</summary>
-        </member>
         <member name="P:System.IO.Fakes.ShimPath.HasLongPathPrefixString">
             <summary>Sets the shim of Path.HasLongPathPrefix(String path)</summary>
         </member>
         <member name="P:System.IO.Fakes.ShimPath.InternalCombineStringString">
             <summary>Sets the shim of Path.InternalCombine(String path1, String path2)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimPath.InternalGetDirectoryNameString">
+            <summary>Sets the shim of Path.InternalGetDirectoryName(String path)</summary>
         </member>
         <member name="P:System.IO.Fakes.ShimPath.InternalGetTempFileNameBoolean">
             <summary>Sets the shim of Path.InternalGetTempFileName(Boolean checkHost)</summary>
@@ -16842,6 +16848,18 @@
         </member>
         <member name="P:System.IO.Fakes.ShimPath.IsRelativeString">
             <summary>Sets the shim of Path.IsRelative(String path)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimPath.LegacyGetRootLengthString">
+            <summary>Sets the shim of Path.LegacyGetRootLength(String path)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimPath.LegacyNormalizePathStringBooleanInt32Boolean">
+            <summary>Sets the shim of Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimPath.NewNormalizePathLimitedChecksStringInt32Boolean">
+            <summary>Sets the shim of Path.NewNormalizePathLimitedChecks(String path, Int32 maxPathLength, Boolean expandShortPaths)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimPath.NewNormalizePathStringInt32Boolean">
+            <summary>Sets the shim of Path.NewNormalizePath(String path, Int32 maxPathLength, Boolean expandShortPaths)</summary>
         </member>
         <member name="P:System.IO.Fakes.ShimPath.NormalizePathStringBoolean">
             <summary>Sets the shim of Path.NormalizePath(String path, Boolean fullCheck)</summary>
