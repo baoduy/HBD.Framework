@@ -1,0 +1,191 @@
+Ordinal_Position,Table_Catalog,Table_Name,Table_Schema,Column_Name,Is_Nullable,Data_Type,Character_Maximum_Length,Is_Identity,Is_Computed,Is_Primary_Key,Primary_Key_Name,Is_Foreign_Key,Fk_Table_Schema,Fk_Table_Name,Fk_Column_Name,Foreign_Key_Name,Row_Count,Is_Table,Is_View
+1,Northwind,Alphabetical list of products,dbo,ProductID,,int,,0,0,,,,,,,,,,1
+1,Northwind,Categories,dbo,CategoryID,,int,,1,0,1,PK_Categories,,,,,,8,1,
+1,Northwind,Category Sales for 1997,dbo,CategoryName,,nvarchar,15,0,0,,,,,,,,,,1
+1,Northwind,Current Product List,dbo,ProductID,,int,,1,0,,,,,,,,,,1
+1,Northwind,Customer and Suppliers by City,dbo,City,1,nvarchar,15,0,0,,,,,,,,,,1
+1,Northwind,CustomerCustomerDemo,dbo,CustomerID,,nchar,5,0,0,1,PK_CustomerCustomerDemo,1,dbo,Customers,CustomerID,FK_CustomerCustomerDemo_Customers,0,1,
+1,Northwind,CustomerDemographics,dbo,CustomerTypeID,,nchar,10,0,0,1,PK_CustomerDemographics,,,,,,0,1,
+1,Northwind,Customers,dbo,CustomerID,,nchar,5,0,0,1,PK_Customers,,,,,,91,1,
+1,Northwind,Employees,dbo,EmployeeID,,int,,1,0,1,PK_Employees,,,,,,9,1,
+1,Northwind,EmployeeTerritories,dbo,EmployeeID,,int,,0,0,1,PK_EmployeeTerritories,1,dbo,Employees,EmployeeID,FK_EmployeeTerritories_Employees,49,1,
+1,Northwind,Invoices,dbo,ShipName,1,nvarchar,40,0,0,,,,,,,,,,1
+1,Northwind,Order Details,dbo,OrderID,,int,,0,0,1,PK_Order_Details,1,dbo,Orders,OrderID,FK_Order_Details_Orders,2155,1,
+1,Northwind,Order Details Extended,dbo,OrderID,,int,,0,0,,,,,,,,,,1
+1,Northwind,Order Subtotals,dbo,OrderID,,int,,0,0,,,,,,,,,,1
+1,Northwind,Orders,dbo,OrderID,,int,,1,0,1,PK_Orders,,,,,,830,1,
+1,Northwind,Orders Qry,dbo,OrderID,,int,,0,0,,,,,,,,,,1
+1,Northwind,Product Sales for 1997,dbo,CategoryName,,nvarchar,15,0,0,,,,,,,,,,1
+1,Northwind,Products,dbo,ProductID,,int,,1,0,1,PK_Products,,,,,,77,1,
+1,Northwind,Products Above Average Price,dbo,ProductName,,nvarchar,40,0,0,,,,,,,,,,1
+1,Northwind,Products by Category,dbo,CategoryName,,nvarchar,15,0,0,,,,,,,,,,1
+1,Northwind,Quarterly Orders,dbo,CustomerID,1,nchar,5,0,0,,,,,,,,,,1
+1,Northwind,Region,dbo,RegionID,,int,,0,0,1,PK_Region,,,,,,4,1,
+1,Northwind,Sales by Category,dbo,CategoryID,,int,,0,0,,,,,,,,,,1
+1,Northwind,Sales Totals by Amount,dbo,SaleAmount,1,money,,0,0,,,,,,,,,,1
+1,Northwind,Shippers,dbo,ShipperID,,int,,1,0,1,PK_Shippers,,,,,,3,1,
+1,Northwind,Summary of Sales by Quarter,dbo,ShippedDate,1,datetime,,0,0,,,,,,,,,,1
+1,Northwind,Summary of Sales by Year,dbo,ShippedDate,1,datetime,,0,0,,,,,,,,,,1
+1,Northwind,Suppliers,dbo,SupplierID,,int,,1,0,1,PK_Suppliers,,,,,,29,1,
+1,Northwind,Territories,dbo,TerritoryID,,nvarchar,20,0,0,1,PK_Territories,,,,,,53,1,
+2,Northwind,Alphabetical list of products,dbo,ProductName,,nvarchar,40,0,0,,,,,,,,,,1
+2,Northwind,Categories,dbo,CategoryName,,nvarchar,15,0,0,,,,,,,,8,1,
+2,Northwind,Category Sales for 1997,dbo,CategorySales,1,money,,0,0,,,,,,,,,,1
+2,Northwind,Current Product List,dbo,ProductName,,nvarchar,40,0,0,,,,,,,,,,1
+2,Northwind,Customer and Suppliers by City,dbo,CompanyName,,nvarchar,40,0,0,,,,,,,,,,1
+2,Northwind,CustomerCustomerDemo,dbo,CustomerTypeID,,nchar,10,0,0,1,PK_CustomerCustomerDemo,1,dbo,CustomerDemographics,CustomerTypeID,FK_CustomerCustomerDemo,0,1,
+2,Northwind,CustomerDemographics,dbo,CustomerDesc,1,ntext,1073741823,0,0,,,,,,,,0,1,
+2,Northwind,Customers,dbo,CompanyName,,nvarchar,40,0,0,,,,,,,,91,1,
+2,Northwind,Employees,dbo,LastName,,nvarchar,20,0,0,,,,,,,,9,1,
+2,Northwind,EmployeeTerritories,dbo,TerritoryID,,nvarchar,20,0,0,1,PK_EmployeeTerritories,1,dbo,Territories,TerritoryID,FK_EmployeeTerritories_Territories,49,1,
+2,Northwind,Invoices,dbo,ShipAddress,1,nvarchar,60,0,0,,,,,,,,,,1
+2,Northwind,Order Details,dbo,ProductID,,int,,0,0,1,PK_Order_Details,1,dbo,Products,ProductID,FK_Order_Details_Products,2155,1,
+2,Northwind,Order Details Extended,dbo,ProductID,,int,,0,0,,,,,,,,,,1
+2,Northwind,Order Subtotals,dbo,Subtotal,1,money,,0,0,,,,,,,,,,1
+2,Northwind,Orders,dbo,CustomerID,1,nchar,5,0,0,,,1,dbo,Customers,CustomerID,FK_Orders_Customers,830,1,
+2,Northwind,Orders Qry,dbo,CustomerID,1,nchar,5,0,0,,,,,,,,,,1
+2,Northwind,Product Sales for 1997,dbo,ProductName,,nvarchar,40,0,0,,,,,,,,,,1
+2,Northwind,Products,dbo,ProductName,,nvarchar,40,0,0,,,,,,,,77,1,
+2,Northwind,Products Above Average Price,dbo,UnitPrice,1,money,,0,0,,,,,,,,,,1
+2,Northwind,Products by Category,dbo,ProductName,,nvarchar,40,0,0,,,,,,,,,,1
+2,Northwind,Quarterly Orders,dbo,CompanyName,1,nvarchar,40,0,0,,,,,,,,,,1
+2,Northwind,Region,dbo,RegionDescription,,nchar,50,0,0,,,,,,,,4,1,
+2,Northwind,Sales by Category,dbo,CategoryName,,nvarchar,15,0,0,,,,,,,,,,1
+2,Northwind,Sales Totals by Amount,dbo,OrderID,,int,,0,0,,,,,,,,,,1
+2,Northwind,Shippers,dbo,CompanyName,,nvarchar,40,0,0,,,,,,,,3,1,
+2,Northwind,Summary of Sales by Quarter,dbo,OrderID,,int,,0,0,,,,,,,,,,1
+2,Northwind,Summary of Sales by Year,dbo,OrderID,,int,,0,0,,,,,,,,,,1
+2,Northwind,Suppliers,dbo,CompanyName,,nvarchar,40,0,0,,,,,,,,29,1,
+2,Northwind,Territories,dbo,TerritoryDescription,,nchar,50,0,0,,,,,,,,53,1,
+3,Northwind,Alphabetical list of products,dbo,SupplierID,1,int,,0,0,,,,,,,,,,1
+3,Northwind,Categories,dbo,Description,1,ntext,1073741823,0,0,,,,,,,,8,1,
+3,Northwind,Customer and Suppliers by City,dbo,ContactName,1,nvarchar,30,0,0,,,,,,,,,,1
+3,Northwind,Customers,dbo,ContactName,1,nvarchar,30,0,0,,,,,,,,91,1,
+3,Northwind,Employees,dbo,FirstName,,nvarchar,10,0,0,,,,,,,,9,1,
+3,Northwind,Invoices,dbo,ShipCity,1,nvarchar,15,0,0,,,,,,,,,,1
+3,Northwind,Order Details,dbo,UnitPrice,,money,,0,0,,,,,,,,2155,1,
+3,Northwind,Order Details Extended,dbo,ProductName,,nvarchar,40,0,0,,,,,,,,,,1
+3,Northwind,Orders,dbo,EmployeeID,1,int,,0,0,,,1,dbo,Employees,EmployeeID,FK_Orders_Employees,830,1,
+3,Northwind,Orders Qry,dbo,EmployeeID,1,int,,0,0,,,,,,,,,,1
+3,Northwind,Product Sales for 1997,dbo,ProductSales,1,money,,0,0,,,,,,,,,,1
+3,Northwind,Products,dbo,SupplierID,1,int,,0,0,,,1,dbo,Suppliers,SupplierID,FK_Products_Suppliers,77,1,
+3,Northwind,Products by Category,dbo,QuantityPerUnit,1,nvarchar,20,0,0,,,,,,,,,,1
+3,Northwind,Quarterly Orders,dbo,City,1,nvarchar,15,0,0,,,,,,,,,,1
+3,Northwind,Sales by Category,dbo,ProductName,,nvarchar,40,0,0,,,,,,,,,,1
+3,Northwind,Sales Totals by Amount,dbo,CompanyName,,nvarchar,40,0,0,,,,,,,,,,1
+3,Northwind,Shippers,dbo,Phone,1,nvarchar,24,0,0,,,,,,,,3,1,
+3,Northwind,Summary of Sales by Quarter,dbo,Subtotal,1,money,,0,0,,,,,,,,,,1
+3,Northwind,Summary of Sales by Year,dbo,Subtotal,1,money,,0,0,,,,,,,,,,1
+3,Northwind,Suppliers,dbo,ContactName,1,nvarchar,30,0,0,,,,,,,,29,1,
+3,Northwind,Territories,dbo,RegionID,,int,,0,0,,,1,dbo,Region,RegionID,FK_Territories_Region,53,1,
+4,Northwind,Alphabetical list of products,dbo,CategoryID,1,int,,0,0,,,,,,,,,,1
+4,Northwind,Categories,dbo,Picture,1,image,2147483647,0,0,,,,,,,,8,1,
+4,Northwind,Customer and Suppliers by City,dbo,Relationship,,varchar,9,0,0,,,,,,,,,,1
+4,Northwind,Customers,dbo,ContactTitle,1,nvarchar,30,0,0,,,,,,,,91,1,
+4,Northwind,Employees,dbo,Title,1,nvarchar,30,0,0,,,,,,,,9,1,
+4,Northwind,Invoices,dbo,ShipRegion,1,nvarchar,15,0,0,,,,,,,,,,1
+4,Northwind,Order Details,dbo,Quantity,,smallint,,0,0,,,,,,,,2155,1,
+4,Northwind,Order Details Extended,dbo,UnitPrice,,money,,0,0,,,,,,,,,,1
+4,Northwind,Orders,dbo,OrderDate,1,datetime,,0,0,,,,,,,,830,1,
+4,Northwind,Orders Qry,dbo,OrderDate,1,datetime,,0,0,,,,,,,,,,1
+4,Northwind,Products,dbo,CategoryID,1,int,,0,0,,,1,dbo,Categories,CategoryID,FK_Products_Categories,77,1,
+4,Northwind,Products by Category,dbo,UnitsInStock,1,smallint,,0,0,,,,,,,,,,1
+4,Northwind,Quarterly Orders,dbo,Country,1,nvarchar,15,0,0,,,,,,,,,,1
+4,Northwind,Sales by Category,dbo,ProductSales,1,money,,0,0,,,,,,,,,,1
+4,Northwind,Sales Totals by Amount,dbo,ShippedDate,1,datetime,,0,0,,,,,,,,,,1
+4,Northwind,Suppliers,dbo,ContactTitle,1,nvarchar,30,0,0,,,,,,,,29,1,
+5,Northwind,Alphabetical list of products,dbo,QuantityPerUnit,1,nvarchar,20,0,0,,,,,,,,,,1
+5,Northwind,Customers,dbo,Address,1,nvarchar,60,0,0,,,,,,,,91,1,
+5,Northwind,Employees,dbo,TitleOfCourtesy,1,nvarchar,25,0,0,,,,,,,,9,1,
+5,Northwind,Invoices,dbo,ShipPostalCode,1,nvarchar,10,0,0,,,,,,,,,,1
+5,Northwind,Order Details,dbo,Discount,,real,,0,0,,,,,,,,2155,1,
+5,Northwind,Order Details Extended,dbo,Quantity,,smallint,,0,0,,,,,,,,,,1
+5,Northwind,Orders,dbo,RequiredDate,1,datetime,,0,0,,,,,,,,830,1,
+5,Northwind,Orders Qry,dbo,RequiredDate,1,datetime,,0,0,,,,,,,,,,1
+5,Northwind,Products,dbo,QuantityPerUnit,1,nvarchar,20,0,0,,,,,,,,77,1,
+5,Northwind,Products by Category,dbo,Discontinued,,bit,,0,0,,,,,,,,,,1
+5,Northwind,Suppliers,dbo,Address,1,nvarchar,60,0,0,,,,,,,,29,1,
+6,Northwind,Alphabetical list of products,dbo,UnitPrice,1,money,,0,0,,,,,,,,,,1
+6,Northwind,Customers,dbo,City,1,nvarchar,15,0,0,,,,,,,,91,1,
+6,Northwind,Employees,dbo,BirthDate,1,datetime,,0,0,,,,,,,,9,1,
+6,Northwind,Invoices,dbo,ShipCountry,1,nvarchar,15,0,0,,,,,,,,,,1
+6,Northwind,Order Details Extended,dbo,Discount,,real,,0,0,,,,,,,,,,1
+6,Northwind,Orders,dbo,ShippedDate,1,datetime,,0,0,,,,,,,,830,1,
+6,Northwind,Orders Qry,dbo,ShippedDate,1,datetime,,0,0,,,,,,,,,,1
+6,Northwind,Products,dbo,UnitPrice,1,money,,0,0,,,,,,,,77,1,
+6,Northwind,Suppliers,dbo,City,1,nvarchar,15,0,0,,,,,,,,29,1,
+7,Northwind,Alphabetical list of products,dbo,UnitsInStock,1,smallint,,0,0,,,,,,,,,,1
+7,Northwind,Customers,dbo,Region,1,nvarchar,15,0,0,,,,,,,,91,1,
+7,Northwind,Employees,dbo,HireDate,1,datetime,,0,0,,,,,,,,9,1,
+7,Northwind,Invoices,dbo,CustomerID,1,nchar,5,0,0,,,,,,,,,,1
+7,Northwind,Order Details Extended,dbo,ExtendedPrice,1,money,,0,0,,,,,,,,,,1
+7,Northwind,Orders,dbo,ShipVia,1,int,,0,0,,,1,dbo,Shippers,ShipperID,FK_Orders_Shippers,830,1,
+7,Northwind,Orders Qry,dbo,ShipVia,1,int,,0,0,,,,,,,,,,1
+7,Northwind,Products,dbo,UnitsInStock,1,smallint,,0,0,,,,,,,,77,1,
+7,Northwind,Suppliers,dbo,Region,1,nvarchar,15,0,0,,,,,,,,29,1,
+8,Northwind,Alphabetical list of products,dbo,UnitsOnOrder,1,smallint,,0,0,,,,,,,,,,1
+8,Northwind,Customers,dbo,PostalCode,1,nvarchar,10,0,0,,,,,,,,91,1,
+8,Northwind,Employees,dbo,Address,1,nvarchar,60,0,0,,,,,,,,9,1,
+8,Northwind,Invoices,dbo,CustomerName,,nvarchar,40,0,0,,,,,,,,,,1
+8,Northwind,Orders,dbo,Freight,1,money,,0,0,,,,,,,,830,1,
+8,Northwind,Orders Qry,dbo,Freight,1,money,,0,0,,,,,,,,,,1
+8,Northwind,Products,dbo,UnitsOnOrder,1,smallint,,0,0,,,,,,,,77,1,
+8,Northwind,Suppliers,dbo,PostalCode,1,nvarchar,10,0,0,,,,,,,,29,1,
+9,Northwind,Alphabetical list of products,dbo,ReorderLevel,1,smallint,,0,0,,,,,,,,,,1
+9,Northwind,Customers,dbo,Country,1,nvarchar,15,0,0,,,,,,,,91,1,
+9,Northwind,Employees,dbo,City,1,nvarchar,15,0,0,,,,,,,,9,1,
+9,Northwind,Invoices,dbo,Address,1,nvarchar,60,0,0,,,,,,,,,,1
+9,Northwind,Orders,dbo,ShipName,1,nvarchar,40,0,0,,,,,,,,830,1,
+9,Northwind,Orders Qry,dbo,ShipName,1,nvarchar,40,0,0,,,,,,,,,,1
+9,Northwind,Products,dbo,ReorderLevel,1,smallint,,0,0,,,,,,,,77,1,
+9,Northwind,Suppliers,dbo,Country,1,nvarchar,15,0,0,,,,,,,,29,1,
+10,Northwind,Alphabetical list of products,dbo,Discontinued,,bit,,0,0,,,,,,,,,,1
+10,Northwind,Customers,dbo,Phone,1,nvarchar,24,0,0,,,,,,,,91,1,
+10,Northwind,Employees,dbo,Region,1,nvarchar,15,0,0,,,,,,,,9,1,
+10,Northwind,Invoices,dbo,City,1,nvarchar,15,0,0,,,,,,,,,,1
+10,Northwind,Orders,dbo,ShipAddress,1,nvarchar,60,0,0,,,,,,,,830,1,
+10,Northwind,Orders Qry,dbo,ShipAddress,1,nvarchar,60,0,0,,,,,,,,,,1
+10,Northwind,Products,dbo,Discontinued,,bit,,0,0,,,,,,,,77,1,
+10,Northwind,Suppliers,dbo,Phone,1,nvarchar,24,0,0,,,,,,,,29,1,
+11,Northwind,Alphabetical list of products,dbo,CategoryName,,nvarchar,15,0,0,,,,,,,,,,1
+11,Northwind,Customers,dbo,Fax,1,nvarchar,24,0,0,,,,,,,,91,1,
+11,Northwind,Employees,dbo,PostalCode,1,nvarchar,10,0,0,,,,,,,,9,1,
+11,Northwind,Invoices,dbo,Region,1,nvarchar,15,0,0,,,,,,,,,,1
+11,Northwind,Orders,dbo,ShipCity,1,nvarchar,15,0,0,,,,,,,,830,1,
+11,Northwind,Orders Qry,dbo,ShipCity,1,nvarchar,15,0,0,,,,,,,,,,1
+11,Northwind,Suppliers,dbo,Fax,1,nvarchar,24,0,0,,,,,,,,29,1,
+12,Northwind,Employees,dbo,Country,1,nvarchar,15,0,0,,,,,,,,9,1,
+12,Northwind,Invoices,dbo,PostalCode,1,nvarchar,10,0,0,,,,,,,,,,1
+12,Northwind,Orders,dbo,ShipRegion,1,nvarchar,15,0,0,,,,,,,,830,1,
+12,Northwind,Orders Qry,dbo,ShipRegion,1,nvarchar,15,0,0,,,,,,,,,,1
+12,Northwind,Suppliers,dbo,HomePage,1,ntext,1073741823,0,0,,,,,,,,29,1,
+13,Northwind,Employees,dbo,HomePhone,1,nvarchar,24,0,0,,,,,,,,9,1,
+13,Northwind,Invoices,dbo,Country,1,nvarchar,15,0,0,,,,,,,,,,1
+13,Northwind,Orders,dbo,ShipPostalCode,1,nvarchar,10,0,0,,,,,,,,830,1,
+13,Northwind,Orders Qry,dbo,ShipPostalCode,1,nvarchar,10,0,0,,,,,,,,,,1
+14,Northwind,Employees,dbo,Extension,1,nvarchar,4,0,0,,,,,,,,9,1,
+14,Northwind,Invoices,dbo,Salesperson,,nvarchar,31,0,0,,,,,,,,,,1
+14,Northwind,Orders,dbo,ShipCountry,1,nvarchar,15,0,0,,,,,,,,830,1,
+14,Northwind,Orders Qry,dbo,ShipCountry,1,nvarchar,15,0,0,,,,,,,,,,1
+15,Northwind,Employees,dbo,Photo,1,image,2147483647,0,0,,,,,,,,9,1,
+15,Northwind,Invoices,dbo,OrderID,,int,,0,0,,,,,,,,,,1
+15,Northwind,Orders Qry,dbo,CompanyName,,nvarchar,40,0,0,,,,,,,,,,1
+16,Northwind,Employees,dbo,Notes,1,ntext,1073741823,0,0,,,,,,,,9,1,
+16,Northwind,Invoices,dbo,OrderDate,1,datetime,,0,0,,,,,,,,,,1
+16,Northwind,Orders Qry,dbo,Address,1,nvarchar,60,0,0,,,,,,,,,,1
+17,Northwind,Employees,dbo,ReportsTo,1,int,,0,0,,,1,dbo,Employees,EmployeeID,FK_Employees_Employees,9,1,
+17,Northwind,Invoices,dbo,RequiredDate,1,datetime,,0,0,,,,,,,,,,1
+17,Northwind,Orders Qry,dbo,City,1,nvarchar,15,0,0,,,,,,,,,,1
+18,Northwind,Employees,dbo,PhotoPath,1,nvarchar,255,0,0,,,,,,,,9,1,
+18,Northwind,Invoices,dbo,ShippedDate,1,datetime,,0,0,,,,,,,,,,1
+18,Northwind,Orders Qry,dbo,Region,1,nvarchar,15,0,0,,,,,,,,,,1
+19,Northwind,Invoices,dbo,ShipperName,,nvarchar,40,0,0,,,,,,,,,,1
+19,Northwind,Orders Qry,dbo,PostalCode,1,nvarchar,10,0,0,,,,,,,,,,1
+20,Northwind,Invoices,dbo,ProductID,,int,,0,0,,,,,,,,,,1
+20,Northwind,Orders Qry,dbo,Country,1,nvarchar,15,0,0,,,,,,,,,,1
+21,Northwind,Invoices,dbo,ProductName,,nvarchar,40,0,0,,,,,,,,,,1
+22,Northwind,Invoices,dbo,UnitPrice,,money,,0,0,,,,,,,,,,1
+23,Northwind,Invoices,dbo,Quantity,,smallint,,0,0,,,,,,,,,,1
+24,Northwind,Invoices,dbo,Discount,,real,,0,0,,,,,,,,,,1
+25,Northwind,Invoices,dbo,ExtendedPrice,1,money,,0,0,,,,,,,,,,1
+26,Northwind,Invoices,dbo,Freight,1,money,,0,0,,,,,,,,,,1
