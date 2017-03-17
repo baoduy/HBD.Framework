@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AzAdminManager MajorVersion="2" MinorVersion="0" Guid="520e8d1e-88f8-4bf3-835d-2174b0ee95e0">
+	<AzApplication Guid="a56074ce-5bff-4677-8eb7-e66f1e475991" Name="App1" Description="App1" ApplicationVersion="App1">
+		<AzOperation Guid="1e405acf-5fda-418a-b634-18513af85891" Name="Op1" Description="">
+			<OperationID>1</OperationID>
+		</AzOperation>
+		<AzOperation Guid="37ce2e76-43c7-444c-8914-1074722a7760" Name="Op2" Description="">
+			<OperationID>2</OperationID>
+		</AzOperation>
+		<AzScope Guid="77c44723-e5bd-4b1a-af08-17569fe5eca5" Name="Scope1" Description="">
+			<AzApplicationGroup Guid="40146e7f-d8f3-4cba-887f-77a5128498c4" Name="Group1" Description="" GroupType="Basic">
+				<BizRuleLanguage></BizRuleLanguage>
+				<Member>S-1-5-21-3950037421-2280272726-867751007-500</Member></AzApplicationGroup>
+			<AzApplicationGroup Guid="03aa567c-f322-494d-b21e-9bd372fbeeb4" Name="Group2" Description="" GroupType="Basic">
+				<BizRuleLanguage></BizRuleLanguage>
+			</AzApplicationGroup>
+			<AzRole Guid="8d60dfbd-8bb5-4de1-bf9f-c3b136836977" Name="Role1"><TaskLink>d991f2f9-2a93-4b4f-ba28-1345f005ef62</TaskLink><Member>S-1-5-21-3950037421-2280272726-867751007-500</Member></AzRole><AzTask Guid="80d7dab4-ac8c-4730-aad2-eb4be7cea844" Name="Role3" Description="" BizRuleImportedPath="" RoleDefinition="True"/></AzScope>
+		<AzTask Guid="d991f2f9-2a93-4b4f-ba28-1345f005ef62" Name="Role1" Description="" BizRuleImportedPath="" RoleDefinition="True">
+			<OperationLink>1e405acf-5fda-418a-b634-18513af85891</OperationLink>
+			<OperationLink>37ce2e76-43c7-444c-8914-1074722a7760</OperationLink>
+		</AzTask>
+		<AzTask Guid="1c76ed40-7a3f-4c52-b591-02722a8f037a" Name="Task1" Description="" BizRuleImportedPath="">
+			<OperationLink>1e405acf-5fda-418a-b634-18513af85891</OperationLink>
+			<OperationLink>37ce2e76-43c7-444c-8914-1074722a7760</OperationLink>
+		</AzTask>
+		<AzTask Guid="79347b1c-3d6b-4ca3-bbba-af356c6d1783" Name="Role2" Description="" BizRuleImportedPath="" RoleDefinition="True"><TaskLink>d991f2f9-2a93-4b4f-ba28-1345f005ef62</TaskLink><OperationLink>1e405acf-5fda-418a-b634-18513af85891</OperationLink><OperationLink>37ce2e76-43c7-444c-8914-1074722a7760</OperationLink></AzTask><AzRole Guid="7a307408-881e-4396-b531-9acf71be508b" Name="Role1"><TaskLink>d991f2f9-2a93-4b4f-ba28-1345f005ef62</TaskLink><Member>S-1-5-21-472063034-3168602739-1019008494-1001</Member></AzRole><AzRole Guid="e54759a1-6199-4270-b1ad-d4f230d83290" Name="Role2"><TaskLink>79347b1c-3d6b-4ca3-bbba-af356c6d1783</TaskLink></AzRole><AzApplicationGroup Guid="f558fe3a-eb3a-40ae-a0b5-1efc531bb3b9" Name="GroupMan" Description="" GroupType="Basic"><BizRuleLanguage></BizRuleLanguage><Member>S-1-5-21-472063034-3168602739-1019008494-1001</Member></AzApplicationGroup><AzScope Guid="6084d7eb-9a8b-4e23-80fa-f4be53d141b4" Name="Scope2" Description=""><AzApplicationGroup Guid="f55461c0-bd22-4a40-bc6d-da8947e51171" Name="Group1" Description="" GroupType="Basic"><BizRuleLanguage></BizRuleLanguage></AzApplicationGroup><AzTask Guid="2aafb6d2-341e-4048-bf5e-4d700c666d75" Name="Role3" Description="" BizRuleImportedPath="" RoleDefinition="True"><OperationLink>37ce2e76-43c7-444c-8914-1074722a7760</OperationLink></AzTask><AzRole Guid="17d2379e-9ca0-456d-9897-02bc97c8c1ec" Name="Role3"><TaskLink>2aafb6d2-341e-4048-bf5e-4d700c666d75</TaskLink><Member>S-1-5-21-472063034-3168602739-1019008494-1001</Member></AzRole></AzScope></AzApplication>
+</AzAdminManager>

@@ -1,0 +1,11 @@
+MaxValue,ColumnName,TableName
+,CustomerID,[dbo].[CustomerCustomerDemo]
+,CustomerTypeID,[dbo].[CustomerCustomerDemo]
+,CustomerTypeID,[dbo].[CustomerDemographics]
+11077,OrderID,[dbo].[Order Details]
+4,RegionID,[dbo].[Region]
+77,ProductID,[dbo].[Order Details]
+9,EmployeeID,[dbo].[EmployeeTerritories]
+98104,TerritoryID,[dbo].[EmployeeTerritories]
+98104,TerritoryID,[dbo].[Territories]
+WOLZA,CustomerID,[dbo].[Customers]

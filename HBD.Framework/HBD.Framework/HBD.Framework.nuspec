@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>HBD.Framework</id>
+    <version>$version$</version>
+    <title>HBD.Framework</title>
+    <authors>Duy, Hoang</authors>
+    <owners>Duy, Hoang</owners>
+    <description>
+      The helpful library for .Net developers
+    </description>
+    <releaseNotes>
+      Version 1.0.5
+      - Add method to get ChangeTrackingEntry into ChangeTrackingCollection.
+      - Add ICancelableNotifyPropertyChanging and apply for NotifyPropertyChange object.
+      - Add TableHtmlGeneration that helps to generate a Html table from IGetSetterCollection, copy to clipboard. That table can be past to Word, Excel easily.
+      - Add ObservableSortedCollection
+      - Add SingletonWrapper.
+      - Add SingletonManager.
+      - Seperate the HBD.Framework.Data.Excel and HBD.Framework.Security.Azman
+      - Add NotNull attributes 
+    </releaseNotes>
+    <summary>
+      The helpful library for .Net developers which support:
+      - Caching
+      - Csv Adapter that allow to interact with Csv files.
+      - Sql Adapter that allow to interact with Sql servers.
+      - OleDb Adapter that allow to interact with Data files.
+      - The common extension methods that will help developers to save time when wring the code.
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://github.com/baoduy/HBD.Framework</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/baoduy/Images/master/NugetLogo.PNG</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <copyright>Copyright © 2016</copyright>
+    <dependencies></dependencies>
+    <references></references>
+    <tags></tags>
+  </metadata>
+  <files>
+    <!--<file src="bin\Release\HBD.Framework.dll" target="lib\net461" />-->
+    <!--<file src="tools\" target="tools" />
+    <file src="content\" target="content" />-->
+  </files>
+</package>

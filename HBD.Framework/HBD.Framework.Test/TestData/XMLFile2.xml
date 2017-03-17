@@ -1,0 +1,8 @@
+﻿<HBD>
+  <Name>Testing Obj</Name>
+  <A>Information</A>
+  <B Name="Object B">
+    <C>Object C</C>
+    <D>Object D</D>
+  </B>
+</HBD>

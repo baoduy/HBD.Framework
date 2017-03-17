@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26206.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CED0D593-F054-49C1-941A-80DFC9D8E299}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet.Config = NuGet.Config
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.Data.Excel", "HBD.Framework.Data.Excel\HBD.Framework.Data.Excel.csproj", "{AEB0E484-E248-4649-A09C-14E7F0668512}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.Excel.Test", "HBD.Framework.Excel.Test\HBD.Framework.Excel.Test.csproj", "{34534349-0C23-443A-BD5A-E269D7770B90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEB0E484-E248-4649-A09C-14E7F0668512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB0E484-E248-4649-A09C-14E7F0668512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEB0E484-E248-4649-A09C-14E7F0668512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEB0E484-E248-4649-A09C-14E7F0668512}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34534349-0C23-443A-BD5A-E269D7770B90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34534349-0C23-443A-BD5A-E269D7770B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34534349-0C23-443A-BD5A-E269D7770B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34534349-0C23-443A-BD5A-E269D7770B90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Security.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Security.AzMan.5.0.505.0\lib\NET35
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://steven2412.visualstudio.com/
+		SccProjectUniqueName0 = HBD.Framework.Data.Excel\\HBD.Framework.Data.Excel.csproj
+		SccProjectName0 = HBD.Framework.Data.Excel
+		SccLocalPath0 = HBD.Framework.Data.Excel
+		SccProjectUniqueName1 = HBD.Framework.Excel.Test\\HBD.Framework.Excel.Test.csproj
+		SccProjectName1 = HBD.Framework.Excel.Test
+		SccLocalPath1 = HBD.Framework.Excel.Test
+		SccLocalPath2 = .
+	EndGlobalSection
+EndGlobal

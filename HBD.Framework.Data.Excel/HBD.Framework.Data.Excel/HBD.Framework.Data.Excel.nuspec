@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>HBD.Framework.Data.Excel</id>
+    <version>$version$</version>
+    <title>HBD.Framework.Data.Excel</title>
+    <authors>Duy, Hoang</authors>
+    <owners>Duy, Hoang</owners>
+    <description>
+      The helpful library for Excel
+    </description>
+    <releaseNotes>
+      Version 1.0.0
+      - Excel Adapter allows to working on Excel 2007 onward using OpenXml.
+      - Excel2003 Adapter allows to working on the old excel version using OleDb.
+    </releaseNotes>
+    <summary>
+      The helpful library for .Net developers which support:
+      - Excel Adapter that allow to interact with Excel format files.
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://github.com/baoduy/HBD.Framework.Data.Excel</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/baoduy/Images/master/NugetLogo.PNG</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <copyright>Copyright © 2017</copyright>
+    <dependencies></dependencies>
+    <references></references>
+    <tags></tags>
+  </metadata>
+  <files>
+    <!--<file src="bin\Release\HBD.Framework.dll" target="lib\net461" />-->
+    <!--<file src="tools\" target="tools" />
+    <file src="content\" target="content" />-->
+  </files>
+</package>
