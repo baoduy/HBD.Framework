@@ -1,1 +1,0 @@
-﻿Make sure that the keys you use to encrypt and decrypt are the same. The padding method even if not explicitly set should still allow for proper decryption/encryption (if not set they will be the same). However if you for some reason are using a different set of keys for decryption than used for encryption you will get this error:
