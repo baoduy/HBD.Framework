@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System.Configuration;
 
@@ -8,6 +8,7 @@ namespace HBD.Framework.Configuration.Base
 {
     public abstract class ConfigurationElementBase : ConfigurationElement
     {
+        // ReSharper disable once InconsistentNaming
         private const string _name = "name";
 
         [ConfigurationProperty(_name, IsKey = true)]

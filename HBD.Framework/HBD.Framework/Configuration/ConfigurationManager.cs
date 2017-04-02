@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections.Generic;
@@ -39,11 +39,11 @@ namespace HBD.Framework.Configuration
         }
 
         public static TSection GetSection<TSection>(string name = null) where TSection : ConfigurationSection
-        => name.IsNullOrEmpty()
-            ? GetSections<TSection>().FirstOrDefault()
-            : GetSections<TSection>()
-                .FirstOrDefault(
-                    s => string.Equals(s.SectionInformation.Name, name, StringComparison.CurrentCultureIgnoreCase));
+            => name.IsNullOrEmpty()
+                ? GetSections<TSection>().FirstOrDefault()
+                : GetSections<TSection>()
+                    .FirstOrDefault(
+                        s => string.Equals(s.SectionInformation.Name, name, StringComparison.CurrentCultureIgnoreCase));
 
         public static TSectionGroup GetSectionGroup<TSectionGroup>()
             where TSectionGroup : ConfigurationSectionGroup, new()
@@ -73,7 +73,7 @@ namespace HBD.Framework.Configuration
                 ? bool.TrueString.Equals(value, StringComparison.OrdinalIgnoreCase)
                 : Convert.ChangeType(value, type);
 
-            return (T)obj;
+            return (T) obj;
         }
 
         public static string GetConnectionString(string nameOrConnectionString)

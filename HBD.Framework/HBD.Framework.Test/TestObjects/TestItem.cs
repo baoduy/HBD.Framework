@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.ComponentModel;
@@ -27,10 +27,8 @@ namespace HBD.Framework.Test.TestObjects
         public string Name { get; set; }
     }
 
-    public class TestItem3 : ITem,IDisposable
+    public class TestItem3 : ITem, IDisposable
     {
-        public bool IsDisposed { get; private set; } = false;
-
         public TestItem3()
         {
         }
@@ -40,6 +38,8 @@ namespace HBD.Framework.Test.TestObjects
             Name = name;
         }
 
+        public bool IsDisposed { get; private set; }
+
         public TestEnum Type { get; set; } = TestEnum.Enum1;
 
         public string Description { get; set; }
@@ -47,9 +47,10 @@ namespace HBD.Framework.Test.TestObjects
         [Column("Summ")]
         public string Summary { get; set; }
 
+        public void Dispose() => IsDisposed = true;
+
         public int Id { get; set; }
         public string Name { get; set; }
-        public void Dispose() => this.IsDisposed = true;
     }
 
     public enum TestEnum

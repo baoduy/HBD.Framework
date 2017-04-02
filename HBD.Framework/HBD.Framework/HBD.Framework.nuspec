@@ -4,21 +4,14 @@
     <id>HBD.Framework</id>
     <version>$version$</version>
     <title>HBD.Framework</title>
-    <authors>Duy, Hoang</authors>
-    <owners>Duy, Hoang</owners>
+    <authors>Duy Hoang</authors>
+    <owners>Duy Hoang</owners>
     <description>
       The helpful library for .Net developers
     </description>
     <releaseNotes>
-      Version 1.0.5
-      - Add method to get ChangeTrackingEntry into ChangeTrackingCollection.
-      - Add ICancelableNotifyPropertyChanging and apply for NotifyPropertyChange object.
-      - Add TableHtmlGeneration that helps to generate a Html table from IGetSetterCollection, copy to clipboard. That table can be past to Word, Excel easily.
-      - Add ObservableSortedCollection
-      - Add SingletonWrapper.
-      - Add SingletonManager.
-      - Seperate the HBD.Framework.Data.Excel and HBD.Framework.Security.Azman
-      - Add NotNull attributes 
+      Version 1.0.6
+      - Add NotFoundException.
     </releaseNotes>
     <summary>
       The helpful library for .Net developers which support:

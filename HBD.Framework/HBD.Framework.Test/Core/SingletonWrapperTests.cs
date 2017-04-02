@@ -1,12 +1,16 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿#region using
+
 using HBD.Framework.Test.TestObjects;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+#endregion
 
 namespace HBD.Framework.Core.Tests
 {
-    [TestClass()]
+    [TestClass]
     public class SingletonWrapperTests
     {
-        [TestMethod()]
+        [TestMethod]
         public void SingleInstanceWrapperTest()
         {
             var count = 0;
@@ -27,7 +31,6 @@ namespace HBD.Framework.Core.Tests
             Assert.IsNotNull(a.Instance);
             Assert.AreNotEqual(i, a.Instance);
             Assert.IsTrue(count == 2);
-
         }
     }
 }

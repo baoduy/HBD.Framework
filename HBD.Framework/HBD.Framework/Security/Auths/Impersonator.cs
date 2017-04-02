@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.ComponentModel;
@@ -41,15 +41,7 @@ namespace HBD.Framework.Security.Auths
             }
         }
 
-        private WindowsIdentity Identity
-        {
-            get
-            {
-                if (_identity == null)
-                    _identity = new WindowsIdentity(Token.DangerousGetHandle());
-                return _identity;
-            }
-        }
+        private WindowsIdentity Identity => _identity ?? (_identity = new WindowsIdentity(Token.DangerousGetHandle()));
 
         public void Dispose()
         {

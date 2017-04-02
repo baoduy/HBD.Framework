@@ -1,115 +1,84 @@
+#region using
+
 using HBD.Framework.Attributes;
+
+#endregion
 
 namespace HBD.Framework.Data.HtmlGeneration
 {
     public enum StyleNames
     {
-        [EnumString("background-color")]
-        BackgroundColor,
+        [EnumString("background-color")] BackgroundColor,
 
-        [EnumString("border")]
-        Border,
+        [EnumString("border")] Border,
 
-        [EnumString("border-collapse")]
-        BorderCollapse,
+        [EnumString("border-collapse")] BorderCollapse,
 
-        [EnumString("border-color")]
-        BorderColor,
+        [EnumString("border-color")] BorderColor,
 
-        [EnumString("border-style")]
-        BorderStyle,
+        [EnumString("border-style")] BorderStyle,
 
-        [EnumString("border-spacing")]
-        BorderSpacing,
+        [EnumString("border-spacing")] BorderSpacing,
 
-        [EnumString("border-width")]
-        BorderWidth,
+        [EnumString("border-width")] BorderWidth,
 
-        [EnumString("color")]
-        Color,
+        [EnumString("color")] Color,
 
-        [EnumString("font-family")]
-        FontFamily,
+        [EnumString("font-family")] FontFamily,
 
-        [EnumString("font-size")]
-        FontSize,
+        [EnumString("font-size")] FontSize,
 
-        [EnumString("font-style")]
-        FontStyle,
+        [EnumString("font-style")] FontStyle,
 
-        [EnumString("font-weight")]
-        FontWeight,
+        [EnumString("font-weight")] FontWeight,
 
-        [EnumString("height")]
-        Height,
+        [EnumString("height")] Height,
 
-        [EnumString("text-decoration")]
-        TextDecoration,
+        [EnumString("text-decoration")] TextDecoration,
 
-        [EnumString("width")]
-        Width,
+        [EnumString("width")] Width,
 
-        [EnumString("direction")]
-        Direction,
+        [EnumString("direction")] Direction,
 
-        [EnumString("left")]
-        Left,
+        [EnumString("left")] Left,
 
-        [EnumString("margin")]
-        Margin,
+        [EnumString("margin")] Margin,
 
-        [EnumString("margin-bottom")]
-        MarginBottom,
+        [EnumString("margin-bottom")] MarginBottom,
 
-        [EnumString("margin-left")]
-        MarginLeft,
+        [EnumString("margin-left")] MarginLeft,
 
-        [EnumString("margin-right")]
-        MarginRight,
+        [EnumString("margin-right")] MarginRight,
 
-        [EnumString("margin-top")]
-        MarginTop,
+        [EnumString("margin-top")] MarginTop,
 
-        [EnumString("overflow")]
-        Overflow,
+        [EnumString("overflow")] Overflow,
 
-        [EnumString("overflow-x")]
-        OverflowX,
+        [EnumString("overflow-x")] OverflowX,
 
-        [EnumString("overflow-y")]
-        OverflowY,
+        [EnumString("overflow-y")] OverflowY,
 
-        [EnumString("padding")]
-        Padding,
+        [EnumString("padding")] Padding,
 
-        [EnumString("padding-bottom")]
-        PaddingBottom,
+        [EnumString("padding-bottom")] PaddingBottom,
 
-        [EnumString("padding-left")]
-        PaddingLeft,
+        [EnumString("padding-left")] PaddingLeft,
 
-        [EnumString("padding-right")]
-        PaddingRight,
+        [EnumString("padding-right")] PaddingRight,
 
-        [EnumString("padding-top")]
-        PaddingTop,
+        [EnumString("padding-top")] PaddingTop,
 
-        [EnumString("text-align")]
-        TextAlign,
+        [EnumString("text-align")] TextAlign,
 
-        [EnumString("vertical-align")]
-        VerticalAlign,
+        [EnumString("vertical-align")] VerticalAlign,
 
         //Didn't put DisplayValue for testing purpose.
         TextOverflow,
 
-        [EnumString("top")]
-        Top,
+        [EnumString("top")] Top,
 
-        [EnumString("visibility")]
-        Visibility,
+        [EnumString("visibility")] Visibility,
 
-        [EnumString("white-space")]
-        WhiteSpace,
+        [EnumString("white-space")] WhiteSpace
     }
 }

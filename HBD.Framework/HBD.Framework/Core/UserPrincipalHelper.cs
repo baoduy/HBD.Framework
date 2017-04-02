@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.DirectoryServices.AccountManagement;
@@ -12,7 +12,10 @@ namespace HBD.Framework.Core
     public static class UserPrincipalHelper
     {
         public static WindowsIdentity User
-         => EnvironmentExtension.IsHosted ? HttpContext.Current.User.Identity as WindowsIdentity : WindowsIdentity.GetCurrent();
+            =>
+                EnvironmentExtension.IsHosted
+                    ? HttpContext.Current.User.Identity as WindowsIdentity
+                    : WindowsIdentity.GetCurrent();
 
         public static string UserName => User.Name;
         public static string UserNameWithoutDomain => GetUserNameWithoutDomain(User.Name);
@@ -31,7 +34,7 @@ namespace HBD.Framework.Core
         }
 
         /// <summary>
-        /// Find User in Machine and Domain
+        ///     Find User in Machine and Domain
         /// </summary>
         /// <param name="displayName"></param>
         /// <returns></returns>
@@ -42,14 +45,18 @@ namespace HBD.Framework.Core
         {
             // set up Local context
             using (var ctx = new PrincipalContext(ContextType.Machine, Environment.MachineName))
+            {
                 return UserPrincipal.FindByIdentity(ctx, displayName);
+            }
         }
 
         public static UserPrincipal FindUserInDomain(string displayName)
         {
             // set up Local context
             using (var ctx = new PrincipalContext(ContextType.Domain))
+            {
                 return UserPrincipal.FindByIdentity(ctx, displayName);
+            }
         }
 
         public static bool IsUserExisted(string displayName)

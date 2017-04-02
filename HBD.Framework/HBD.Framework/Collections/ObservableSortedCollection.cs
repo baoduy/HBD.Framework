@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections;
@@ -14,22 +14,21 @@ using HBD.Framework.Core;
 namespace HBD.Framework.Collections
 {
     /// <summary>
-    /// The Observable SortedList
-    /// Note: TKey is not allows to duplicated.
+    ///     The Observable SortedList
+    ///     Note: TKey is not allows to duplicated.
     /// </summary>
     /// <typeparam name="TKey"></typeparam>
     /// <typeparam name="T"></typeparam>
-    public class ObservableSortedCollection<TKey, T> : ICollection<T>, ICollection, IReadOnlyList<T>, INotifyCollectionChanged, INotifyPropertyChanged where T:class, INotifyPropertyChanged
+    public class ObservableSortedCollection<TKey, T> : ICollection<T>, ICollection, IReadOnlyList<T>,
+        INotifyCollectionChanged, INotifyPropertyChanged where T : class, INotifyPropertyChanged
     {
-        protected bool StopRaisingEvent { get; set; } = false;
-        private const string CountString = "Count";
-        private const string IndexerName = "Item[]";
         private readonly string _keyPropertyName;
         private readonly Func<T, TKey> _keySelector;
+        private const string CountString = "Count";
+        private const string IndexerName = "Item[]";
 
         public ObservableSortedCollection(Expression<Func<T, TKey>> keySelector) : this(new List<T>(), keySelector)
         {
-
         }
 
         public ObservableSortedCollection(List<T> list, Expression<Func<T, TKey>> keySelector)
@@ -43,15 +42,17 @@ namespace HBD.Framework.Collections
             InternalList = list;
         }
 
+        protected bool StopRaisingEvent { get; set; } = false;
+
         protected SimpleMonitor Monitor { get; }
 
         protected List<T> InternalList { get; private set; }
 
-        public void CopyTo(Array array, int index) => ((ICollection)InternalList).CopyTo(array, index);
+        public void CopyTo(Array array, int index) => ((ICollection) InternalList).CopyTo(array, index);
 
-        public object SyncRoot => ((ICollection)InternalList).SyncRoot;
+        public object SyncRoot => ((ICollection) InternalList).SyncRoot;
 
-        public bool IsSynchronized => ((ICollection)InternalList).IsSynchronized;
+        public bool IsSynchronized => ((ICollection) InternalList).IsSynchronized;
 
         public IEnumerator<T> GetEnumerator() => InternalList.OrderBy(_keySelector).GetEnumerator();
 
@@ -111,11 +112,13 @@ namespace HBD.Framework.Collections
         protected virtual void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
         {
             if (StopRaisingEvent) return;
-            if (e.Action == NotifyCollectionChangedAction.Add && this.Count > 1)
-                this.InternalList = InternalList.OrderBy(_keySelector).ToList();
+            if (e.Action == NotifyCollectionChangedAction.Add && Count > 1)
+                InternalList = InternalList.OrderBy(_keySelector).ToList();
 
             using (Monitor.BlockReentrancy())
+            {
                 CollectionChanged?.Invoke(this, e);
+            }
         }
 
         protected virtual void OnPropertyChanged(string propertyName)
@@ -132,10 +135,12 @@ namespace HBD.Framework.Collections
 
         private void Item_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName != _keyPropertyName||StopRaisingEvent) return;
+            if (e.PropertyName != _keyPropertyName || StopRaisingEvent) return;
 
             lock (Monitor)
-                this.InternalList = InternalList.OrderBy(_keySelector).ToList();
+            {
+                InternalList = InternalList.OrderBy(_keySelector).ToList();
+            }
         }
     }
 }

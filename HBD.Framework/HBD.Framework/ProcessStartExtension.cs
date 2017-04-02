@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System.Diagnostics;
 
@@ -33,6 +33,8 @@ namespace HBD.Framework
 
             using (var process = Process.Start(@this))
             {
+                if (process == null) return string.Empty;
+
                 var str = process.StandardOutput.ReadToEnd();
                 process.WaitForExit();
                 process.Close();

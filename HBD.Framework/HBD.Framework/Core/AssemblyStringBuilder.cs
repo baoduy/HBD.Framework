@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 
@@ -34,7 +34,10 @@ namespace HBD.Framework.Core
                 assemblyFileName = array[1];
             }
             //fullTypeAndAsemblyName contains TypeName only.
-            else fullTypeName = fullTypeAndAsemblyName;
+            else
+            {
+                fullTypeName = fullTypeAndAsemblyName;
+            }
 
             return new AssemblyStringBuilder {FullTypeName = fullTypeName, AssemblyFileName = assemblyFileName};
         }

@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using HBD.Framework.Core;
 
@@ -8,11 +8,12 @@ namespace HBD.Framework.Test.TestObjects
 {
     public class NotifyPropertyChangedObject : NotifyPropertyChange
     {
+        private int _id;
         private TestItem _item;
         private string _name;
-        private int _id;
 
-        public int Id {
+        public int Id
+        {
             get { return _id; }
             set { SetValue(ref _id, value); }
         }

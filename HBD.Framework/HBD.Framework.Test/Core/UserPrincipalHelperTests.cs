@@ -1,17 +1,21 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿#region using
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+#endregion
 
 namespace HBD.Framework.Core.Tests
 {
-    [TestClass()]
+    [TestClass]
     public class UserPrincipalHelperTests
     {
-        [TestMethod()]
+        [TestMethod]
         public void GetUserNameWithoutDomain1_Test()
         {
             Assert.AreEqual(UserPrincipalHelper.GetUserNameWithoutDomain("baoduy@hbd.net"), "baoduy");
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void GetUserNameWithoutDomain2_Test()
         {
             Assert.AreEqual(UserPrincipalHelper.GetUserNameWithoutDomain("hbd\\baoduy"), "baoduy");

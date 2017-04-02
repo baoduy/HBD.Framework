@@ -2,6 +2,9 @@
 {
     public enum TextAlignValues
     {
-        Left, Right, Center, Justify
+        Left,
+        Right,
+        Center,
+        Justify
     }
 }

@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System.Collections.Generic;
 using System.Text;
@@ -25,7 +25,10 @@ namespace HBD.Framework
                     {
                         if (strBuild.Length <= 0) strBuild.Append(item.Value);
                     }
-                    else strBuild = strBuild.Replace(item.Key, item.Value);
+                    else
+                    {
+                        strBuild = strBuild.Replace(item.Key, item.Value);
+                    }
                 return strBuild.ToString();
             }
             foreach (var item in replaceItems)
@@ -33,7 +36,10 @@ namespace HBD.Framework
                 {
                     if (str.IsNullOrEmpty()) str = item.Value;
                 }
-                else str = str.Replace(item.Key, item.Value);
+                else
+                {
+                    str = str.Replace(item.Key, item.Value);
+                }
             return str;
         }
     }

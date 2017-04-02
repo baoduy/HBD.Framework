@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System.Linq;
 
@@ -20,8 +20,8 @@ namespace HBD.Framework.Data
                 var split = name.Split('.');
                 return string.Join(".", split.Select(GetSqlName));
             }
-            if ((name.Contains("[") && name.Contains("]"))
-                || (name.Contains("(") && name.Contains(")")))
+            if (name.Contains("[") && name.Contains("]")
+                || name.Contains("(") && name.Contains(")"))
                 return name;
             return $"[{name}]";
         }

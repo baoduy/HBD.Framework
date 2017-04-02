@@ -1,19 +1,19 @@
-﻿using HBD.Framework.Attributes;
+﻿#region using
+
+using HBD.Framework.Attributes;
+
+#endregion
 
 namespace HBD.Framework.Data.HtmlGeneration
 {
     public enum BorderStyleValues
     {
-        [EnumString("dotted")]
-        Dotted,
+        [EnumString("dotted")] Dotted,
 
-        [EnumString("solid")]
-        Solid,
+        [EnumString("solid")] Solid,
 
-        [EnumString("double")]
-        Double,
+        [EnumString("double")] Double,
 
-        [EnumString("dashed")]
-        Dashed
+        [EnumString("dashed")] Dashed
     }
 }

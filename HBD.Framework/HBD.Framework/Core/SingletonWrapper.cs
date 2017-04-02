@@ -1,4 +1,8 @@
-﻿using System;
+﻿#region using
+
+using System;
+
+#endregion
 
 namespace HBD.Framework.Core
 {
@@ -9,14 +13,15 @@ namespace HBD.Framework.Core
     }
 
     /// <summary>
-    /// Support to load instance of class 1 time only.
+    ///     Support to load instance of class 1 time only.
     /// </summary>
-    public class SingletonWrapper<T> : ISingletonWrapper, IDisposable
+    public class SingletonWrapper<T> : ISingletonWrapper
     {
         private readonly Func<T> _factoryFunc;
-        private bool _isLoaded = false;
-        private bool _isDisposed = false;
         private T _instance;
+        private bool _isDisposed;
+        private bool _isLoaded;
+
         public SingletonWrapper(Func<T> factoryFunc)
         {
             Guard.ArgumentIsNotNull(factoryFunc, nameof(factoryFunc));
@@ -28,7 +33,8 @@ namespace HBD.Framework.Core
             get
             {
                 if (_isDisposed)
-                    throw new ObjectDisposedException($"SingletonWrapper of {typeof(T).FullName}", $"SingletonWrapper of {typeof(T).FullName} is Disposed.");
+                    throw new ObjectDisposedException($"SingletonWrapper of {typeof(T).FullName}",
+                        $"SingletonWrapper of {typeof(T).FullName} is Disposed.");
 
                 if (_isLoaded) return _instance;
 
@@ -41,7 +47,7 @@ namespace HBD.Framework.Core
         object ISingletonWrapper.Instance => Instance;
 
         /// <summary>
-        /// Reset and load instance again on next accessing.
+        ///     Reset and load instance again on next accessing.
         /// </summary>
         public virtual void Reset() => _isLoaded = false;
 

@@ -1,4 +1,4 @@
-#region
+#region using
 
 using System.Collections.Generic;
 using System.Text;
@@ -9,6 +9,8 @@ namespace HBD.Framework.Data.HtmlGeneration
 {
     public class StyleCollection : Dictionary<string, string>
     {
+        public string this[StyleNames name] => this[name.ToStyleName()];
+
         public void Add(StyleNames name, string value)
             => Add(name.ToStyleName(), value);
 
@@ -18,9 +20,7 @@ namespace HBD.Framework.Data.HtmlGeneration
         public bool TryGetValue(StyleNames name, out string value)
             => base.TryGetValue(name.ToStyleName(), out value);
 
-        public string this[StyleNames name] => this[name.ToStyleName()];
-
-        public virtual bool ContainsKey(StyleNames name) => this.ContainsKey(name.ToStyleName());
+        public virtual bool ContainsKey(StyleNames name) => ContainsKey(name.ToStyleName());
 
         public override string ToString()
         {

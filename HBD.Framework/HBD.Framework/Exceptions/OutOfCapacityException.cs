@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 
@@ -8,7 +8,7 @@ namespace HBD.Framework.Exceptions
 {
     public class OutOfCapacityException : Exception
     {
-        public OutOfCapacityException() : base($"The value is out of capacity.")
+        public OutOfCapacityException() : base("The value is out of capacity.")
         {
         }
 

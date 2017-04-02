@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System.Data;
 using System.Linq;
@@ -14,7 +14,7 @@ namespace HBD.Framework.Data
             ColumnNamingType columnNamingType = ColumnNamingType.Auto)
         {
             if (@this == null) return null;
-         
+
             var geters = @this.ToList();
             var data = new DataTable(@this.Name);
             var index = 0;
@@ -40,7 +40,6 @@ namespace HBD.Framework.Data
                 data.AddMoreColumns(vals.Length, columnNamingType);
                 data.Rows.Add(vals);
             }
-            ;
 
             return data;
         }

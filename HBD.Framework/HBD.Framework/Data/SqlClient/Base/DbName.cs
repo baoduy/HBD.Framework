@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using HBD.Framework.Core;
@@ -36,8 +36,8 @@ namespace HBD.Framework.Data.SqlClient.Base
             Name = name;
         }
 
-        public string Schema { get; set; }
-        public string Name { get; set; }
+        public string Schema { get; }
+        public string Name { get; }
         public string FullName => Common.GetFullName(Schema, Name);
 
         public int CompareTo(DbName other)
@@ -51,20 +51,26 @@ namespace HBD.Framework.Data.SqlClient.Base
         {
             if (fullName.IsNullOrEmpty()) return null;
             string schema = null;
-            string name = null;
+            string name;
 
             if (fullName.Contains("."))
             {
                 var splited = fullName.Split('.');
                 if (splited.Length <= 0) return null;
-                if (splited.Length == 1) name = splited[0];
+                if (splited.Length == 1)
+                {
+                    name = splited[0];
+                }
                 else
                 {
                     schema = splited[0];
                     name = splited[1];
                 }
             }
-            else name = fullName;
+            else
+            {
+                name = fullName;
+            }
 
             return name.IsNullOrEmpty() ? null : new DbName(schema, name);
         }
@@ -77,10 +83,13 @@ namespace HBD.Framework.Data.SqlClient.Base
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            if (obj is DbName)
-                return CompareTo((DbName) obj) == 0;
-            if (obj is string)
-                return CompareTo((string) obj) == 0;
+            var name = obj as DbName;
+            if (name != null)
+                return CompareTo(name) == 0;
+
+            var s = obj as string;
+            if (s != null)
+                return CompareTo(s) == 0;
             return false;
         }
 

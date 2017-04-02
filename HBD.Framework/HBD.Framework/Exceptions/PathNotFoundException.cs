@@ -1,10 +1,10 @@
-﻿#region
+﻿#region using
 
 using System.IO;
 
 #endregion
 
-namespace HBD.Framework.Core.Exceptions
+namespace HBD.Framework.Exceptions
 {
     public class PathNotFoundException : DirectoryNotFoundException
     {

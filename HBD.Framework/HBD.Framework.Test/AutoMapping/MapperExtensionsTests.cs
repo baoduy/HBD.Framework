@@ -1,10 +1,11 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using HBD.Framework.Data;
 using HBD.Framework.Test.TestObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -45,7 +46,9 @@ namespace HBD.Framework.AutoMapping.Tests
         private void AssertResults(bool ignoreEmptyRows = true)
         {
             if (ignoreEmptyRows)
+            {
                 Assert.AreEqual(2, results.Count);
+            }
             else
             {
                 Assert.AreEqual(3, results.Count);

@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System.Configuration;
 
@@ -11,7 +11,7 @@ namespace HBD.Framework.Configuration.Base
     {
         [ConfigurationProperty("", IsDefaultCollection = true)]
         [ConfigurationCollection(typeof(ConfigurationElement), AddItemName = "add", ClearItemsName = "clear",
-             RemoveItemName = "remove")]
+            RemoveItemName = "remove")]
         public ConfigurationCollection<TElement> Elements => this[""] as ConfigurationCollection<TElement>;
     }
 }

@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections.Generic;
@@ -26,8 +26,8 @@ namespace HBD.Framework
             if (@this == null) yield break;
 
             foreach (var lamdar in @this)
-                foreach (var p in lamdar.ExtractProperties())
-                    yield return p;
+            foreach (var p in lamdar.ExtractProperties())
+                yield return p;
         }
 
         public static IEnumerable<PropertyInfo> ExtractProperties<T, TKey>(this Expression<Func<T, TKey>> @this)
@@ -105,10 +105,8 @@ namespace HBD.Framework
                 var value = @this.GetValueFromProperty(p);
                 var left = Expression.Property(pe, p);
                 var right = Expression.Constant(value);
-                if (expression == null)
-                    expression = Expression.Equal(left, right);
-                else
-                    expression = Expression.And(expression, Expression.Equal(left, right));
+
+                expression = expression == null ? Expression.Equal(left, right) : Expression.And(expression, Expression.Equal(left, right));
             }
 
             return Expression.Lambda(expression, pe);
@@ -126,10 +124,8 @@ namespace HBD.Framework
                 var value = k.Value;
                 var left = Expression.Property(pe, k.Key);
                 var right = Expression.Constant(value);
-                if (expression == null)
-                    expression = Expression.Equal(left, right);
-                else
-                    expression = Expression.And(expression, Expression.Equal(left, right));
+
+                expression = expression == null ? Expression.Equal(left, right) : Expression.And(expression, Expression.Equal(left, right));
             }
 
             return Expression.Lambda(expression, pe);
@@ -146,10 +142,8 @@ namespace HBD.Framework
             {
                 var left = Expression.Property(pe, p);
                 var right = Expression.Constant(value);
-                if (expression == null)
-                    expression = Expression.Call(left, ContainsMethod, right);
-                else
-                    expression = Expression.Or(expression, Expression.Call(left, ContainsMethod, right));
+
+                expression = expression == null ? Expression.Call(left, ContainsMethod, right) : Expression.Or(expression, Expression.Call(left, ContainsMethod, right));
             }
 
             return Expression.Lambda(expression, pe);

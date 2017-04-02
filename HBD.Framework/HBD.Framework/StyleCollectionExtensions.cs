@@ -1,8 +1,12 @@
-﻿using HBD.Framework.Data;
-using HBD.Framework.Data.HtmlGeneration;
+﻿#region using
+
 using System;
 using System.Drawing;
 using System.Linq;
+using HBD.Framework.Data;
+using HBD.Framework.Data.HtmlGeneration;
+
+#endregion
 
 namespace HBD.Framework
 {
@@ -26,13 +30,15 @@ namespace HBD.Framework
             return @this;
         }
 
-        public static StyleCollection AddBorder(this StyleCollection @this, string borderWidth, BorderStyleValues value, Color color)
+        public static StyleCollection AddBorder(this StyleCollection @this, string borderWidth, BorderStyleValues value,
+            Color color)
         {
             @this.Add(StyleNames.Border, $"{borderWidth} {value.ToStyleName()} {color.ToHtmlCode()}");
             return @this;
         }
 
-        public static StyleCollection AddBorder(this StyleCollection @this, int borderWidth, BorderStyleValues value, Color color)
+        public static StyleCollection AddBorder(this StyleCollection @this, int borderWidth, BorderStyleValues value,
+            Color color)
             => @this.AddBorder($"{borderWidth}px", value, color);
 
         public static StyleCollection AddBorderCollapse(this StyleCollection @this, BorderCollapseValue value)

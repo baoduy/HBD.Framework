@@ -1,12 +1,12 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Data;
 using System.Data.SqlTypes;
 using System.Text;
 using HBD.Framework.Core;
-using HBD.Framework.Data.SqlClient;
 using HBD.Framework.Data.SqlClient.Base;
+using HBD.Framework.Data.SqlClient.Extensions;
 using HBD.Framework.Exceptions;
 
 #endregion

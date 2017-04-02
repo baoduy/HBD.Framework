@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections.Generic;
@@ -55,7 +55,7 @@ namespace HBD.Framework.Data.SSDT
         }
 
         public virtual Task GenerateAsync(IEnumerable<DataTable> tables,
-                MergeScriptOption option = MergeScriptOption.Default, Action<string> updateStatus = null)
+            MergeScriptOption option = MergeScriptOption.Default, Action<string> updateStatus = null)
             => Task.Run(() => Generate(tables, option, updateStatus));
 
         /// <summary>
@@ -154,8 +154,8 @@ namespace HBD.Framework.Data.SSDT
 
         public static string GetFileName(string tableName)
             =>
-            string.Format(DefaultOutputFileName,
-                tableName.Replace("[", string.Empty).Replace("]", string.Empty).Replace(" ", string.Empty));
+                string.Format(DefaultOutputFileName,
+                    tableName.Replace("[", string.Empty).Replace("]", string.Empty).Replace(" ", string.Empty));
 
         public virtual void AddHeader(StringBuilder builder)
         {
@@ -219,7 +219,7 @@ namespace HBD.Framework.Data.SSDT
                 }
                 else if (obj is DateTime)
                 {
-                    builder.AppendFormat("'{0}'", ((DateTime) obj).ToString("yyyy-MM-dd hh:mm:ss"));
+                    builder.AppendFormat("'{0:yyyy-MM-dd hh:mm:ss}'", (DateTime) obj);
                 }
                 else
                 {

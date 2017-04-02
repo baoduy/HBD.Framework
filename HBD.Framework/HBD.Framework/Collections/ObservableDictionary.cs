@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections;
@@ -82,7 +82,9 @@ namespace HBD.Framework.Collections
         protected virtual void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
         {
             using (Monitor.BlockReentrancy())
+            {
                 CollectionChanged?.Invoke(this, e);
+            }
         }
 
         private void OnCollectionChanged()

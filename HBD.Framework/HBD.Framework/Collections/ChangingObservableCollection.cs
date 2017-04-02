@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections.ObjectModel;
@@ -14,7 +14,7 @@ namespace HBD.Framework.Collections
     ///     The extension of ObservableCollection that support INotifyCollectionChanging,
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    [DebuggerDisplay("Count = {Count}")]
+    [DebuggerDisplay("Count = {" + nameof(Count) + "}")]
     public class ChangingObservableCollection<T> : ObservableCollection<T>,
         INotifyCollectionChanging, ISupportInitialize
     {

@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System.Collections.Specialized;
 using System.Linq;
@@ -73,7 +73,7 @@ namespace HBD.Framework.Collections.Tests
             coll.Add(new TestItem {Id = 2});
             coll.Clear();
 
-            Assert.IsTrue(propertyEvent == 2*3);
+            Assert.IsTrue(propertyEvent == 2 * 3);
             Assert.IsTrue(changedEvent == 3);
         }
     }

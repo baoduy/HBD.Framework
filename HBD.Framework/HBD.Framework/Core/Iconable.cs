@@ -1,7 +1,7 @@
 ﻿namespace HBD.Framework.Core
 {
     /// <summary>
-    /// The object that has an Icon property.
+    ///     The object that has an Icon property.
     /// </summary>
     public abstract class Iconable : NotifyPropertyChange
     {

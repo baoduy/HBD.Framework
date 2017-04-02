@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections.Generic;
@@ -62,13 +62,13 @@ namespace HBD.Framework
             if (@this.IsNullOrEmpty()) yield break;
 
             foreach (var f in dateFormatStrings.Select(f => f.ToDateExtractRegex()).Where(f => f != null))
-                foreach (Match match in f.Item2.Matches(@this))
-                {
-                    if (!match.Success) continue;
-                    DateTime dt;
-                    if (DateTime.TryParseExact(match.Value, f.Item1, null, DateTimeStyles.None, out dt))
-                        yield return dt;
-                }
+            foreach (Match match in f.Item2.Matches(@this))
+            {
+                if (!match.Success) continue;
+                DateTime dt;
+                if (DateTime.TryParseExact(match.Value, f.Item1, null, DateTimeStyles.None, out dt))
+                    yield return dt;
+            }
         }
     }
 }

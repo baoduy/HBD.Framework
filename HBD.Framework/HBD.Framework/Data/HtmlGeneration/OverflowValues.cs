@@ -2,6 +2,9 @@
 {
     public enum OverflowValues
     {
-        Visible, Hidden, Scroll, Auto
+        Visible,
+        Hidden,
+        Scroll,
+        Auto
     }
 }

@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections.Generic;
@@ -39,31 +39,31 @@ namespace HBD.Framework
         }
 
         /// <summary>
-        /// Check whether IEnumerable has NO item or not.
-        /// If IEnumerable is NULL then return FALSE.
+        ///     Check whether IEnumerable has NO item or not.
+        ///     If IEnumerable is NULL then return FALSE.
         /// </summary>
         public static bool NotAnyItem<T>(this IEnumerable<T> @this) => !@this.AnyItem();
 
         /// <summary>
-        /// Check whether IEnumerable has any item or not.
-        /// If IEnumerable is NULL then return FALSE.
+        ///     Check whether IEnumerable has any item or not.
+        ///     If IEnumerable is NULL then return FALSE.
         /// </summary>
         public static bool AnyItem<T>(this IEnumerable<T> @this) => @this?.Any() == true;
 
         /// <summary>
-        ///  Check whether IDictionary has NO item or not.
-        /// If IDictionary is NULL then return FALSE.
+        ///     Check whether IDictionary has NO item or not.
+        ///     If IDictionary is NULL then return FALSE.
         /// </summary>
         public static bool NotAnyItem<TKey, TValue>(this IDictionary<TKey, TValue> @this) => !@this.AnyItem();
 
         /// <summary>
-        /// Check whether IDictionary has any item or not.
-        /// If IDictionary is NULL then return FALSE.
+        ///     Check whether IDictionary has any item or not.
+        ///     If IDictionary is NULL then return FALSE.
         /// </summary>
         public static bool AnyItem<TKey, TValue>(this IDictionary<TKey, TValue> @this) => @this?.Count > 0;
 
         /// <summary>
-        /// Check whether the collection whether it has duplicate items.
+        ///     Check whether the collection whether it has duplicate items.
         /// </summary>
         public static bool DuplicatedItems<T, TKey>(this ICollection<T> @this, Func<T, TKey> keySelector)
             where T : class where TKey : struct
@@ -71,9 +71,9 @@ namespace HBD.Framework
             if (@this == null || keySelector == null) return false;
 
             return (from i in @this
-                    from y in @this
-                    where i != null && y != null && i != y && keySelector(i).Equals(keySelector(y))
-                    select i).Any();
+                from y in @this
+                where i != null && y != null && i != y && keySelector(i).Equals(keySelector(y))
+                select i).Any();
         }
 
         public static bool DuplicatedItems<T>(this ICollection<T> @this, Func<T, string> keySelector) where T : class
@@ -81,9 +81,9 @@ namespace HBD.Framework
             if (@this == null || keySelector == null) return false;
 
             return (from i in @this
-                    from y in @this
-                    where i != null && y != null && i != y && keySelector(i).Equals(keySelector(y))
-                    select i).Any();
+                from y in @this
+                where i != null && y != null && i != y && keySelector(i).Equals(keySelector(y))
+                select i).Any();
         }
 
         public static IDictionary<TKey, TValue> ToDictionary<T, TKey, TValue>(this ICollection<T> @this,

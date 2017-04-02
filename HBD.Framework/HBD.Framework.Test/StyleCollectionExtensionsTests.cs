@@ -1,21 +1,25 @@
-﻿using HBD.Framework.Data;
+﻿#region using
+
+using System.Drawing;
+using HBD.Framework.Data;
 using HBD.Framework.Data.HtmlGeneration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Drawing;
+
+#endregion
 
 namespace HBD.Framework.Tests
 {
-    [TestClass()]
+    [TestClass]
     public class StyleCollectionExtensionsTests
     {
-        [TestMethod()]
+        [TestMethod]
         public void ToStyleNameTest()
         {
             Assert.IsTrue(StyleNames.TextOverflow.ToStyleName() == "text-overflow");
             Assert.IsTrue(DirectionValues.LeftToRight.ToStyleName() == "ltr");
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddBackgroundColorTest()
         {
             var coll = new StyleCollection();
@@ -23,7 +27,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.BackgroundColor));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddBackgroundColorTest1()
         {
             var coll = new StyleCollection();
@@ -31,7 +35,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.BackgroundColor));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddBorderTest()
         {
             var coll = new StyleCollection();
@@ -39,7 +43,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Border));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddBorderTest1()
         {
             var coll = new StyleCollection();
@@ -47,7 +51,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Border));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddBorderCollapseTest()
         {
             var coll = new StyleCollection();
@@ -55,7 +59,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.BorderCollapse));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddBorderColorTest()
         {
             var coll = new StyleCollection();
@@ -63,7 +67,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.BorderColor));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddBorderColorTest1()
         {
             var coll = new StyleCollection();
@@ -71,7 +75,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.BorderColor));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddBorderStyleTest()
         {
             var coll = new StyleCollection();
@@ -79,7 +83,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.BorderStyle));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddBorderSpacingTest()
         {
             var coll = new StyleCollection();
@@ -87,7 +91,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.BorderSpacing));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddBorderSpacingTest1()
         {
             var coll = new StyleCollection();
@@ -95,7 +99,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.BorderSpacing));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddBorderWidthTest()
         {
             var coll = new StyleCollection();
@@ -103,7 +107,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.BorderWidth));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddBorderWidthTest1()
         {
             var coll = new StyleCollection();
@@ -111,7 +115,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.BorderWidth));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddColorTest()
         {
             var coll = new StyleCollection();
@@ -119,7 +123,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Color));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddColorTest1()
         {
             var coll = new StyleCollection();
@@ -127,7 +131,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Color));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddFontFamilyTest()
         {
             var coll = new StyleCollection();
@@ -135,7 +139,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.FontFamily));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddFontSizeTest()
         {
             var coll = new StyleCollection();
@@ -143,7 +147,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.FontSize));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddFontSizeTest1()
         {
             var coll = new StyleCollection();
@@ -151,7 +155,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.FontSize));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddFontStyleTest()
         {
             var coll = new StyleCollection();
@@ -159,7 +163,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.FontStyle));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddFontWeightTest()
         {
             var coll = new StyleCollection();
@@ -167,7 +171,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.FontWeight));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddHeightTest()
         {
             var coll = new StyleCollection();
@@ -175,7 +179,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Height));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddHeightTest1()
         {
             var coll = new StyleCollection();
@@ -183,7 +187,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Height));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddWidthTest()
         {
             var coll = new StyleCollection();
@@ -191,7 +195,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Width));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddWidthTest1()
         {
             var coll = new StyleCollection();
@@ -199,7 +203,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Width));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddTextDecorationTest()
         {
             var coll = new StyleCollection();
@@ -207,7 +211,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.TextDecoration));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddDirectionTest()
         {
             var coll = new StyleCollection();
@@ -215,7 +219,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Direction));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddLeftTest()
         {
             var coll = new StyleCollection();
@@ -223,7 +227,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Left));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddLeftTest1()
         {
             var coll = new StyleCollection();
@@ -231,7 +235,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Left));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddMarginTest()
         {
             var coll = new StyleCollection();
@@ -239,23 +243,23 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Margin));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddMarginTest1()
         {
             var coll = new StyleCollection();
-            coll.AddMargin(11,12,12);
+            coll.AddMargin(11, 12, 12);
             Assert.IsTrue(coll.ContainsKey(StyleNames.Margin));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddMarginTest2()
         {
             var coll = new StyleCollection();
-            coll.AddMargin(11, 12, 12,13);
+            coll.AddMargin(11, 12, 12, 13);
             Assert.IsTrue(coll.ContainsKey(StyleNames.Margin));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddMarginTest3()
         {
             var coll = new StyleCollection();
@@ -263,7 +267,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Margin));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddMarginBottomTest()
         {
             var coll = new StyleCollection();
@@ -271,7 +275,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.MarginBottom));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddMarginLeftTest()
         {
             var coll = new StyleCollection();
@@ -279,7 +283,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.MarginLeft));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddMarginRightTest()
         {
             var coll = new StyleCollection();
@@ -287,7 +291,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.MarginRight));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddMarginTopTest()
         {
             var coll = new StyleCollection();
@@ -295,7 +299,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.MarginTop));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddOverflowTest()
         {
             var coll = new StyleCollection();
@@ -303,7 +307,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Overflow));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddOverflowXTest()
         {
             var coll = new StyleCollection();
@@ -311,7 +315,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.OverflowX));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddOverflowYTest()
         {
             var coll = new StyleCollection();
@@ -319,7 +323,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.OverflowY));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddPaddingTest()
         {
             var coll = new StyleCollection();
@@ -327,31 +331,31 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Padding));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddPaddingTest1()
         {
             var coll = new StyleCollection();
-            coll.AddPadding(11,12);
+            coll.AddPadding(11, 12);
             Assert.IsTrue(coll.ContainsKey(StyleNames.Padding));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddPaddingTest2()
         {
             var coll = new StyleCollection();
-            coll.AddPadding(11,12,13);
+            coll.AddPadding(11, 12, 13);
             Assert.IsTrue(coll.ContainsKey(StyleNames.Padding));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddPaddingTest3()
         {
             var coll = new StyleCollection();
-            coll.AddPadding(11,12,13,14);
+            coll.AddPadding(11, 12, 13, 14);
             Assert.IsTrue(coll.ContainsKey(StyleNames.Padding));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddPaddingBottomTest()
         {
             var coll = new StyleCollection();
@@ -359,7 +363,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.PaddingBottom));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddPaddingLeftTest()
         {
             var coll = new StyleCollection();
@@ -367,7 +371,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.PaddingLeft));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddPaddingRightTest()
         {
             var coll = new StyleCollection();
@@ -375,7 +379,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.PaddingRight));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddPaddingTopTest()
         {
             var coll = new StyleCollection();
@@ -383,7 +387,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.PaddingTop));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddTextAlignTest()
         {
             var coll = new StyleCollection();
@@ -391,7 +395,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.TextAlign));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddVerticalAlignTest()
         {
             var coll = new StyleCollection();
@@ -399,7 +403,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.VerticalAlign));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddTextOverflowTest()
         {
             var coll = new StyleCollection();
@@ -407,7 +411,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.TextOverflow));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddTopTest()
         {
             var coll = new StyleCollection();
@@ -415,7 +419,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Top));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddTopTest1()
         {
             var coll = new StyleCollection();
@@ -423,7 +427,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Top));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddVisibilityTest()
         {
             var coll = new StyleCollection();
@@ -431,7 +435,7 @@ namespace HBD.Framework.Tests
             Assert.IsTrue(coll.ContainsKey(StyleNames.Visibility));
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void AddWhiteSpaceTest()
         {
             var coll = new StyleCollection();

@@ -2,6 +2,10 @@
 {
     public enum WhiteSpaceValues
     {
-        Normal, Nowrap, Pre, PreLine, PreWrap
+        Normal,
+        Nowrap,
+        Pre,
+        PreLine,
+        PreWrap
     }
 }

@@ -2,6 +2,8 @@
 {
     public enum TextOverflowValues
     {
-        Clip, Ellipsis, String
+        Clip,
+        Ellipsis,
+        String
     }
 }

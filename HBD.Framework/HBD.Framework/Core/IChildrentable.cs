@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System.Collections;
 
@@ -6,7 +6,7 @@ using System.Collections;
 
 namespace HBD.Framework.Core
 {
-    public interface IChildrentable<T> where T : ICollection
+    public interface IChildrentable<out T> where T : ICollection
     {
         T Children { get; }
     }

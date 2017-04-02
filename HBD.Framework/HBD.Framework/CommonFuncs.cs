@@ -1,15 +1,19 @@
-﻿using System;
+﻿#region using
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using HBD.Framework.Core;
 using HBD.Framework.Exceptions;
+
+#endregion
 
 namespace HBD.Framework
 {
     public static class CommonFuncs
     {
         /// <summary>
-        /// Get Datatable colum name as format F1,F2,F3,F4
+        ///     Get Datatable colum name as format F1,F2,F3,F4
         /// </summary>
         /// <param name="columnIndex"></param>
         /// <returns></returns>
@@ -23,7 +27,7 @@ namespace HBD.Framework
         public static int GetColumnIndex(string columnName)
         {
             Guard.ArgumentIsNotNull(columnName, nameof(columnName));
-            var index = -1;
+            int index;
 
             if (int.TryParse(columnName.Remove(0, 1), out index))
                 return index - 1;
@@ -65,14 +69,14 @@ namespace HBD.Framework
         {
             Guard.ArgumentIsNotNull(columnName, nameof(columnName));
 
-            if (columnName.Any(c => (c < 'A') || (c > 'Z')))
+            if (columnName.Any(c => c < 'A' || c > 'Z'))
                 throw new ArgumentOutOfRangeException(nameof(columnName));
 
             var colIndex = 0;
-            for (int i = 0, pow = columnName.Count() - 1; i < columnName.Count(); ++i, --pow)
+            for (int i = 0, pow = columnName.Length - 1; i < columnName.Length; ++i, --pow)
             {
                 var cVal = Convert.ToInt32(columnName[i]) - 64;
-                colIndex += cVal * (int)Math.Pow(26, pow);
+                colIndex += cVal * (int) Math.Pow(26, pow);
             }
             return colIndex - 1;
         }

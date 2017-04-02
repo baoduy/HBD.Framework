@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using HBD.Framework.Exceptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

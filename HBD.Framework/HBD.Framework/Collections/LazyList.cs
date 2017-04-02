@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections;
@@ -15,7 +15,7 @@ namespace HBD.Framework.Collections
     ///     The LazyList will execute loadItemAction method at the first item accessing.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    [DebuggerDisplay("Count = {Count}")]
+    [DebuggerDisplay("Count = {" + nameof(Count) + "}")]
     public class LazyList<T> : IList<T>, INotifyCollectionChanging, INotifyCollectionChanged
     {
         private readonly Func<bool> _canLoadItems;

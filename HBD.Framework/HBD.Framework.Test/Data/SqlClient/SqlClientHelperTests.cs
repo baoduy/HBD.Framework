@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,6 @@ using System.Data.Fakes;
 using System.Data.SqlClient;
 using System.Data.SqlClient.Fakes;
 using System.Linq;
-using HBD.Framework.Data;
 using HBD.Framework.Data.Csv;
 using HBD.Framework.Data.SqlClient;
 using HBD.Framework.Data.SqlClient.Base;

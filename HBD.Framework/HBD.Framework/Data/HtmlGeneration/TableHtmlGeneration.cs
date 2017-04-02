@@ -1,10 +1,10 @@
-﻿#region
+﻿#region using
 
-using HBD.Framework.Core;
-using HBD.Framework.Data.GetSetters;
 using System;
 using System.Linq;
 using System.Text;
+using HBD.Framework.Core;
+using HBD.Framework.Data.GetSetters;
 
 #endregion
 

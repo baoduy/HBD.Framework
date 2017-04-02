@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System.Collections.Generic;
 using System.Data;
@@ -24,19 +24,19 @@ namespace HBD.Framework.Data.Base
 
         #region Constructors
 
-        protected DataClientAdapter([NotNull]string nameOrConnectionString)
+        protected DataClientAdapter([NotNull] string nameOrConnectionString)
         {
             ConnectionString = CreateConnectionString(ConfigurationManager.GetConnectionString(nameOrConnectionString));
             Connection = CreateConnection();
         }
 
-        protected DataClientAdapter([NotNull]DbConnectionStringBuilder connectionStringBuilder)
+        protected DataClientAdapter([NotNull] DbConnectionStringBuilder connectionStringBuilder)
         {
             ConnectionString = connectionStringBuilder;
             Connection = CreateConnection();
         }
 
-        protected DataClientAdapter([NotNull]IDbConnection connection)
+        protected DataClientAdapter([NotNull] IDbConnection connection)
         {
             Guard.ArgumentIsNotNull(connection, nameof(connection));
             Connection = connection;

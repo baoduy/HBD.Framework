@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections.Specialized;
@@ -86,11 +86,11 @@ namespace HBD.Framework.Collections
             OnCollectionChanged(new NotifyCollectionChangedEventArgs(action, changedItem));
         }
 
-        private void OnCollectionChanged(NotifyCollectionChangedAction action, T newItem, T oldItem)
-        {
-            RaisePropertyChanged();
-            OnCollectionChanged(new NotifyCollectionChangedEventArgs(action, newItem, oldItem));
-        }
+        //private void OnCollectionChanged(NotifyCollectionChangedAction action, T newItem, T oldItem)
+        //{
+        //    RaisePropertyChanged();
+        //    OnCollectionChanged(new NotifyCollectionChangedEventArgs(action, newItem, oldItem));
+        //}
 
         #region Events
 

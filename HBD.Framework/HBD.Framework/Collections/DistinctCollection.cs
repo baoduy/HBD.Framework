@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections;
@@ -18,7 +18,7 @@ namespace HBD.Framework.Collections
     /// </summary>
     /// <typeparam name="TKey"></typeparam>
     /// <typeparam name="T"></typeparam>
-    [DebuggerDisplay("Count = {Count}")]
+    [DebuggerDisplay("Count = {" + nameof(Count) + "}")]
     public class DistinctCollection<TKey, T> : ICollection<T>
     {
         public DistinctCollection(Func<T, TKey> getKeyFunc)

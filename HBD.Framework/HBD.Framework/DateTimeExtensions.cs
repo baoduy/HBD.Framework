@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using HBD.Framework.Core;
@@ -22,11 +22,7 @@ namespace HBD.Framework
             return @this.Month <= 9 ? 3 : 4;
         }
 
-        public static DateTime? LastDayOfMoth(this DateTime? @this)
-        {
-            if (@this == null) return null;
-            return @this.Value.LastDayOfMoth();
-        }
+        public static DateTime? LastDayOfMoth(this DateTime? @this) => @this?.LastDayOfMoth();
 
         public static DateTime LastDayOfMoth(this DateTime @this)
         {

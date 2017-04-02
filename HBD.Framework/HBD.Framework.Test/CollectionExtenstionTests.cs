@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections.Generic;
@@ -10,19 +10,19 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace HBD.Framework.Tests
 {
-    [TestClass()]
+    [TestClass]
     public class CollectionExtenstionTests
     {
-        [TestMethod()]
+        [TestMethod]
         public void NotAnyItemTest()
         {
-            var list = new string[] {"hoang"};
+            var list = new[] {"hoang"};
 
             Assert.IsTrue(list.AnyItem());
             Assert.IsFalse(list.NotAnyItem());
 
-            Assert.IsFalse(((ICollection<object>)null).AnyItem());
-            Assert.IsTrue(((ICollection<object>)null).NotAnyItem());
+            Assert.IsFalse(((ICollection<object>) null).AnyItem());
+            Assert.IsTrue(((ICollection<object>) null).NotAnyItem());
         }
 
         [TestMethod]
@@ -30,7 +30,7 @@ namespace HBD.Framework.Tests
         [ExpectedException(typeof(NotSupportedException))]
         public void AddRange_WithReadOnlyArray_Test()
         {
-            new object[] { }.AddRange(new object[] { });
+            new object[] {}.AddRange(new object[] {});
         }
 
         [TestMethod]
@@ -78,18 +78,18 @@ namespace HBD.Framework.Tests
             Assert.IsFalse(list.DuplicatedItems(t => t.Name));
             Assert.IsFalse(list.DuplicatedItems(t => t.Id));
 
-            list = new List<TestItem> { new TestItem { Name = "A" }, new TestItem { Name = "A" } };
+            list = new List<TestItem> {new TestItem {Name = "A"}, new TestItem {Name = "A"}};
             Assert.IsTrue(list.DuplicatedItems(t => t.Name));
             Assert.IsFalse(list.DuplicatedItems(null));
 
-            list = new List<TestItem> { new TestItem { Name = "A" } };
+            list = new List<TestItem> {new TestItem {Name = "A"}};
             Assert.IsFalse(list.DuplicatedItems(t => t.Name));
 
-            list = new List<TestItem> { new TestItem { Id = 1 }, new TestItem { Id = 1 } };
+            list = new List<TestItem> {new TestItem {Id = 1}, new TestItem {Id = 1}};
             Assert.IsTrue(list.DuplicatedItems(t => t.Id));
             Assert.IsFalse(list.DuplicatedItems(null));
 
-            list = new List<TestItem> { new TestItem { Id = 1 } };
+            list = new List<TestItem> {new TestItem {Id = 1}};
             Assert.IsFalse(list.DuplicatedItems(t => t.Id));
         }
 
@@ -97,8 +97,8 @@ namespace HBD.Framework.Tests
         [TestCategory("Fw.Extensions")]
         public void MergeFrom_ListToList1_Test()
         {
-            var list1 = new List<TestItem> { new TestItem { Name = "A" } };
-            var list2 = new List<TestItem> { new TestItem { Name = "A" }, new TestItem { Name = "B" } };
+            var list1 = new List<TestItem> {new TestItem {Name = "A"}};
+            var list2 = new List<TestItem> {new TestItem {Name = "A"}, new TestItem {Name = "B"}};
 
             list1.MergeFrom(null, null);
             Assert.IsTrue(list1.Count == 1);
@@ -121,7 +121,7 @@ namespace HBD.Framework.Tests
         [TestCategory("Fw.Extensions")]
         public void MergeFrom_ListToList2_Test()
         {
-            var list1 = new List<TestItem> { new TestItem { Id = 1, Name = "A" } };
+            var list1 = new List<TestItem> {new TestItem {Id = 1, Name = "A"}};
             var list2 = new List<TestItem>
             {
                 new TestItem {Id = 2, Name = "A"},
@@ -144,7 +144,7 @@ namespace HBD.Framework.Tests
         [TestCategory("Fw.Extensions")]
         public void MergeFrom_DicToList_Test()
         {
-            var list1 = new List<TestItem> { new TestItem { Name = "A" } };
+            var list1 = new List<TestItem> {new TestItem {Name = "A"}};
             var list2 = new Dictionary<string, TestItem>
             {
                 {"A", new TestItem {Name = "A"}},
@@ -163,7 +163,7 @@ namespace HBD.Framework.Tests
         [TestCategory("Fw.Extensions")]
         public void MergeFrom_ListToDic_Test()
         {
-            var list1 = new List<TestItem> { new TestItem { Name = "A" }, new TestItem { Name = "C" } };
+            var list1 = new List<TestItem> {new TestItem {Name = "A"}, new TestItem {Name = "C"}};
             var list2 = new Dictionary<string, TestItem>
             {
                 {"A", new TestItem {Name = "A"}},
@@ -273,7 +273,7 @@ namespace HBD.Framework.Tests
                 {"2", "2"}
             };
 
-            dic1.AddRange((Dictionary<string, string>)null);
+            dic1.AddRange((Dictionary<string, string>) null);
             Assert.IsTrue(dic1.Count == 2);
         }
 
@@ -321,7 +321,7 @@ namespace HBD.Framework.Tests
         [TestCategory("Fw.Extensions")]
         public void EnqueueArrange_Test()
         {
-            var dic1 = new[] { new object(), new object(), new object() };
+            var dic1 = new[] {new object(), new object(), new object()};
             var queue = new Queue<object>();
 
             queue.EnqueueArrange(dic1);

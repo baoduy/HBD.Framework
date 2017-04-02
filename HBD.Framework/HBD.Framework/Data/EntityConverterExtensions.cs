@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections.Generic;
@@ -11,14 +11,13 @@ using HBD.Framework.Data.EntityConverters;
 
 #endregion
 
-namespace HBD.Framework
+namespace HBD.Framework.Data
 {
     public static class EntityConverterExtensions
     {
         /// <summary>
         ///     Get Writable property column mapping.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
         /// <returns></returns>
         internal static IEnumerable<ColumnMappingInfo> GetColumnMapping(Type type)
         {
@@ -35,7 +34,7 @@ namespace HBD.Framework
         }
 
         internal static IEnumerable<ColumnMappingInfo> GetColumnMapping<T>() where T : class
-        => GetColumnMapping(typeof(T));
+            => GetColumnMapping(typeof(T));
 
         internal static IEnumerable<ColumnMappingInfo> GetColumnMapping(this object @this)
             => GetColumnMapping(@this.GetType());

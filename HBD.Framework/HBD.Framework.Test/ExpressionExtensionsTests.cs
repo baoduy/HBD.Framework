@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections.Generic;
@@ -18,7 +18,7 @@ namespace HBD.Framework.Tests
         [TestCategory("Fw.Extensions")]
         public void ExtractProperties_Test()
         {
-            Expression<Func<TestItem, object>>[] ex = { i => i.Name, i => i.Id };
+            Expression<Func<TestItem, object>>[] ex = {i => i.Name, i => i.Id};
             var properties = ex.ExtractProperties().ToArray();
             Assert.IsTrue(properties.Length == 2);
             Assert.IsTrue(properties[0].Name == "Name");
@@ -29,7 +29,7 @@ namespace HBD.Framework.Tests
         [TestCategory("Fw.Extensions")]
         public void GetProperties_NullExpress_Test()
         {
-            var properties = ((Expression<Func<TestItem, object>>[])null).GetProperties().ToArray();
+            var properties = ((Expression<Func<TestItem, object>>[]) null).GetProperties().ToArray();
             Assert.IsTrue(properties.Length == 0);
         }
 
@@ -81,7 +81,7 @@ namespace HBD.Framework.Tests
         [TestCategory("Fw.Extensions")]
         public void ToEqualsExpress_WithNullObject_Test()
         {
-            Assert.IsNull(((TestItem)null).ToEqualsExpress("Name"));
+            Assert.IsNull(((TestItem) null).ToEqualsExpress("Name"));
         }
 
         [TestMethod]
@@ -95,7 +95,7 @@ namespace HBD.Framework.Tests
         [TestCategory("Fw.Extensions")]
         public void ToEqualsExpress_WithDictionary_Test()
         {
-            var dic = new Dictionary<string, object> { { "Name", "1" }, { "Id", 2 } };
+            var dic = new Dictionary<string, object> {{"Name", "1"}, {"Id", 2}};
             var ex = dic.ToEqualsExpress<TestItem>();
             var props = ex.ExtractProperties().ToArray();
 
@@ -108,7 +108,7 @@ namespace HBD.Framework.Tests
         [TestCategory("Fw.Extensions")]
         public void ToEqualsExpress_WithNullDictionary_Test()
         {
-            var ex = ((Dictionary<string, object>)null).ToEqualsExpress<TestItem>();
+            var ex = ((Dictionary<string, object>) null).ToEqualsExpress<TestItem>();
 
             Assert.IsNull(ex);
         }
@@ -133,7 +133,7 @@ namespace HBD.Framework.Tests
             Assert.IsNull(ex);
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void ExtractPropertyNameTest()
         {
             var obj = new TestItem();

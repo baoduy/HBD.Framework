@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System.Collections;
 using System.Collections.Generic;
@@ -31,6 +31,8 @@ namespace HBD.Framework.Collections
 
         private IList<ChangeTrackingEntry<TEntity>> InternalList { get; }
 
+        public bool IsChanged => InternalList.Any(e => e.IsChanged);
+
         public int Count => InternalList.Count;
 
         public bool IsReadOnly => InternalList.IsReadOnly;
@@ -60,8 +62,6 @@ namespace HBD.Framework.Collections
         }
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-
-        public bool IsChanged => InternalList.Any(e => e.IsChanged);
 
         /// <summary>
         ///     Undo changes for all items

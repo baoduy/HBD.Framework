@@ -1,10 +1,11 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using HBD.Framework.Data.SqlClient;
+using HBD.Framework.Data.SqlClient.Extensions;
 
 #endregion
 
@@ -62,7 +63,7 @@ namespace HBD.Framework.Data.SSDT
             => Task.Run(() => Generate(option, tables));
 
         public virtual Task GenerateAsync(MergeScriptOption option = MergeScriptOption.Default,
-                Action<string> updateStatus = null, params string[] tables)
+            Action<string> updateStatus = null, params string[] tables)
             => Task.Run(() => Generate(option, updateStatus, tables));
 
         #endregion Public Methods

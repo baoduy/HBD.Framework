@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using HBD.Framework.Data.SqlClient.Base;
 
 #endregion
 
-namespace HBD.Framework.Data.SqlClient
+namespace HBD.Framework.Data.SqlClient.Extensions
 {
     public static class TableInfoExtensions
     {
@@ -58,7 +58,7 @@ namespace HBD.Framework.Data.SqlClient
             => tableNames.OrderBy(t => @this[t]?.DependenceIndex ?? 0).ToArray();
 
         public static IEnumerable<TableInfo> GetTableInfoByName(this TableInfoCollection @this,
-                params string[] tableNames)
+            params string[] tableNames)
             => @this.Where(t => tableNames.Any(s => s == t.Name));
 
         #endregion TableInfo Collection

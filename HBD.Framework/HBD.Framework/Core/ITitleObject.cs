@@ -1,7 +1,7 @@
 ﻿namespace HBD.Framework.Core
 {
     /// <summary>
-    /// The object that has a Title property.
+    ///     The object that has a Title property.
     /// </summary>
     public interface ITitleObject
     {

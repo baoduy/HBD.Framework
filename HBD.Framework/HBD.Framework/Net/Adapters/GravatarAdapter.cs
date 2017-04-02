@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Drawing;
@@ -11,7 +11,7 @@ namespace HBD.Framework.Net.Adapters
 {
     public class GravatarAdapter
     {
-        private const string url = "http://www.gravatar.com/avatar/{0}.jpg?s={1}&r={2}&d={3}";
+        private const string Url = "http://www.gravatar.com/avatar/{0}.jpg?s={1}&r={2}&d={3}";
 
         /// <summary>
         ///     Generate Gravatar Url or Image from Email, Size and Rating.
@@ -31,15 +31,15 @@ namespace HBD.Framework.Net.Adapters
 
         public string Email { get; set; }
         public short Size { get; set; }
-        public GravatarRating Rating { get; set; } = GravatarRating.G;
-        public GravatarDefaultIcon DefaultIcon { get; set; } = GravatarDefaultIcon.Identicon;
+        public GravatarRating Rating { get; set; }
+        public GravatarDefaultIcon DefaultIcon { get; set; }
 
         private static short GetLegalSize(short size)
             => (short) (size > 512 ? 512 : size < 1 ? 1 : size);
 
         public Uri GetUrl()
         {
-            return new Uri(string.Format(url,
+            return new Uri(string.Format(Url,
                 Email.GetMd5HashCode(),
                 GetLegalSize(Size),
                 Rating,
@@ -52,8 +52,9 @@ namespace HBD.Framework.Net.Adapters
         {
             using (var stream = response.GetResponseStream())
             {
-                return Image.FromStream(stream);
+                if (stream != null) return Image.FromStream(stream);
             }
+            return null;
         }
 
         public Image GetImage()
@@ -75,17 +76,17 @@ namespace HBD.Framework.Net.Adapters
 
     public enum GravatarRating
     {
-        G,
-        PG,
-        R,
-        X
+        G = 0,
+        Pg = 1,
+        R = 2,
+        X = 4
     }
 
     public enum GravatarDefaultIcon
     {
-        Identicon,
-        Monsterid,
-        Wavatar,
-        NotFound
+        Identicon = 0,
+        Monsterid = 1,
+        Wavatar = 2,
+        NotFound = 4
     }
 }

@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using HBD.Framework.Test.TestObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

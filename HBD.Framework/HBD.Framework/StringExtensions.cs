@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections.Generic;
@@ -98,7 +98,7 @@ namespace HBD.Framework
         public static bool IsStringOrValueType(this Type @this)
         {
             if (@this == null) return false;
-            var result = Type.GetTypeCode(@this) == TypeCode.String || (!@this.IsGenericType && @this.IsValueType);
+            var result = Type.GetTypeCode(@this) == TypeCode.String || !@this.IsGenericType && @this.IsValueType;
             //Null able is IsValueType and IsGenericType
             return result;
         }
@@ -134,8 +134,8 @@ namespace HBD.Framework
             => @this?.IndexOf(value, StringComparison.OrdinalIgnoreCase) >= 0;
 
         /// <summary>
-        /// Check whether the string collection is contains item.
-        /// Ignore Case when do the comparison.
+        ///     Check whether the string collection is contains item.
+        ///     Ignore Case when do the comparison.
         /// </summary>
         /// <param name="this"></param>
         /// <param name="item"></param>
@@ -144,7 +144,7 @@ namespace HBD.Framework
             => @this?.Any(s => s.EqualsIgnoreCase(item)) == true;
 
         /// <summary>
-        /// Check whether the string is contains any item in the list of values.
+        ///     Check whether the string is contains any item in the list of values.
         /// </summary>
         /// <param name="this"></param>
         /// <param name="values"></param>
@@ -153,8 +153,8 @@ namespace HBD.Framework
             => values.Any(@this.Contains);
 
         /// <summary>
-        /// Check whether the string is contains any item in the list of values.
-        /// Ignore Case when do the comparison.
+        ///     Check whether the string is contains any item in the list of values.
+        ///     Ignore Case when do the comparison.
         /// </summary>
         /// <param name="this"></param>
         /// <param name="values"></param>
@@ -163,8 +163,8 @@ namespace HBD.Framework
             => values.Any(@this.ContainsIgnoreCase);
 
         /// <summary>
-        /// Check whether the string is contains all items in the list of values.
-        /// Ignore Case when do the comparison.
+        ///     Check whether the string is contains all items in the list of values.
+        ///     Ignore Case when do the comparison.
         /// </summary>
         /// <param name="this"></param>
         /// <param name="values"></param>

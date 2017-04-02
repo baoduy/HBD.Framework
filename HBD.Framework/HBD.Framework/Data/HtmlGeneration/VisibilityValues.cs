@@ -2,6 +2,8 @@
 {
     public enum VisibilityValues
     {
-        Visible, Hidden, Collapse,
+        Visible,
+        Hidden,
+        Collapse
     }
 }

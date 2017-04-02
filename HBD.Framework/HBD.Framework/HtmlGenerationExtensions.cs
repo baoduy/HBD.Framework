@@ -1,7 +1,7 @@
-﻿#region
+﻿#region using
 
-using HBD.Framework.Data.HtmlGeneration;
 using System;
+using HBD.Framework.Data.HtmlGeneration;
 
 #endregion
 

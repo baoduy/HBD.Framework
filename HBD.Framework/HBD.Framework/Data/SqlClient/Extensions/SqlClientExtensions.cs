@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Data;
@@ -7,7 +7,7 @@ using HBD.Framework.Data.SqlClient.Base;
 
 #endregion
 
-namespace HBD.Framework.Data.SqlClient
+namespace HBD.Framework.Data.SqlClient.Extensions
 {
     public static class SqlClientExtensions
     {
@@ -65,9 +65,9 @@ namespace HBD.Framework.Data.SqlClient
                 case TypeCode.String:
                     return SqlDbType.NVarChar;
 
-                case TypeCode.Empty:
-                case TypeCode.Object:
-                case TypeCode.DBNull:
+                //case TypeCode.Empty:
+                //case TypeCode.Object:
+                //case TypeCode.DBNull:
                 default:
                     return SqlDbType.VarBinary;
             }
@@ -136,7 +136,7 @@ namespace HBD.Framework.Data.SqlClient
 
                 //case SqlDbType.UserDefinedDataType:
                 //case SqlDbType.UserDefinedType:
-                case SqlDbType.Variant:
+                //case SqlDbType.Variant:
                 default:
                     return typeof(object);
             }

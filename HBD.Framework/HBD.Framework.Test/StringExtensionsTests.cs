@@ -1,10 +1,14 @@
-﻿using System.Collections.Generic;
+﻿#region using
+
+using System.Collections.Generic;
 
 #region
 
 using System;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+#endregion
 
 #endregion
 
@@ -78,14 +82,14 @@ namespace HBD.Framework.Tests
         {
             Assert.AreEqual("Hoang Bao Duy".ReplaceIgnoreCase("duy", "Test"), "Hoang Bao Test");
             Assert.AreEqual("Hoang Bao Duy".ReplaceIgnoreCase("BAO", "TEST"), "Hoang TEST Duy");
-            Assert.IsNull(((string)null).ReplaceIgnoreCase("BAO", "TEST"));
+            Assert.IsNull(((string) null).ReplaceIgnoreCase("BAO", "TEST"));
         }
 
         [TestMethod]
         public void ContainsIgnoreCaseTest()
         {
-            Assert.IsTrue(new[] { "123", "ABC", "aaa" }.AnyIgnoreCase("AAA"));
-            Assert.IsFalse(new string[] { }.AnyIgnoreCase("AAA"));
+            Assert.IsTrue(new[] {"123", "ABC", "aaa"}.AnyIgnoreCase("AAA"));
+            Assert.IsFalse(new string[] {}.AnyIgnoreCase("AAA"));
         }
 
         [TestMethod]
@@ -144,7 +148,7 @@ namespace HBD.Framework.Tests
             Assert.AreEqual(split[2], "Duy");
         }
 
-        [TestMethod()]
+        [TestMethod]
         public void ContainsItemIgnoreCaseTest()
         {
             var list = new[] {"Hoang", "bAo", "duy"};
@@ -165,7 +169,7 @@ namespace HBD.Framework.Tests
             Assert.IsFalse(list.AnyIgnoreCase("B"));
             Assert.IsFalse(list.AnyIgnoreCase("C"));
 
-            Assert.IsFalse(((ICollection<string>)null).AnyIgnoreCase("A"));
+            Assert.IsFalse(((ICollection<string>) null).AnyIgnoreCase("A"));
             Assert.IsFalse(new string[] {}.AnyIgnoreCase("B"));
         }
     }

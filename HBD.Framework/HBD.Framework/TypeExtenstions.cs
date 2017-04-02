@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 
@@ -33,9 +33,7 @@ namespace HBD.Framework
                 @this = str.Equals("1") || string.Compare(str, "Yes", StringComparison.CurrentCultureIgnoreCase) == 0;
             }
 
-            object value = null;
-
-            value = Convert.ChangeType(@this, typeof(T));
+            var value=Convert.ChangeType(@this, typeof(T));
 
             if (value == null) return default(T);
             return (T) value;

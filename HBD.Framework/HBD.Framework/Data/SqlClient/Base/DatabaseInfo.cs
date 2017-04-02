@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System.Diagnostics;
 
@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace HBD.Framework.Data.SqlClient.Base
 {
-    [DebuggerDisplay("Schema Name = {Name}")]
+    [DebuggerDisplay("Schema Name = {" + nameof(Name) + "}")]
     public class DatabaseInfo
     {
         private readonly SqlClientAdapterBase _sqlClient;

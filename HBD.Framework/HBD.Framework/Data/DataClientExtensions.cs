@@ -1,11 +1,11 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Data;
 
 #endregion
 
-namespace HBD.Framework
+namespace HBD.Framework.Data
 {
     public static class DataClientExtensions
     {
@@ -20,10 +20,10 @@ namespace HBD.Framework
                 @this.Open();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 if (throwException)
-                    throw ex;
+                    throw;
 
                 return false;
             }
@@ -38,10 +38,10 @@ namespace HBD.Framework
                 @this.Close();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 if (throwException)
-                    throw ex;
+                    throw;
 
                 return false;
             }

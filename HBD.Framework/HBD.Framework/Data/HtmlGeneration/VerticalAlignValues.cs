@@ -2,6 +2,14 @@
 {
     public enum VerticalAlignValues
     {
-        Baseline, Length, Sub, Super, Top, TextTop, Middle, Bottom, TextBottom
+        Baseline,
+        Length,
+        Sub,
+        Super,
+        Top,
+        TextTop,
+        Middle,
+        Bottom,
+        TextBottom
     }
 }

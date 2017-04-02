@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.IO;
@@ -40,7 +40,7 @@ namespace HBD.Framework.Security.Services
             if (string.IsNullOrWhiteSpace(text)) return string.Empty;
 
             var pass = new Rfc2898DeriveBytes(Password, SaltBytes);
-            var keyBytes = pass.GetBytes(Keysize/8);
+            var keyBytes = pass.GetBytes(Keysize / 8);
 
             using (var symmetricKey = new RijndaelManaged())
             {

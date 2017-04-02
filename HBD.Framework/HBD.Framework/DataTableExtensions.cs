@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Data;
@@ -51,7 +51,7 @@ namespace HBD.Framework
         }
 
         public static void AddMoreColumns(this DataTable @this, int expectedColumns,
-                ColumnNamingType namingType = ColumnNamingType.FieldType)
+            ColumnNamingType namingType = ColumnNamingType.FieldType)
             => @this.Columns.AddMoreColumns(expectedColumns, namingType);
 
         public static void AddMoreColumns(this DataColumnCollection @this, int expectedColumns,

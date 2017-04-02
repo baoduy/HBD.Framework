@@ -1,8 +1,8 @@
-﻿#region
+﻿#region using
 
+using System;
 using HBD.Framework.Randoms;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 #endregion
 

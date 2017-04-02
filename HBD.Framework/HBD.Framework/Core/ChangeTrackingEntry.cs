@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections.Concurrent;
@@ -35,14 +35,17 @@ namespace HBD.Framework.Core
         public virtual ConcurrentDictionary<string, object> OriginalValues { get; } =
             new ConcurrentDictionary<string, object>();
 
+        public bool IsChanged { get; private set; }
+
         public void Dispose()
         {
             if (Entity == null) return;
 
-            if (Entity is IInternalNotifyPropertyChanged && Entity is IInternalNotifyPropertyChanging)
+            var entity = Entity as IInternalNotifyPropertyChanged;
+            if (entity != null && Entity is IInternalNotifyPropertyChanging)
             {
                 ((IInternalNotifyPropertyChanging) Entity).InternalPropertyChanging -= Entity_PropertyChanging;
-                ((IInternalNotifyPropertyChanged) Entity).InternalPropertyChanged -= Entity_PropertyChanged;
+                entity.InternalPropertyChanged -= Entity_PropertyChanged;
             }
             else
             {
@@ -52,8 +55,6 @@ namespace HBD.Framework.Core
 
             Entity = null;
         }
-
-        public bool IsChanged { get; private set; }
 
         /// <summary>
         ///     This will be remove the original of properties accept the current values as latest one.

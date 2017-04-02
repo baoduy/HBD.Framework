@@ -1,4 +1,4 @@
-﻿#region
+﻿#region using
 
 using System;
 using System.Collections.Generic;
@@ -10,6 +10,7 @@ using System.Text;
 using HBD.Framework.Cache;
 using HBD.Framework.Core;
 using HBD.Framework.Data.Base;
+using HBD.Framework.Data.SqlClient.Extensions;
 
 #endregion
 
@@ -73,7 +74,7 @@ namespace HBD.Framework.Data.SqlClient.Base
         private const string FieldIsIdentity = "Is_Identity";
         private const string FieldIsComputed = "Is_Computed";
         private const string FieldIsPrimaryKey = "Is_Primary_Key";
-        private const string FieldPrimaryKeyName = "Primary_Key_Name";
+        //private const string FieldPrimaryKeyName = "Primary_Key_Name";
         private const string FieldIsPoreignKey = "Is_Foreign_Key";
         private const string FieldFkTableSchema = "Fk_Table_Schema";
         private const string FieldFkTableName = "Fk_Table_Name";
@@ -81,11 +82,13 @@ namespace HBD.Framework.Data.SqlClient.Base
         private const string FieldForeignKeyName = "Foreign_Key_Name";
         private const string FieldRowCount = "Row_Count";
         private const string FieldIsTable = "Is_Table";
-        private const string FieldIsView = "Is_View";
+        //private const string FieldIsView = "Is_View";
 
         private const string CacheSchemaInfoKey = "SchemaInfoOf_";
         private const string CacheAllSchemaNameKey = "AllSchemaNames";
+        #endregion Fields
 
+        #region QueryAllSchemaNames
         private const string QueryAllSchemaNames = @"SELECT [Name] as [Table_Catalog]
 FROM   Sys.Databases
 WHERE  [Name] NOT IN('master', 'tempdb', 'model', 'msdb');
@@ -171,8 +174,7 @@ FROM      Information_Schema.Columns C
 ) AS Tbcnt ON T.Table_Schema = Tbcnt.Table_Schema
               AND T.Table_Name = Tbcnt.Table_Name
 ORDER BY C.Ordinal_Position;";
-
-        #endregion Fields
+        #endregion QueryAllSchemaNames
 
         #region ShemaInfo Methods
 
@@ -207,7 +209,7 @@ ORDER BY C.Ordinal_Position;";
             Guard.ArgumentIsNotNull(databaseName, nameof(databaseName));
 
             var cacheKey = CacheSchemaInfoKey + databaseName;
-            SchemaInfo schema = null;
+            SchemaInfo schema;
             if (CacheManager.Default.IsContains(cacheKey))
             {
                 schema = CacheManager.Default.Get<SchemaInfo>(cacheKey);
@@ -233,7 +235,7 @@ ORDER BY C.Ordinal_Position;";
                     var isIdentity = reader.GetValue<bool>(FieldIsIdentity);
                     var isComputed = reader.GetValue<bool>(FieldIsComputed);
                     var isPrimaryKey = reader.GetValue<bool>(FieldIsPrimaryKey);
-                    var primaryKeyName = reader.GetValue<string>(FieldPrimaryKeyName);
+                    //var primaryKeyName = reader.GetValue<string>(FieldPrimaryKeyName);
                     var isPoreignKey = reader.GetValue<bool>(FieldIsPoreignKey);
                     var fkTableSchema = reader.GetValue<string>(FieldFkTableSchema);
                     var fkTableName = reader.GetValue<string>(FieldFkTableName);
@@ -241,7 +243,7 @@ ORDER BY C.Ordinal_Position;";
                     var rowCount = reader.GetValue<int>(FieldRowCount);
                     var foreignKeyName = reader.GetValue<string>(FieldForeignKeyName);
                     var isTable = reader.GetValue<bool>(FieldIsTable);
-                    var isView = reader.GetValue<bool>(FieldIsView);
+                    //var isView = reader.GetValue<bool>(FieldIsView);
 
                     #endregion Field Values
 
