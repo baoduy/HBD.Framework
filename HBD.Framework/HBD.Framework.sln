@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{50AD68A2-236B-4323-856B-E47C0638EBD0}"
 EndProject
@@ -12,12 +12,41 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Shared", "!Shared", "{6AEC9FCA-E4E1-4311-A706-CAF544EA8F3C}"
 	ProjectSection(SolutionItems) = preProject
 		Shared\App.config = Shared\App.config
+		Shared\Northwind\Categories.csv = Shared\Northwind\Categories.csv
+		Shared\Northwind\Customers.csv = Shared\Northwind\Customers.csv
+		Shared\Northwind\Employees.csv = Shared\Northwind\Employees.csv
+		Shared\Northwind\Employees_PileDilimiters.csv = Shared\Northwind\Employees_PileDilimiters.csv
+		Shared\Northwind\EmployeeTerritories.csv = Shared\Northwind\EmployeeTerritories.csv
+		Shared\Northwind\Northwind_SchemaInfo.csv = Shared\Northwind\Northwind_SchemaInfo.csv
+		Shared\Northwind\Northwind_SchemaInfo_MaxValues.csv = Shared\Northwind\Northwind_SchemaInfo_MaxValues.csv
+		Shared\Northwind\Order Details.csv = Shared\Northwind\Order Details.csv
+		Shared\Northwind\Orders.csv = Shared\Northwind\Orders.csv
+		Shared\Northwind\Products.csv = Shared\Northwind\Products.csv
+		Shared\Northwind\Region.csv = Shared\Northwind\Region.csv
+		Shared\Northwind\Shippers.csv = Shared\Northwind\Shippers.csv
+		Shared\Northwind\Suppliers.csv = Shared\Northwind\Suppliers.csv
+		Shared\Northwind\Territories.csv = Shared\Northwind\Territories.csv
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solutions", "Solutions", "{98C7752B-A6A1-4DF5-A9E0-DDEF955ECD01}"
 	ProjectSection(SolutionItems) = preProject
 		.tfignore = .tfignore
+		Shared\App.config = Shared\App.config
+		Shared\Northwind\Categories.csv = Shared\Northwind\Categories.csv
+		Shared\Northwind\Customers.csv = Shared\Northwind\Customers.csv
+		Shared\Northwind\Employees.csv = Shared\Northwind\Employees.csv
+		Shared\Northwind\Employees_PileDilimiters.csv = Shared\Northwind\Employees_PileDilimiters.csv
+		Shared\Northwind\EmployeeTerritories.csv = Shared\Northwind\EmployeeTerritories.csv
 		global.json = global.json
+		Shared\Northwind\Northwind_SchemaInfo.csv = Shared\Northwind\Northwind_SchemaInfo.csv
+		Shared\Northwind\Northwind_SchemaInfo_MaxValues.csv = Shared\Northwind\Northwind_SchemaInfo_MaxValues.csv
+		Shared\Northwind\Order Details.csv = Shared\Northwind\Order Details.csv
+		Shared\Northwind\Orders.csv = Shared\Northwind\Orders.csv
+		Shared\Northwind\Products.csv = Shared\Northwind\Products.csv
+		Shared\Northwind\Region.csv = Shared\Northwind\Region.csv
+		Shared\Northwind\Shippers.csv = Shared\Northwind\Shippers.csv
+		Shared\Northwind\Suppliers.csv = Shared\Northwind\Suppliers.csv
+		Shared\Northwind\Territories.csv = Shared\Northwind\Territories.csv
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{1B32E88E-EE4F-4FCA-88E3-881FDE450437}"

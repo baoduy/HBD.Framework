@@ -57,9 +57,6 @@
     <Reference Include="mscorlib.4.0.0.0.Fakes">
       <HintPath>FakesAssemblies\mscorlib.4.0.0.0.Fakes.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.4.0.0.0.Fakes">
       <HintPath>FakesAssemblies\System.4.0.0.0.Fakes.dll</HintPath>
@@ -160,14 +157,52 @@
       <DependentUpon>Northwind.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="..\Shared\App.config">
+      <Link>App.config</Link>
+    </None>
+    <None Include="..\Shared\Northwind\Categories.csv">
+      <Link>Categories.csv</Link>
+    </None>
     <None Include="..\Shared\Northwind\Customers.csv">
-      <Link>TestData\Customers.csv</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Customers.csv</Link>
+    </None>
+    <None Include="..\Shared\Northwind\Employees.csv">
+      <Link>Employees.csv</Link>
     </None>
     <None Include="..\Shared\Northwind\Employees_PileDilimiters.csv">
-      <Link>TestData\Employees_PileDilimiters.csv</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>Employees_PileDilimiters.csv</Link>
     </None>
+    <None Include="..\Shared\Northwind\EmployeeTerritories.csv">
+      <Link>EmployeeTerritories.csv</Link>
+    </None>
+    <None Include="..\Shared\Northwind\Northwind_SchemaInfo.csv">
+      <Link>Northwind_SchemaInfo.csv</Link>
+    </None>
+    <None Include="..\Shared\Northwind\Northwind_SchemaInfo_MaxValues.csv">
+      <Link>Northwind_SchemaInfo_MaxValues.csv</Link>
+    </None>
+    <None Include="..\Shared\Northwind\Order Details.csv">
+      <Link>Order Details.csv</Link>
+    </None>
+    <None Include="..\Shared\Northwind\Orders.csv">
+      <Link>Orders.csv</Link>
+    </None>
+    <None Include="..\Shared\Northwind\Products.csv">
+      <Link>Products.csv</Link>
+    </None>
+    <None Include="..\Shared\Northwind\Region.csv">
+      <Link>Region.csv</Link>
+    </None>
+    <None Include="..\Shared\Northwind\Shippers.csv">
+      <Link>Shippers.csv</Link>
+    </None>
+    <None Include="..\Shared\Northwind\Suppliers.csv">
+      <Link>Suppliers.csv</Link>
+    </None>
+    <None Include="..\Shared\Northwind\Territories.csv">
+      <Link>Territories.csv</Link>
+    </None>
+    <None Include="packages.config" />
     <None Include="TestData\AzMan.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -206,61 +241,9 @@
     <Fakes Include="Fakes\mscorlib.fakes" />
     <Fakes Include="Fakes\System.Data.fakes" />
     <Fakes Include="Fakes\System.fakes" />
-    <None Include="..\Shared\App.config">
-      <Link>App.config</Link>
-    </None>
-    <None Include="..\Shared\Northwind\Categories.csv">
-      <Link>TestData\Categories.csv</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="..\Shared\Northwind\Employees.csv">
-      <Link>TestData\Employees.csv</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="..\Shared\Northwind\EmployeeTerritories.csv">
-      <Link>TestData\EmployeeTerritories.csv</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="..\Shared\Northwind\Northwind_SchemaInfo.csv">
-      <Link>TestData\Northwind_SchemaInfo.csv</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="..\Shared\Northwind\Northwind_SchemaInfo_MaxValues.csv">
-      <Link>TestData\Northwind_SchemaInfo_MaxValues.csv</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="..\Shared\Northwind\Order Details.csv">
-      <Link>TestData\Order Details.csv</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="..\Shared\Northwind\Orders.csv">
-      <Link>TestData\Orders.csv</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="..\Shared\Northwind\Products.csv">
-      <Link>TestData\Products.csv</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="..\Shared\Northwind\Region.csv">
-      <Link>TestData\Region.csv</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="..\Shared\Northwind\Shippers.csv">
-      <Link>TestData\Shippers.csv</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="..\Shared\Northwind\Suppliers.csv">
-      <Link>TestData\Suppliers.csv</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="..\Shared\Northwind\Territories.csv">
-      <Link>TestData\Territories.csv</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Modules\HBD.App.Demo.Plugin\Module_Demo.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="packages.config" />
     <None Include="TestData\2015 Weekly Calendar.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

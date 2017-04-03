@@ -32,9 +32,7 @@ namespace HBD.Framework.Core
         {
             get
             {
-                if (_isDisposed)
-                    throw new ObjectDisposedException($"SingletonWrapper of {typeof(T).FullName}",
-                        $"SingletonWrapper of {typeof(T).FullName} is Disposed.");
+                ValidateDiposed();
 
                 if (_isLoaded) return _instance;
 
@@ -42,6 +40,13 @@ namespace HBD.Framework.Core
                 TryDisposeInstance();
                 return _instance = _factoryFunc.Invoke();
             }
+        }
+
+        private void ValidateDiposed()
+        {
+            if (_isDisposed)
+                throw new ObjectDisposedException($"SingletonWrapper of {typeof(T).FullName}",
+                    $"SingletonWrapper of {typeof(T).FullName} is Disposed.");
         }
 
         object ISingletonWrapper.Instance => Instance;

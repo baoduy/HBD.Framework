@@ -8,7 +8,7 @@ namespace HBD.Framework.Security.Auths
 {
     internal sealed class SafeTokenHandle : SafeHandleZeroOrMinusOneIsInvalid
     {
-        private SafeTokenHandle() : base(true)
+        public SafeTokenHandle() : base(true)
         {
         }
 

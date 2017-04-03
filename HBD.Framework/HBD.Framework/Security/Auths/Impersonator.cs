@@ -26,18 +26,19 @@ namespace HBD.Framework.Security.Auths
             _domain = domainName;
         }
 
+        //if (!RevertToSelf()) throw new Win32Exception(Marshal.GetLastWin32Error());
+        /// <summary>
+        /// Get the login token.
+        /// </summary>
         private SafeTokenHandle Token
         {
             get
             {
                 if (_token != null) return _token;
-                //if (!RevertToSelf()) throw new Win32Exception(Marshal.GetLastWin32Error());
+               
 
-                if (
-                    LogonUser(_userName, _domain, _password, (int) LogonTypes.Interactive, (int) LogonProviders.Default,
-                        out _token) != 0)
-                    return _token;
-                throw new Win32Exception(Marshal.GetLastWin32Error());
+                return LogonUser(_userName, _domain, _password, (int) LogonTypes.Interactive, (int) LogonProviders.Default,
+                           out _token) != 0 ? _token : null;
             }
         }
 

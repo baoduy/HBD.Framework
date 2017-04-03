@@ -20,6 +20,7 @@
       - Sql Adapter that allow to interact with Sql servers.
       - OleDb Adapter that allow to interact with Data files.
       - The common extension methods that will help developers to save time when wring the code.
+      - Remove the JsonExtensions and Json packages as it is not in use anymore.
     </summary>
     <language>en-US</language>
     <projectUrl>https://github.com/baoduy/HBD.Framework</projectUrl>

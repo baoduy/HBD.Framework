@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using HBD.Framework.Data.SqlClient.Base;
+using HBD.Framework.Exceptions;
 
 #endregion
 
@@ -26,16 +27,15 @@ namespace HBD.Framework.Data.SqlClient.Extensions
                 c.AutoIncrement = col.IsIdentity;
 
                 if (col.IsComputed && col.ComputedExpression.IsNullOrEmpty())
-                    throw new Exception($"Computed Column {col.Name} is required the 'ComputedExpression'");
+                    throw new NotFoundException($"'ComputedExpression' of {col.Name}");
 
                 c.ReadOnly = col.IsComputed;
                 c.Expression = col.ComputedExpression;
 
-                if (col.IsPrimaryKey)
-                {
-                    var list = new List<DataColumn>(data.PrimaryKey) {c};
-                    data.PrimaryKey = list.ToArray();
-                }
+                if (!col.IsPrimaryKey) continue;
+
+                var list = new List<DataColumn>(data.PrimaryKey) {c};
+                data.PrimaryKey = list.ToArray();
             }
 
             return data;
