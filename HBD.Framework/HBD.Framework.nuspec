@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>HBD.Framework</id>
+    <version>${NugetVersion}$</version>
+    <title>HBD.Framework</title>
+    <authors>Duy Hoang</authors>
+    <owners>Duy Hoang</owners>
+    <description>
+      The helpful library for .Net developers
+    </description>
+    <releaseNotes>
+      Version ${NugetVersion}$
+      - Add NotAny extension methods.
+      - Remove all NotAnyItem extensions as it is not inused and ccausing the ambiguously.
+      - Add Wildcard class, that help to compare the string with wildcard.
+      - Starting to Support .Net Standard 1.6
+        * The common extensions, Exceptions and EventArguments.
+        * The Attributes, Collections and Core namespaces classes.
+    </releaseNotes>
+    <summary>
+      The helpful library for .Net developers which support:
+      - Caching
+      - Csv Adapter that allow to interact with Csv files.
+      - Sql Adapter that allow to interact with Sql servers.
+      - OleDb Adapter that allow to interact with Data files.
+      - The common extension methods that will help developers to save time when wring the code.
+      - Remove the JsonExtensions and Json packages as it is not in use anymore.
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://github.com/baoduy/HBD.Framework</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/baoduy/Images/master/NugetLogo.PNG</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <copyright>Copyright © 2016</copyright>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.0">
+      </group>
+      <!--<group targetFramework=".NETStandard1.6">
+        <dependency id="Microsoft.CSharp" version="4.3.0" />
+        <dependency id="System.ComponentModel" version="4.3.0" />
+        <dependency id="System.Data.Common" version="4.3.0" />
+      </group>-->
+    </dependencies>
+    <references></references>
+    <tags></tags>
+  </metadata>
+  <files>
+    <file src="HBD.Framework\bin\Release\HBD.Framework*" target="lib\net460" />
+    <!--<file src="HBD.Framework.St\bin\Release\netstandard1.6\HBD.Framework*" target="lib\netstandard1.6" />-->
+  </files>
+</package>

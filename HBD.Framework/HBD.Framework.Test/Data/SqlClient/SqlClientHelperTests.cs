@@ -70,16 +70,16 @@ namespace HBD.Framework.Test.Data.SqlClient
                     (s, c) =>
                     {
                         if (s.CommandText.ContainsIgnoreCase("FROM      Information_Schema.Columns C"))
-                            return new CsvAdapter("TestData\\Northwind_SchemaInfo.csv").Read().CreateDataReader();
+                            return new CsvAdapter("TestData\\DataBaseInfo\\SchemaInfo.csv").Read().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("SELECT MaxValue"))
                             return
-                                new CsvAdapter("TestData\\Northwind_SchemaInfo_MaxValues.csv").Read().CreateDataReader();
+                                new CsvAdapter("TestData\\DataBaseInfo\\MaxOfPrimaryKeys.csv").Read().CreateDataReader();
 
                         return null;
                     };
 
-                using (var conn = new SqlClientAdapter("Northwind"))
+                using (var conn = new SqlClientAdapter(DummyConnection))
                 {
                     return conn.GetSchemaInfo();
                 }
@@ -106,7 +106,7 @@ namespace HBD.Framework.Test.Data.SqlClient
                         }
                     };
 
-                using (var conn = new SqlClientAdapter("Northwind"))
+                using (var conn = new SqlClientAdapter(DummyConnection))
                 {
                     var dbnames = conn.GetDataBaseInfos();
                     Assert.IsTrue(dbnames.Count > 0);

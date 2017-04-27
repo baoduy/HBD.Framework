@@ -13,26 +13,24 @@ namespace HBD.Framework.Core
     {
         public static string[] GetCurrecySymbols()
         {
-            //var method = MethodBase.GetCurrentMethod();
-            //var key = $"{method.DeclaringType.FullName}.{method.Name}";
-            var key = "CultureInfoHelper_CurrencySymbols";
+            const string key = "CultureInfoHelper_CurrencySymbols";
             var values = CacheManager.Default.Get<string[]>(key);
 
-            if (!values.NotAnyItem()) return values;
-            values = Resource.ResourceManager.GetString(key)?
-                .Split(new[] {',', ';'}, StringSplitOptions.RemoveEmptyEntries);
+            if (values?.NotAny() == true) return values;
+            values = Resources.ResourceManager.GetString(key)
+                ?.Split(new[] {',', ';'}, StringSplitOptions.RemoveEmptyEntries);
             CacheManager.Default.SetValueToProperty(key, values);
             return values;
         }
 
         public static string[] GetCurrecyCharacters()
         {
-            var key = "CultureInfoHelper_CurrencyCharacters";
+            const string key = "CultureInfoHelper_CurrencyCharacters";
             var values = CacheManager.Default.Get<string[]>(key);
 
-            if (!values.NotAnyItem()) return values;
-            values = Resource.ResourceManager.GetString(key)?
-                .Split(new[] {',', ';'}, StringSplitOptions.RemoveEmptyEntries);
+            if (values?.NotAny() == true) return values;
+            values = Resources.ResourceManager.GetString(key)
+                ?.Split(new[] {',', ';'}, StringSplitOptions.RemoveEmptyEntries);
             CacheManager.Default.SetValueToProperty(key, values);
             return values;
         }

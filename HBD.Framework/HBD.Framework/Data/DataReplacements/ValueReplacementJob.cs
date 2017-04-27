@@ -15,7 +15,7 @@ namespace HBD.Framework.Data.DataReplacements
 
         protected ValueReplacementJob(Dictionary<string, string> values)
         {
-            if (values.NotAnyItem()) return;
+            if (values?.NotAny() == true) return;
             Replace(values);
         }
 

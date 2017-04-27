@@ -48,10 +48,10 @@ namespace HBD.Framework.Test
         [TestCategory("Fw.Security")]
         public void Check_IsEncrypted()
         {
-            var encrytp = "2lf2KXUNgHvzeqKUjiaeJhwPRYeICK3s1pyX8cHOn8U=";
+            var encrytp = CryptionManager.Default.Encrypt("Hoang Bao Duy");
             Assert.IsTrue(encrytp.IsEncrypted());
 
-            encrytp = "Duy2lf2KXUNgHvzeqKUjiaeJhwPRYeICK3s1pyX8cHOn8U=";
+            encrytp = $"Duy2-{encrytp}";
             Assert.IsFalse(encrytp.IsEncrypted());
         }
     }

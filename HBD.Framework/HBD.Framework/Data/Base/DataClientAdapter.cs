@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using HBD.Framework.Attributes;
-using HBD.Framework.Configuration;
 using HBD.Framework.Core;
 
 #endregion
@@ -24,9 +23,9 @@ namespace HBD.Framework.Data.Base
 
         #region Constructors
 
-        protected DataClientAdapter([NotNull] string nameOrConnectionString)
+        protected DataClientAdapter([NotNull] string connectionString)
         {
-            ConnectionString = CreateConnectionString(ConfigurationManager.GetConnectionString(nameOrConnectionString));
+            ConnectionString = CreateConnectionString(connectionString);
             Connection = CreateConnection();
         }
 

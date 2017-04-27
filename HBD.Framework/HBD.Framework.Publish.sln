@@ -1,19 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26206.0
+VisualStudioVersion = 15.0.26403.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework", "HBD.Framework\HBD.Framework.csproj", "{C189DF1C-C95C-45AB-A9DE-A98F7410AD26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.Test", "HBD.Framework.Test\HBD.Framework.Test.csproj", "{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CED0D593-F054-49C1-941A-80DFC9D8E299}"
 	ProjectSection(SolutionItems) = preProject
-		NuGet.Config = NuGet.Config
+		HBD.Framework.nuspec = HBD.Framework.nuspec
 		ReadMe.md = ReadMe.md
 	EndProjectSection
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HBD.Framework.Share", "HBD.Framework.Share\HBD.Framework.Share.shproj", "{F38A3904-623D-45C1-8493-08C193A35F61}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.St", "HBD.Framework.St\HBD.Framework.St.csproj", "{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		HBD.Framework.Share\HBD.Framework.Share.projitems*{c189df1c-c95c-45ab-a9de-a98f7410ad26}*SharedItemsImports = 4
+		HBD.Framework.Share\HBD.Framework.Share.projitems*{f38a3904-623d-45c1-8493-08c193a35f61}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -23,10 +29,10 @@ Global
 		{C189DF1C-C95C-45AB-A9DE-A98F7410AD26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C189DF1C-C95C-45AB-A9DE-A98F7410AD26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C189DF1C-C95C-45AB-A9DE-A98F7410AD26}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,15 +41,22 @@ Global
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Security.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Security.AzMan.5.0.505.0\lib\NET35
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
+		SccNumberOfProjects = 5
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://steven2412.visualstudio.com/
 		SccLocalPath0 = .
 		SccProjectUniqueName1 = HBD.Framework\\HBD.Framework.csproj
 		SccProjectName1 = HBD.Framework
 		SccLocalPath1 = HBD.Framework
-		SccProjectUniqueName2 = HBD.Framework.Test\\HBD.Framework.Test.csproj
-		SccProjectName2 = HBD.Framework.Test
-		SccLocalPath2 = HBD.Framework.Test
+		SccProjectUniqueName2 = HBD.Framework.Share\\HBD.Framework.Share.shproj
+		SccProjectName2 = HBD.Framework.Share
+		SccLocalPath2 = HBD.Framework.Share
+		SccProjectUniqueName3 = HBD.Framework.St\\HBD.Framework.St.csproj
+		SccProjectName3 = HBD.Framework.St
+		SccLocalPath3 = HBD.Framework.St
+		SccProjectUniqueName4 = HBD.Framework.Share\\HBD.Framework.Share.projitems
+		SccProjectTopLevelParentUniqueName4 = HBD.Framework.Share\\HBD.Framework.Share.shproj
+		SccProjectName4 = HBD.Framework.Share
+		SccLocalPath4 = HBD.Framework.Share
 	EndGlobalSection
 EndGlobal

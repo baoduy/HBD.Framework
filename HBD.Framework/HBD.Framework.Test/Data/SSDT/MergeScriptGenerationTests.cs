@@ -15,7 +15,8 @@ namespace HBD.Framework.Test.Data.SSDT
     [TestClass]
     public class MergeScriptGenerationTests
     {
-        private const string ConnectionStringName = "Northwind";
+        private const string ConnectionStringName =
+            "Data Source=DESKTOP-PK6P1F4\\SQLEXPRESS;Initial Catalog=Northwind;Integrated Security=True";
 
         [TestMethod]
         [TestCategory("Fw.Data.SSDT")]
@@ -27,21 +28,21 @@ namespace HBD.Framework.Test.Data.SSDT
                 ShimSqlCommand.AllInstances.ExecuteDbDataReaderCommandBehavior =
                     (s, c) =>
                     {
-                        if (s.CommandText.ContainsIgnoreCase("FROM      Information_Schema.Columns C"))
-                            return new CsvAdapter("TestData\\Northwind_SchemaInfo.csv").Read().CreateDataReader();
+                        if (s.CommandText.ContainsIgnoreCase("Information_Schema.Columns C"))
+                            return new CsvAdapter("TestData\\DataBaseInfo\\SchemaInfo.csv").Read().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("SELECT MaxValue"))
                             return
-                                new CsvAdapter("TestData\\Northwind_SchemaInfo_MaxValues.csv").Read().CreateDataReader();
+                                new CsvAdapter("TestData\\DataBaseInfo\\MaxOfPrimaryKeys.csv").Read().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("Categories"))
-                            return new CsvAdapter("TestData\\Categories.csv").Read().CreateDataReader();
+                            return new CsvAdapter("TestData\\Northwind\\Categories.csv").Read().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("Customers"))
-                            return new CsvAdapter("TestData\\Customers.csv").Read().CreateDataReader();
+                            return new CsvAdapter("TestData\\Northwind\\Customers.csv").Read().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("Employees"))
-                            return new CsvAdapter("TestData\\Employees.csv").Read().CreateDataReader();
+                            return new CsvAdapter("TestData\\Northwind\\Employees.csv").Read().CreateDataReader();
 
                         return null;
                     };
@@ -64,45 +65,46 @@ namespace HBD.Framework.Test.Data.SSDT
                 ShimSqlCommand.AllInstances.ExecuteDbDataReaderCommandBehavior =
                     (s, c) =>
                     {
-                        if (s.CommandText.ContainsIgnoreCase("FROM      Information_Schema.Columns C"))
-                            return new CsvAdapter("TestData\\Northwind_SchemaInfo.csv").Read().CreateDataReader();
+                        if (s.CommandText.ContainsIgnoreCase("Information_Schema.Columns C"))
+                            return new CsvAdapter("TestData\\DataBaseInfo\\SchemaInfo.csv").Read().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("SELECT MaxValue"))
                             return
-                                new CsvAdapter("TestData\\Northwind_SchemaInfo_MaxValues.csv").Read().CreateDataReader();
+                                new CsvAdapter("TestData\\DataBaseInfo\\MaxOfPrimaryKeys.csv").Read().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("Categories"))
-                            return new CsvAdapter("TestData\\Categories.csv").Read().CreateDataReader();
+                            return new CsvAdapter("TestData\\Northwind\\Categories.csv").Read().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("Customers"))
-                            return new CsvAdapter("TestData\\Customers.csv").Read().CreateDataReader();
+                            return new CsvAdapter("TestData\\Northwind\\Customers.csv").Read().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("Employees"))
-                            return new CsvAdapter("TestData\\Employees.csv").Read().CreateDataReader();
+                            return new CsvAdapter("TestData\\Northwind\\Employees.csv").Read().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("EmployeeTerritories"))
-                            return new CsvAdapter("TestData\\EmployeeTerritories.csv").Read().CreateDataReader();
+                            return
+                                new CsvAdapter("TestData\\Northwind\\EmployeeTerritories.csv").Read().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("Order Details"))
-                            return new CsvAdapter("TestData\\Order Details.csv").Read().CreateDataReader();
+                            return new CsvAdapter("TestData\\Northwind\\Order Details.csv").Read().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("Orders"))
-                            return new CsvAdapter("TestData\\Orders.csv").Read().CreateDataReader();
+                            return new CsvAdapter("TestData\\Northwind\\Orders.csv").Read().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("Products"))
-                            return new CsvAdapter("TestData\\Products.csv").Read().CreateDataReader();
+                            return new CsvAdapter("TestData\\Northwind\\Products.csv").Read().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("Region"))
-                            return new CsvAdapter("TestData\\Region.csv").Read().CreateDataReader();
+                            return new CsvAdapter("TestData\\Northwind\\Region.csv").Read().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("Shippers"))
-                            return new CsvAdapter("TestData\\Shippers.csv").Read().CreateDataReader();
+                            return new CsvAdapter("TestData\\Northwind\\Shippers.csv").Read().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("Suppliers"))
-                            return new CsvAdapter("TestData\\Suppliers.csv").Read().CreateDataReader();
+                            return new CsvAdapter("TestData\\Northwind\\Suppliers.csv").Read().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("Territories"))
-                            return new CsvAdapter("TestData\\Territories.csv").Read().CreateDataReader();
+                            return new CsvAdapter("TestData\\Northwind\\Territories.csv").Read().CreateDataReader();
 
                         return new DataTable().CreateDataReader();
                     };

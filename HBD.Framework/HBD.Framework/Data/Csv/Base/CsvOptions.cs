@@ -10,7 +10,7 @@ namespace HBD.Framework.Data.Csv.Base
     {
         public string[] Dilimiters { get; set; } = {","};
         public int[] FieldWidths { get; set; }
-        internal FieldType TextFieldType => FieldWidths.NotAnyItem() ? FieldType.Delimited : FieldType.FixedWidth;
+        internal FieldType TextFieldType => FieldWidths.NotAny() ? FieldType.Delimited : FieldType.FixedWidth;
     }
 
     public class ReadCsvOption : CsvOption

@@ -58,29 +58,13 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attributes\EnumStringAttribute.cs" />
-    <Compile Include="Attributes\NotNullAttribute.cs" />
-    <Compile Include="Collections\ChangeTrackingCollection.cs" />
-    <Compile Include="Collections\ObservableDistinctCollection.cs" />
-    <Compile Include="Collections\ObservableSortedCollection.cs" />
-    <Compile Include="Collections\SimpleMonitor.cs" />
     <Compile Include="ColorExtensions.cs" />
-    <Compile Include="CommonFuncs.cs" />
-    <Compile Include="Core\IInternalNotifyPropertyChanging.cs" />
-    <Compile Include="Core\ICancelableNotifyPropertyChanging.cs" />
-    <Compile Include="Core\IChildrentable.cs" />
-    <Compile Include="Core\Iconable.cs" />
-    <Compile Include="Core\IInternalNotifyPropertyChanged.cs" />
-    <Compile Include="Core\INamedObject.cs" />
-    <Compile Include="Core\IOwnerable.cs" />
-    <Compile Include="Core\IParentable.cs" />
-    <Compile Include="Core\IRootable.cs" />
-    <Compile Include="Core\ITitleObject.cs" />
-    <Compile Include="Core\IToolTipable.cs" />
-    <Compile Include="Core\NotifyPropertyChange.cs" />
-    <Compile Include="Core\ChangeTrackingEntry.cs" />
-    <Compile Include="Core\SingletonWrapper.cs" />
+    <Compile Include="CommonExtensions.cs" />
+    <Compile Include="Core\ICloneable.cs" />
+    <Compile Include="Data\Base\DataClientAdapter.cs" />
     <Compile Include="Data\Base\DataFileAdapterBase.cs" />
+    <Compile Include="Data\Base\IDataClientAdapter.cs" />
+    <Compile Include="Data\Base\IDataFileAdapter.cs" />
     <Compile Include="Data\BorderCollapseValue.cs" />
     <Compile Include="Data\EntityConverters\ColumnMappingInfo.cs" />
     <Compile Include="Data\EntityConverterExtensions.cs" />
@@ -90,23 +74,16 @@
     <Compile Include="Cache\Services\ICacheService.cs" />
     <Compile Include="Cache\Services\CacheService.cs" />
     <Compile Include="Cache\Services\MemoryCacheService.cs" />
-    <Compile Include="Collections\LazyList.cs" />
-    <Compile Include="Collections\INotifyCollectionChanging.cs" />
-    <Compile Include="Collections\ChangingObservableCollection.cs" />
-    <Compile Include="Collections\ObservableDictionary.cs" />
     <Compile Include="Configuration\Base\ConfigurationCollection.cs" />
     <Compile Include="Configuration\Base\ConfigurationCollectionSectionBase.cs" />
     <Compile Include="Configuration\Base\ConfigurationElementBase.cs" />
     <Compile Include="Configuration\ConfigurationManager.cs" />
-    <Compile Include="Collections\DistinctCollection.cs" />
     <Compile Include="Configuration\Base\PropertyCollection.cs" />
     <Compile Include="Configuration\Base\PropertyElement.cs" />
-    <Compile Include="Core\AssemblyStringBuilder.cs" />
     <Compile Include="Core\BackgroundThreadHelper.cs" />
     <Compile Include="Core\CultureInfoHelper.cs" />
     <Compile Include="Core\EnumeratorSwaper.cs" />
     <Compile Include="Core\EnvironmentExtension.cs" />
-    <Compile Include="Core\IValidationable.cs" />
     <Compile Include="Core\UserPrincipalHelper.cs" />
     <Compile Include="Data\GetSetterExtensions.cs" />
     <Compile Include="Data\GetSetters\ArrayGetSetter.cs" />
@@ -141,43 +118,28 @@
     <Compile Include="Data\SqlClient\Base\ViewInfo.cs" />
     <Compile Include="Data\HtmlGeneration\TableHtmlGeneration.cs" />
     <Compile Include="EnumExtensions.cs" />
-    <Compile Include="EventArguments\CancelablePropertyChangingEventArgs.cs" />
-    <Compile Include="Exceptions\DuplicatedException.cs" />
-    <Compile Include="Exceptions\NotFoundException.cs" />
-    <Compile Include="Exceptions\OutOfCapacityException.cs" />
-    <Compile Include="Exceptions\PathNotFoundException.cs" />
-    <Compile Include="Core\Guard.cs" />
     <Compile Include="Core\AssemblyHelper.cs" />
-    <Compile Include="Core\ICloneable.cs" />
-    <Compile Include="Core\IServiceInstanceManager.cs" />
-    <Compile Include="Core\PropertyAttributeInfo.cs" />
     <Compile Include="Core\TypeFinder.cs" />
     <Compile Include="Data\SqlClient\Base\SqlClientAdapterBase.cs" />
     <Compile Include="Data\SqlClient\Base\ReferencedColumnInfo.cs" />
     <Compile Include="Data\SSDT\IDataTableMergeScriptGeneration.cs" />
     <Compile Include="Data\SSDT\ISqlMergeScriptGeneration.cs" />
-    <Compile Include="DateTimeExtensions.cs" />
     <Compile Include="HtmlGenerationExtensions.cs" />
+    <Compile Include="IO\PathEx.cs" />
+    <Compile Include="Net\Adapters\GravatarAdapter.cs" />
     <Compile Include="Randoms\RandomGenerator.cs" />
     <Compile Include="Dynamic\DynamicDictionary.cs" />
     <Compile Include="Security\Auths\Impersonator.cs" />
     <Compile Include="Security\Auths\LogonType.cs" />
     <Compile Include="Security\Auths\SafeTokenHandle.cs" />
-    <Compile Include="Serialization\Services\BaseSerializeService.cs" />
-    <Compile Include="Serialization\Services\ISerializeService.cs" />
-    <Compile Include="Serialization\Services\XmlSerializeService.cs" />
-    <Compile Include="Data\Base\IDataFileAdapter.cs" />
-    <Compile Include="Exceptions\InvalidException.cs" />
     <Compile Include="Data\DataClientExtensions.cs" />
     <Compile Include="DataTableExtensions.cs" />
     <Compile Include="ProcessStartExtension.cs" />
-    <Compile Include="ReplacementExtensions.cs" />
-    <Compile Include="Properties\Resource.Designer.cs">
+    <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Resource.resx</DependentUpon>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Data\Base\DataClientAdapter.cs" />
     <Compile Include="Data\OleDb\OleDbAdapter.cs" />
     <Compile Include="Data\SqlClient\Base\TableInfoCollection.cs" />
     <Compile Include="Data\SqlClient\Base\ColumnInfoCollection.cs" />
@@ -187,8 +149,6 @@
     <Compile Include="Data\DataReplacements\ValueReplacementJob.cs" />
     <Compile Include="Data\DataReplacements\ValueReplacementItem.cs" />
     <Compile Include="Data\SqlClient\Extensions\TableInfoExtensions.cs" />
-    <Compile Include="Data\Base\IDataClientAdapter.cs" />
-    <Compile Include="IO\PathEx.cs" />
     <Compile Include="Data\SqlClient\Extensions\SqlClientExtensions.cs" />
     <Compile Include="Data\SqlClient\Base\ColumnInfo.cs" />
     <Compile Include="Data\SqlClient\Base\DatabaseInfo.cs" />
@@ -196,48 +156,24 @@
     <Compile Include="Data\SqlClient\Base\SchemaInfo.cs" />
     <Compile Include="Data\SqlClient\SqlClientAdapter.cs" />
     <Compile Include="Data\SqlClient\Base\TableInfo.cs" />
-    <Compile Include="AttributeExtensions.cs" />
-    <Compile Include="CollectionExtenstion.cs" />
-    <Compile Include="ExpressionExtensions.cs" />
-    <Compile Include="CommonExtensions.cs" />
-    <Compile Include="PropertyExtensions.cs" />
-    <Compile Include="SimpleMonitorExtensions.cs" />
-    <Compile Include="SingletonManager.cs" />
-    <Compile Include="StringExtensions.cs" />
     <Compile Include="StyleCollectionExtensions.cs" />
-    <Compile Include="TypeExtenstions.cs" />
-    <Compile Include="IO\DirectoryEx.cs" />
-    <Compile Include="IO\FileEx.cs" />
-    <Compile Include="JsonExtensions.cs" />
-    <Compile Include="Net\Adapters\GravatarAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Security\Services\CryptionService.cs" />
-    <Compile Include="Security\CryptionManager.cs" />
-    <Compile Include="Security\Services\ICryptionService.cs" />
     <Compile Include="Data\SSDT\DataTableMergeScriptGeneration.cs" />
     <Compile Include="Data\SSDT\SqlMergeScriptGeneration.cs" />
-    <Compile Include="Text\AngledBracketsExtractor.cs" />
-    <Compile Include="Text\BracesExtractor.cs" />
-    <Compile Include="Text\BracketsExtractor.cs" />
-    <Compile Include="Text\IPatternExtractor.cs" />
-    <Compile Include="Text\ParenthesisExtractor.cs" />
-    <Compile Include="Text\Pattern.cs" />
-    <Compile Include="Text\PatternExtractor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StringExtensions.ExtractDateTime.cs" />
     <None Include="app.config" />
-    <None Include="HBD.Framework.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Cache\Base\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resource.resx">
+    <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <Import Project="..\HBD.Framework.Share\HBD.Framework.Share.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!--<Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

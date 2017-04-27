@@ -2,7 +2,6 @@
 
 using System;
 using System.Collections.Generic;
-using HBD.Framework.Data.Base;
 using HBD.Framework.Test.TestObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -91,8 +90,6 @@ namespace HBD.Framework.Tests
         {
             Assert.IsNotNull(typeof(TestItem).CreateInstance());
             Assert.IsNotNull(typeof(TestItem3).CreateInstance("AA"));
-            Assert.IsNull(typeof(DataClientAdapter).CreateInstance("AA"));
-            Assert.IsNull(typeof(IDataClientAdapter).CreateInstance());
         }
 
         [TestMethod]
@@ -100,7 +97,7 @@ namespace HBD.Framework.Tests
         [ExpectedException(typeof(ArgumentNullException))]
         public void CreateInstance_WithNullType_Test()
         {
-            CommonExtensions.CreateInstance(null);
+            ShareExtensions.CreateInstance(null);
         }
 
         [TestMethod]

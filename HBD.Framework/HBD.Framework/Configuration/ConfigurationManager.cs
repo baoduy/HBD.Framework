@@ -16,7 +16,7 @@ namespace HBD.Framework.Configuration
     /// <summary>
     ///     ConfigurationManager helps to working with Section in the config file easier than ever.
     /// </summary>
-    public static class ConfigurationManager
+    public partial class ConfigurationManager
     {
         public static CultureInfo GetDefaultCulture()
         {
@@ -80,7 +80,6 @@ namespace HBD.Framework.Configuration
         {
             var conn = System.Configuration.ConfigurationManager.ConnectionStrings[nameOrConnectionString];
             return conn?.ConnectionString ?? nameOrConnectionString;
-            //return ConsolidateConnectionString(conn?.ConnectionString ?? nameOrConnectionString);
         }
     }
 }

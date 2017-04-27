@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using HBD.Framework.Core;
 using HBD.Framework.Data.EntityConverters;
@@ -24,7 +25,7 @@ namespace HBD.Framework.Data
             foreach (var p in type.GetProperties().Where(p => p.CanWrite))
             {
                 var fieldName = p.Name;
-                var att = p.GetAttribute<ColumnAttribute>();
+                var att = p.GetCustomAttribute<ColumnAttribute>();
 
                 if (att != null)
                     fieldName = att.Name;

@@ -91,22 +91,10 @@
     <Compile Include="AutoMapping\MapperExtensionsTests.cs" />
     <Compile Include="Cache\CacheManagerTests.cs" />
     <Compile Include="Cache\Services\MemoryCacheServiceTests.cs" />
-    <Compile Include="Collections\DistinctCollectionTests.cs" />
-    <Compile Include="Collections\LazyListTests.cs" />
-    <Compile Include="Collections\ObservableCollectionTests.cs" />
-    <Compile Include="Collections\ObservableDictionaryTests.cs" />
-    <Compile Include="Collections\ObservableDistinctCollectionTests.cs" />
-    <Compile Include="Collections\ObservableSortedListTests.cs" />
     <Compile Include="CommonExtensionsTests.cs" />
     <Compile Include="Configuration\ConfigurationManagerTests.cs" />
     <Compile Include="Core\AssemblyHelperTestCases.cs" />
     <Compile Include="Core\AssemblyStringBuilderTests.cs" />
-    <Compile Include="Core\ChangeTrackingEntryTests.cs" />
-    <Compile Include="Core\GuardTestCases.cs" />
-    <Compile Include="Core\GuardTests.cs" />
-    <Compile Include="Core\NotifyPropertyChangedTests.cs" />
-    <Compile Include="Core\NotifyPropertyChangeTests.cs" />
-    <Compile Include="Core\SingletonWrapperTests.cs" />
     <Compile Include="Core\UserPrincipalHelperTests.cs" />
     <Compile Include="Data\Base\SchemaInfoTests.cs" />
     <Compile Include="Data\Base\TableNameTests.cs" />
@@ -120,20 +108,12 @@
     <Compile Include="Dynamic\DynamicDictionaryTests.cs" />
     <Compile Include="EnumExtensionsTests.cs" />
     <Compile Include="Exceptions\InvalidExceptionTests.cs" />
-    <Compile Include="AttributeExtensionsTestCases.cs" />
-    <Compile Include="CollectionExtenstionTests.cs" />
     <Compile Include="DataTableExtensionsTests.cs" />
     <Compile Include="ExpressionExtensionsTests.cs" />
     <Compile Include="IO\DirectoryExTests.cs" />
-    <Compile Include="PropertyExtensionsTests.cs" />
-    <Compile Include="SingletonManagerTests.cs" />
-    <Compile Include="StringExtensionsTests.cs" />
     <Compile Include="StyleCollectionExtensionsTests.cs" />
-    <Compile Include="TextExtensionsTests.cs" />
-    <Compile Include="TypeExtenstionsTests.cs" />
     <Compile Include="IO\DirectoryTests.cs" />
     <Compile Include="Security\Services\CryptionServiceTests.cs" />
-    <Compile Include="Serialization\Services\XmlSerializeServiceTests.cs" />
     <Compile Include="IO\PathTests.cs" />
     <Compile Include="Net\Helpers\GravatarHelperTests.cs" />
     <Compile Include="Randoms\RandomGeneratorTests.cs" />
@@ -150,57 +130,64 @@
     <Compile Include="CommonFuncsTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Northwind.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="App_Data\Northwind_log.ldf">
-      <DependentUpon>Northwind.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="..\Shared\App.config">
       <Link>App.config</Link>
     </None>
     <None Include="..\Shared\Northwind\Categories.csv">
-      <Link>Categories.csv</Link>
+      <Link>TestData\Northwind\Categories.csv</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="..\Shared\Northwind\Customers.csv">
-      <Link>Customers.csv</Link>
+      <Link>TestData\Northwind\Customers.csv</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="..\Shared\Northwind\Employees.csv">
-      <Link>Employees.csv</Link>
+      <Link>TestData\Northwind\Employees.csv</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="..\Shared\Northwind\Employees_PileDilimiters.csv">
-      <Link>Employees_PileDilimiters.csv</Link>
+      <Link>TestData\Northwind\Employees_PileDilimiters.csv</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="..\Shared\Northwind\EmployeeTerritories.csv">
-      <Link>EmployeeTerritories.csv</Link>
+      <Link>TestData\Northwind\EmployeeTerritories.csv</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="..\Shared\Northwind\Northwind_SchemaInfo.csv">
-      <Link>Northwind_SchemaInfo.csv</Link>
+      <Link>TestData\Northwind\Northwind_SchemaInfo.csv</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="..\Shared\Northwind\Northwind_SchemaInfo_MaxValues.csv">
-      <Link>Northwind_SchemaInfo_MaxValues.csv</Link>
+      <Link>TestData\Northwind\Northwind_SchemaInfo_MaxValues.csv</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="..\Shared\Northwind\Order Details.csv">
-      <Link>Order Details.csv</Link>
+      <Link>TestData\Northwind\Order Details.csv</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="..\Shared\Northwind\Orders.csv">
-      <Link>Orders.csv</Link>
+      <Link>TestData\Northwind\Orders.csv</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="..\Shared\Northwind\Products.csv">
-      <Link>Products.csv</Link>
+      <Link>TestData\Northwind\Products.csv</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="..\Shared\Northwind\Region.csv">
-      <Link>Region.csv</Link>
+      <Link>TestData\Northwind\Region.csv</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="..\Shared\Northwind\Shippers.csv">
-      <Link>Shippers.csv</Link>
+      <Link>TestData\Northwind\Shippers.csv</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="..\Shared\Northwind\Suppliers.csv">
-      <Link>Suppliers.csv</Link>
+      <Link>TestData\Northwind\Suppliers.csv</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="..\Shared\Northwind\Territories.csv">
-      <Link>Territories.csv</Link>
+      <Link>TestData\Northwind\Territories.csv</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
     <None Include="TestData\AzMan.xml">

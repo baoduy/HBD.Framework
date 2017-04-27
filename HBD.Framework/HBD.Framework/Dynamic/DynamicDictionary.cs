@@ -55,7 +55,7 @@ namespace HBD.Framework.Dynamic
                 return true;
             }
 
-            if (Objects.NotAnyItem()) return false;
+            if (Objects?.NotAny() == true) return false;
 
             result = (from b in Objects
                 let val = b.GetValueFromProperty(propertName)

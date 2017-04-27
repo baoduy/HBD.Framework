@@ -2,6 +2,7 @@
 
 using System;
 using System.Linq;
+using System.Reflection;
 using HBD.Framework.Attributes;
 
 #endregion
@@ -26,7 +27,8 @@ namespace HBD.Framework
         /// <returns></returns>
         public static bool TryToEnumString(this Enum @this, out string value)
         {
-            var att = @this.GetAttribute<EnumStringAttribute>();
+            var fi = @this.GetType().GetField(@this.ToString());
+            var att = fi.GetCustomAttribute<EnumStringAttribute>();
             if (att != null)
             {
                 value = att.Name;

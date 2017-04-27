@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HBD>
+  <Name>Testing Obj</Name>
+  <A>Information</A>
+  <B Name="Object B">
+    <C>Object C</C>
+    <D>Object D</D>
+  </B>
+</HBD>

@@ -1,11 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26206.0
+VisualStudioVersion = 15.0.26228.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CED0D593-F054-49C1-941A-80DFC9D8E299}"
 	ProjectSection(SolutionItems) = preProject
-		NuGet.Config = NuGet.Config
 		ReadMe.md = ReadMe.md
 	EndProjectSection
 EndProject
@@ -38,12 +37,12 @@ Global
 		SccNumberOfProjects = 3
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://steven2412.visualstudio.com/
-		SccProjectUniqueName0 = HBD.Framework.Data.Excel\\HBD.Framework.Data.Excel.csproj
-		SccProjectName0 = HBD.Framework.Data.Excel
-		SccLocalPath0 = HBD.Framework.Data.Excel
-		SccProjectUniqueName1 = HBD.Framework.Excel.Test\\HBD.Framework.Excel.Test.csproj
-		SccProjectName1 = HBD.Framework.Excel.Test
-		SccLocalPath1 = HBD.Framework.Excel.Test
-		SccLocalPath2 = .
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = HBD.Framework.Data.Excel\\HBD.Framework.Data.Excel.csproj
+		SccProjectName1 = HBD.Framework.Data.Excel
+		SccLocalPath1 = HBD.Framework.Data.Excel
+		SccProjectUniqueName2 = HBD.Framework.Excel.Test\\HBD.Framework.Excel.Test.csproj
+		SccProjectName2 = HBD.Framework.Excel.Test
+		SccLocalPath2 = HBD.Framework.Excel.Test
 	EndGlobalSection
 EndGlobal

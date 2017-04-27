@@ -1,0 +1,14 @@
+TABLE_SCHEMA,TABLE_NAME,Rows_Count
+dbo,Categories,14
+dbo,CustomerCustomerDemo,0
+dbo,CustomerDemographics,0
+dbo,Customers,91
+dbo,Employees,9
+dbo,EmployeeTerritories,49
+dbo,Order Details,2155
+dbo,Orders,830
+dbo,Products,77
+dbo,Region,4
+dbo,Shippers,3
+dbo,Suppliers,29
+dbo,Territories,53

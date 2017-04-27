@@ -91,7 +91,7 @@ namespace HBD.Framework.Data.Csv
                 csvReader.HasFieldsEnclosedInQuotes = true;
                 csvReader.TextFieldType = op.TextFieldType;
 
-                if (op.FieldWidths.AnyItem())
+                if (op.FieldWidths!=null && op.FieldWidths.Any())
                     csvReader.SetFieldWidths(op.FieldWidths);
 
                 if (op.FirstRowIsHeader)

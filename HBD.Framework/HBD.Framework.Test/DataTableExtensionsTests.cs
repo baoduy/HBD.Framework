@@ -68,7 +68,7 @@ namespace HBD.Framework.Tests
         public void LoadFromCSV_Customers_FirstRowIsHeader_Test()
         {
             var tb = new DataTable();
-            tb.LoadFromCsv("TestData\\Customers.csv", op => op.FirstRowIsHeader = true);
+            tb.LoadFromCsv("TestData\\Northwind\\Customers.csv", op => op.FirstRowIsHeader = true);
             Assert.IsTrue(tb.Columns.Count == 11);
             Assert.IsTrue(tb.Rows.Count == 91);
         }
@@ -78,7 +78,7 @@ namespace HBD.Framework.Tests
         public void LoadFromCSV_Customers_FirstRowIsNotHeader_Test()
         {
             var tb = new DataTable();
-            tb.LoadFromCsv("TestData\\Customers.csv", op => op.FirstRowIsHeader = false);
+            tb.LoadFromCsv("TestData\\Northwind\\Customers.csv", op => op.FirstRowIsHeader = false);
             Assert.IsTrue(tb.Columns.Count == 11);
             Assert.IsTrue(tb.Rows.Count == 92);
         }
@@ -88,7 +88,7 @@ namespace HBD.Framework.Tests
         public void LoadFromCSV_Employees_Test()
         {
             var tb = new DataTable();
-            tb.LoadFromCsv("TestData\\Employees_PileDilimiters.csv", op => op.Dilimiters = new[] {"|"});
+            tb.LoadFromCsv("TestData\\Northwind\\Employees_PileDilimiters.csv", op => op.Dilimiters = new[] {"|"});
             Assert.IsTrue(tb.Columns.Count >= 10);
             Assert.IsTrue(tb.Rows.Count >= 9);
         }
@@ -97,7 +97,7 @@ namespace HBD.Framework.Tests
         [TestCategory("Fw.DataTableExtensions")]
         public void LoadFromCSV_NullDataTable_Test()
         {
-            var tb = ((DataTable) null).LoadFromCsv("TestData\\Employees.csv", op => op.Dilimiters = new[] {"|"});
+            var tb = ((DataTable) null).LoadFromCsv("TestData\\Northwind\\Employees.csv", op => op.Dilimiters = new[] {"|"});
             Assert.IsNull(tb);
         }
 
