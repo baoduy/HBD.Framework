@@ -9,14 +9,13 @@
 
    The helpful library for .Net developers which support:
       - Caching
-      - Csv Adapter that allow to interact with Csv files.
-      - Sql Adapter that allow to interact with Sql servers.
-      - OleDb Adapter that allow to interact with Data files.
-      - The common extension methods that will help developers to save time when wring the code.
-      - Remove the JsonExtensions and Json packages as it is not in use anymore.
+      - CSV Adapter that allows interacting with CSV files.
+      - SQL Adapter that allows interacting with SQL servers.
+      - OleDb Adapter that allows interacting with Data files.
+      - The common extension methods that will help developers to save time when wringing the code.
 
-This frameowrk is using for all HBD libraries that had been develop by Duy Hoang.
+This framework is using for all HBD libraries that had been developing by Duy Hoang.
 More details in [here](https://github.com/baoduy?tab=repositories).
 
-## The priciple topics in here.
+## The principle topics in here.
 - https://drunkcoding.net/?s=Mef
