@@ -10,13 +10,30 @@
       The helpful library for .Net developers
     </description>
     <releaseNotes>
-      Version ${NugetVersion}$
+      Version ${NugetVersion}
+      -
+      
+      Version 1.8.0
       - Add NotAny extension methods.
       - Remove all NotAnyItem extensions as it is not inused and ccausing the ambiguously.
       - Add Wildcard class, that help to compare the string with wildcard.
       - Starting to Support .Net Standard 1.6
-        * The common extensions, Exceptions and EventArguments.
-        * The Attributes, Collections and Core namespaces classes.
+      * The common extensions, Exceptions and EventArguments.
+      * The Attributes, Collections and Core namespaces classes.
+
+      Version 1.0.6
+      - Add NotFoundException.
+
+      Version 1.0.5
+      - Add method to get ChangeTrackingEntry into ChangeTrackingCollection.
+      - Add ICancelableNotifyPropertyChanging and apply for NotifyPropertyChange object.
+      - Add TableHtmlGeneration that helps to generate a Html table from IGetSetterCollection, copy to clipboard. That table can be past to Word, Excel easily.
+      - Add ObservableSortedCollection
+      - Add SingletonWrapper.
+      - Add SingletonManager.
+      - Seperate the HBD.Framework.Data.Excel and HBD.Framework.Security.Azman
+      - Add NotNull attributes
+
     </releaseNotes>
     <summary>
       The helpful library for .Net developers which support:
@@ -26,6 +43,9 @@
       - OleDb Adapter that allow to interact with Data files.
       - The common extension methods that will help developers to save time when wring the code.
       - Remove the JsonExtensions and Json packages as it is not in use anymore.
+
+      This frameowrk is using for all HBD libraries that had been develop by Duy Hoang.
+      More details in here https://github.com/baoduy?tab=repositories
     </summary>
     <language>en-US</language>
     <projectUrl>https://github.com/baoduy/HBD.Framework</projectUrl>
