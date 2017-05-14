@@ -16,10 +16,38 @@ namespace HBD.Framework
         }
 
         public static bool IsAssignableFrom<T>(this Type @this)
-            => @this != null && @this.GetTypeInfo().IsAssignableFrom(typeof(T));
+        {
+            return @this != null && @this.GetTypeInfo().IsAssignableFrom(typeof(T));
+        }
 
         public static bool IsNotAssignableFrom<T>(this Type @this)
-            => !@this.IsAssignableFrom<T>();
+        {
+            return !@this.IsAssignableFrom<T>();
+        }
+
+        /// <summary>
+        ///     Convert string to Type T.
+        ///     Support boolean from true/false or 1/0
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="this"></param>
+        /// <returns></returns>
+        public static T ConvertTo<T>(this string @this)
+        {
+            if (@this.IsNullOrEmpty()) return default(T);
+
+            var type = typeof(T);
+
+            object obj = null;
+
+            if (type == @this.GetType())
+                obj = @this;
+            else
+                obj = type == typeof(bool)
+                    ? bool.TrueString.EqualsIgnoreCase(@this) || @this == "1"
+                    : Convert.ChangeType(@this, type);
+            return (T) obj;
+        }
 
         public static T ChangeType<T>(this object @this)
         {
@@ -77,9 +105,13 @@ namespace HBD.Framework
         }
 
         public static bool IsNumericType(this object @this)
-            => @this?.GetType().IsNumericType() ?? false;
+        {
+            return @this?.GetType().IsNumericType() ?? false;
+        }
 
         public static bool IsNotNumericType(this object @this)
-            => !@this.IsNumericType();
+        {
+            return !@this.IsNumericType();
+        }
     }
 }

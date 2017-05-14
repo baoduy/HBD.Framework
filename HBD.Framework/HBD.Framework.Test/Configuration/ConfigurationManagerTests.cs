@@ -3,29 +3,54 @@
 using System.Configuration;
 using System.Linq;
 using System.Runtime.Caching.Configuration;
+using System.Xml;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 #endregion
 
-namespace HBD.Framework.Test.Configuration
+namespace HBD.Framework.Configuration.Tests
 {
     [TestClass]
     public class ConfigurationManagerTests
     {
+        [TestMethod]
+        public void MergeConfigFromTest()
+        {
+            ConfigurationManager.MergeConfigFrom("TestData\\Web1.config", "TestData\\Web2.config",
+                "TestData\\Web4.config");
+
+            Assert.IsNotNull(System.Configuration.ConfigurationManager.AppSettings["A"]);
+            Assert.IsNotNull(System.Configuration.ConfigurationManager.AppSettings["B"]);
+            Assert.IsNotNull(System.Configuration.ConfigurationManager.AppSettings["C"]);
+            Assert.IsNotNull(System.Configuration.ConfigurationManager.AppSettings["D"]);
+            Assert.IsTrue(System.Configuration.ConfigurationManager.AppSettings.Count >= 8);
+
+            Assert.IsNotNull(System.Configuration.ConfigurationManager.ConnectionStrings["A"].ConnectionString);
+            Assert.IsNotNull(System.Configuration.ConfigurationManager.ConnectionStrings["B"].ConnectionString);
+            Assert.IsTrue(System.Configuration.ConfigurationManager.ConnectionStrings.Count >= 2);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ConfigurationErrorsException))]
+        public void MergeConfigFrom_Exception_Test()
+        {
+            ConfigurationManager.MergeConfigFrom("TestData\\Web3.config");
+        }
+
         [TestInitialize]
         [TestCategory("Fw.Config")]
         public void Initialiser()
         {
-            ConfigurationManager.AppSettings["TestIntValue"] = "123";
-            ConfigurationManager.AppSettings["TestTrueValue"] = "True";
-            ConfigurationManager.AppSettings["TestFalseValue"] = "False";
+            System.Configuration.ConfigurationManager.AppSettings["TestIntValue"] = "123";
+            System.Configuration.ConfigurationManager.AppSettings["TestTrueValue"] = "True";
+            System.Configuration.ConfigurationManager.AppSettings["TestFalseValue"] = "False";
         }
 
         [TestMethod]
         [TestCategory("Fw.Config")]
         public void GetDefaultCultureTest()
         {
-            var culture = Framework.Configuration.ConfigurationManager.GetDefaultCulture();
+            var culture = ConfigurationManager.GetDefaultCulture();
             Assert.IsNotNull(culture);
         }
 
@@ -33,7 +58,7 @@ namespace HBD.Framework.Test.Configuration
         [TestCategory("Fw.Config")]
         public void OpenConfigurationTest()
         {
-            var config = Framework.Configuration.ConfigurationManager.OpenConfiguration();
+            var config = ConfigurationManager.OpenConfiguration();
             Assert.IsNotNull(config);
         }
 
@@ -41,7 +66,7 @@ namespace HBD.Framework.Test.Configuration
         [TestCategory("Fw.Config")]
         public void GetSectionsTest()
         {
-            var sections = Framework.Configuration.ConfigurationManager.GetSections<UriSection>();
+            var sections = ConfigurationManager.GetSections<UriSection>();
             Assert.IsNotNull(sections);
             Assert.IsTrue(sections.Any());
         }
@@ -50,7 +75,7 @@ namespace HBD.Framework.Test.Configuration
         [TestCategory("Fw.Config")]
         public void GetSectionTest()
         {
-            var section = Framework.Configuration.ConfigurationManager.GetSection<UriSection>();
+            var section = ConfigurationManager.GetSection<UriSection>();
             Assert.IsNotNull(section);
         }
 
@@ -58,7 +83,7 @@ namespace HBD.Framework.Test.Configuration
         [TestCategory("Fw.Config")]
         public void GetSectionWithNameTest()
         {
-            var section = Framework.Configuration.ConfigurationManager.GetSection<UriSection>("uri");
+            var section = ConfigurationManager.GetSection<UriSection>("uri");
             Assert.IsNotNull(section);
         }
 
@@ -67,7 +92,7 @@ namespace HBD.Framework.Test.Configuration
         public void GetSectionGroupsTest()
         {
             var sectionGroup =
-                Framework.Configuration.ConfigurationManager.GetSectionGroup<CachingSectionGroup>();
+                ConfigurationManager.GetSectionGroup<CachingSectionGroup>();
             Assert.IsNotNull(sectionGroup);
         }
 
@@ -76,7 +101,7 @@ namespace HBD.Framework.Test.Configuration
         public void GetSectionGroupTest()
         {
             var sectionGroup =
-                Framework.Configuration.ConfigurationManager.GetSectionGroup<CachingSectionGroup>();
+                ConfigurationManager.GetSectionGroup<CachingSectionGroup>();
             Assert.IsNotNull(sectionGroup);
         }
 
@@ -84,7 +109,7 @@ namespace HBD.Framework.Test.Configuration
         [TestCategory("Fw.Config")]
         public void GetSectionGroupTestWithName()
         {
-            var sectionGroup = Framework.Configuration.ConfigurationManager.GetSectionGroup("system.runtime.caching");
+            var sectionGroup = ConfigurationManager.GetSectionGroup("system.runtime.caching");
             Assert.IsNotNull(sectionGroup);
         }
 
@@ -92,16 +117,16 @@ namespace HBD.Framework.Test.Configuration
         [TestCategory("Fw.Config")]
         public void GetAppSettingValueTest()
         {
-            var value = Framework.Configuration.ConfigurationManager.GetAppSettingValue<int>("TestIntValue");
+            var value = ConfigurationManager.GetAppSettingValue<int>("TestIntValue");
             Assert.IsTrue(value == 123);
 
-            var obj = Framework.Configuration.ConfigurationManager.GetAppSettingValue<object>("123");
+            var obj = ConfigurationManager.GetAppSettingValue<object>("123");
             Assert.IsNull(obj);
 
-            var truebool = Framework.Configuration.ConfigurationManager.GetAppSettingValue<bool>("TestTrueValue");
+            var truebool = ConfigurationManager.GetAppSettingValue<bool>("TestTrueValue");
             Assert.IsTrue(truebool);
 
-            var falsebool = Framework.Configuration.ConfigurationManager.GetAppSettingValue<bool>("TestFalseValue");
+            var falsebool = ConfigurationManager.GetAppSettingValue<bool>("TestFalseValue");
             Assert.IsFalse(falsebool);
         }
     }

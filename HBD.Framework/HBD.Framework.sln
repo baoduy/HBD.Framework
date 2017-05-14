@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.3
+VisualStudioVersion = 15.0.26430.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{50AD68A2-236B-4323-856B-E47C0638EBD0}"
 EndProject
@@ -12,41 +12,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Shared", "!Shared", "{6AEC9FCA-E4E1-4311-A706-CAF544EA8F3C}"
 	ProjectSection(SolutionItems) = preProject
 		Shared\App.config = Shared\App.config
-		Shared\Northwind\Categories.csv = Shared\Northwind\Categories.csv
-		Shared\Northwind\Customers.csv = Shared\Northwind\Customers.csv
-		Shared\Northwind\Employees.csv = Shared\Northwind\Employees.csv
-		Shared\Northwind\Employees_PileDilimiters.csv = Shared\Northwind\Employees_PileDilimiters.csv
-		Shared\Northwind\EmployeeTerritories.csv = Shared\Northwind\EmployeeTerritories.csv
-		Shared\Northwind\Northwind_SchemaInfo.csv = Shared\Northwind\Northwind_SchemaInfo.csv
-		Shared\Northwind\Northwind_SchemaInfo_MaxValues.csv = Shared\Northwind\Northwind_SchemaInfo_MaxValues.csv
-		Shared\Northwind\Order Details.csv = Shared\Northwind\Order Details.csv
-		Shared\Northwind\Orders.csv = Shared\Northwind\Orders.csv
-		Shared\Northwind\Products.csv = Shared\Northwind\Products.csv
-		Shared\Northwind\Region.csv = Shared\Northwind\Region.csv
-		Shared\Northwind\Shippers.csv = Shared\Northwind\Shippers.csv
-		Shared\Northwind\Suppliers.csv = Shared\Northwind\Suppliers.csv
-		Shared\Northwind\Territories.csv = Shared\Northwind\Territories.csv
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solutions", "Solutions", "{98C7752B-A6A1-4DF5-A9E0-DDEF955ECD01}"
-	ProjectSection(SolutionItems) = preProject
-		.tfignore = .tfignore
-		Shared\App.config = Shared\App.config
-		Shared\Northwind\Categories.csv = Shared\Northwind\Categories.csv
-		Shared\Northwind\Customers.csv = Shared\Northwind\Customers.csv
-		Shared\Northwind\Employees.csv = Shared\Northwind\Employees.csv
-		Shared\Northwind\Employees_PileDilimiters.csv = Shared\Northwind\Employees_PileDilimiters.csv
-		Shared\Northwind\EmployeeTerritories.csv = Shared\Northwind\EmployeeTerritories.csv
-		global.json = global.json
-		Shared\Northwind\Northwind_SchemaInfo.csv = Shared\Northwind\Northwind_SchemaInfo.csv
-		Shared\Northwind\Northwind_SchemaInfo_MaxValues.csv = Shared\Northwind\Northwind_SchemaInfo_MaxValues.csv
-		Shared\Northwind\Order Details.csv = Shared\Northwind\Order Details.csv
-		Shared\Northwind\Orders.csv = Shared\Northwind\Orders.csv
-		Shared\Northwind\Products.csv = Shared\Northwind\Products.csv
-		Shared\Northwind\Region.csv = Shared\Northwind\Region.csv
-		Shared\Northwind\Shippers.csv = Shared\Northwind\Shippers.csv
-		Shared\Northwind\Suppliers.csv = Shared\Northwind\Suppliers.csv
-		Shared\Northwind\Territories.csv = Shared\Northwind\Territories.csv
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{1B32E88E-EE4F-4FCA-88E3-881FDE450437}"
@@ -81,6 +46,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.St", "HBD.Fra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A121A8DE-AACE-47E0-BDA0-B5FB76188CC6}"
 	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
 		HBD.Framework.nuspec = HBD.Framework.nuspec
 		ReadMe.md = ReadMe.md
 	EndProjectSection
@@ -141,28 +107,28 @@ Global
 		SccNumberOfProjects = 9
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://steven2412.visualstudio.com/
-		SccProjectUniqueName0 = HBD.Framework.Test\\HBD.Framework.Test.csproj
-		SccProjectTopLevelParentUniqueName0 = HBD.Framework.sln
-		SccProjectName0 = HBD.Framework.Test
-		SccLocalPath0 = HBD.Framework.Test
-		SccProjectUniqueName1 = HBD.Framework\\HBD.Framework.csproj
-		SccProjectName1 = HBD.Framework
-		SccLocalPath1 = HBD.Framework
-		SccProjectUniqueName2 = HBD.Framework.Share\\HBD.Framework.Share.shproj
-		SccProjectName2 = HBD.Framework.Share
-		SccLocalPath2 = HBD.Framework.Share
-		SccProjectUniqueName3 = HBD.Framework.St\\HBD.Framework.St.csproj
-		SccProjectName3 = HBD.Framework.St
-		SccLocalPath3 = HBD.Framework.St
-		SccProjectUniqueName4 = HBD.Framework.Share\\HBD.Framework.Share.projitems
-		SccProjectTopLevelParentUniqueName4 = HBD.Framework.Share\\HBD.Framework.Share.shproj
-		SccProjectName4 = HBD.Framework.Share
-		SccLocalPath4 = HBD.Framework.Share
-		SccProjectUniqueName5 = HBD.Framework.TestSt\\HBD.Framework.Test.St.csproj
-		SccProjectTopLevelParentUniqueName5 = HBD.Framework.sln
-		SccProjectName5 = HBD.Framework.TestSt
-		SccLocalPath5 = HBD.Framework.TestSt
-		SccLocalPath6 = .
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = HBD.Framework.Test\\HBD.Framework.Test.csproj
+		SccProjectTopLevelParentUniqueName1 = HBD.Framework.sln
+		SccProjectName1 = HBD.Framework.Test
+		SccLocalPath1 = HBD.Framework.Test
+		SccProjectUniqueName2 = HBD.Framework\\HBD.Framework.csproj
+		SccProjectName2 = HBD.Framework
+		SccLocalPath2 = HBD.Framework
+		SccProjectUniqueName3 = HBD.Framework.Share\\HBD.Framework.Share.shproj
+		SccProjectName3 = HBD.Framework.Share
+		SccLocalPath3 = HBD.Framework.Share
+		SccProjectUniqueName4 = HBD.Framework.St\\HBD.Framework.St.csproj
+		SccProjectName4 = HBD.Framework.St
+		SccLocalPath4 = HBD.Framework.St
+		SccProjectUniqueName5 = HBD.Framework.Share\\HBD.Framework.Share.projitems
+		SccProjectTopLevelParentUniqueName5 = HBD.Framework.Share\\HBD.Framework.Share.shproj
+		SccProjectName5 = HBD.Framework.Share
+		SccLocalPath5 = HBD.Framework.Share
+		SccProjectUniqueName6 = HBD.Framework.TestSt\\HBD.Framework.Test.St.csproj
+		SccProjectTopLevelParentUniqueName6 = HBD.Framework.sln
+		SccProjectName6 = HBD.Framework.TestSt
+		SccLocalPath6 = HBD.Framework.TestSt
 		SccProjectUniqueName7 = AuditTrail.DB\\AuditTrail.DB.sqlproj
 		SccProjectTopLevelParentUniqueName7 = HBD.Framework.sln
 		SccProjectName7 = AuditTrail.DB

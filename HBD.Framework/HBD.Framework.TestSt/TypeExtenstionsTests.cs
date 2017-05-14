@@ -86,5 +86,21 @@ namespace HBD.Framework.Tests
             Assert.IsTrue("-123.99-".IsNotNumber());
             Assert.IsTrue("123,,123,123.99".IsNotNumber());
         }
+
+        [TestMethod]
+        public void ConvertTo_for_Boolean()
+        {
+            Assert.IsTrue("1".ConvertTo<bool>());
+            Assert.IsFalse("0".ConvertTo<bool>());
+            Assert.IsTrue("True".ConvertTo<bool>());
+            Assert.IsFalse("False".ConvertTo<bool>());
+            Assert.IsTrue("true".ConvertTo<bool>());
+            Assert.IsFalse("false".ConvertTo<bool>());
+
+            Assert.AreEqual("1".ConvertTo<int>(),1);
+            Assert.AreEqual("1.2".ConvertTo<decimal>(), (decimal)1.2);
+
+            Assert.IsNull("".ConvertTo<object>());
+        }
     }
 }
