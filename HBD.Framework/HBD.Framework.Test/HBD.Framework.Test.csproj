@@ -118,7 +118,6 @@
     <Compile Include="Net\Helpers\GravatarHelperTests.cs" />
     <Compile Include="Randoms\RandomGeneratorTests.cs" />
     <Compile Include="Security\Authentication\ImpersonateTests.cs" />
-    <Compile Include="Security\SecurityTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\SSDT\MergeScriptGenerationTests.cs" />
     <Compile Include="TestObjects\ConfigItem.cs" />

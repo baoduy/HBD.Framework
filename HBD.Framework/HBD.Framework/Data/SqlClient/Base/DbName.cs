@@ -15,7 +15,7 @@ namespace HBD.Framework.Data.SqlClient.Base
     ///     This class had been defined to standardize the name for both that elements to easier to compare and the standard
     ///     format is [ShemaName].[TableName].
     /// </summary>
-    public class DbName : IComparable<DbName>, IComparable<string>
+    public class DbName : IEquatable<DbName>, IEquatable<string>
     {
         private const string DefaultSchema = "dbo";
 
@@ -39,11 +39,6 @@ namespace HBD.Framework.Data.SqlClient.Base
         public string Schema { get; }
         public string Name { get; }
         public string FullName => Common.GetFullName(Schema, Name);
-
-        public int CompareTo(DbName other)
-            => string.Compare(FullName, other?.FullName, StringComparison.CurrentCultureIgnoreCase);
-
-        public int CompareTo(string other) => CompareTo(Parse(other));
 
         public override string ToString() => FullName;
 
@@ -83,29 +78,33 @@ namespace HBD.Framework.Data.SqlClient.Base
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            var name = obj as DbName;
-            if (name != null)
-                return CompareTo(name) == 0;
+            if (obj is DbName name)
+                return Equals(name);
 
-            var s = obj as string;
-            if (s != null)
-                return CompareTo(s) == 0;
+            if (obj is string s)
+                return Equals(s);
             return false;
         }
 
         //Two objects that are equal return hash codes that are equal. However, the reverse is not true.
         public override int GetHashCode() => Schema.GetHashCode() + Name.GetHashCode();
 
+        public bool Equals(DbName other)
+        {
+            return this.FullName.EqualsIgnoreCase(other?.FullName);
+        }
+
+        public bool Equals(string other)
+        {
+            return Equals(Parse(other));
+        }
+
         public static implicit operator string(DbName name) => name.FullName;
 
-        public static implicit operator DbName(string fullMame) => Parse(fullMame);
+        public static implicit operator DbName(string fullName) => Parse(fullName);
 
         public static bool operator ==(DbName tbA, object tbB) => tbA?.Equals(tbB) ?? false;
 
         public static bool operator !=(DbName tbA, object tbB) => !tbA?.Equals(tbB) ?? false;
-
-        //public static bool operator ==(string tbA, TableName tbB) => tbB?.Equals(tbA) ?? false;
-
-        //public static bool operator !=(string tbA, TableName tbB) => !tbB?.Equals(tbA) ?? false;
     }
 }

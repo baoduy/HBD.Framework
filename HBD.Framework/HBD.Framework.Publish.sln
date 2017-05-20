@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.0
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework", "HBD.Framework\HBD.Framework.csproj", "{C189DF1C-C95C-45AB-A9DE-A98F7410AD26}"
 EndProject
@@ -14,6 +14,12 @@ EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HBD.Framework.Share", "HBD.Framework.Share\HBD.Framework.Share.shproj", "{F38A3904-623D-45C1-8493-08C193A35F61}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.St", "HBD.Framework.St\HBD.Framework.St.csproj", "{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{35B0F207-95DA-4680-B549-98EBBADAB243}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.Test", "HBD.Framework.Test\HBD.Framework.Test.csproj", "{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.Test.St", "HBD.Framework.TestSt\HBD.Framework.Test.St.csproj", "{A8EB309B-CCAC-444E-AB19-23B513400880}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -33,15 +39,27 @@ Global
 		{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8EB309B-CCAC-444E-AB19-23B513400880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8EB309B-CCAC-444E-AB19-23B513400880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8EB309B-CCAC-444E-AB19-23B513400880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8EB309B-CCAC-444E-AB19-23B513400880}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8} = {35B0F207-95DA-4680-B549-98EBBADAB243}
+		{A8EB309B-CCAC-444E-AB19-23B513400880} = {35B0F207-95DA-4680-B549-98EBBADAB243}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Security.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Security.AzMan.5.0.505.0\lib\NET35
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
+		SccNumberOfProjects = 7
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://steven2412.visualstudio.com/
 		SccLocalPath0 = .
@@ -58,5 +76,13 @@ Global
 		SccProjectTopLevelParentUniqueName4 = HBD.Framework.Share\\HBD.Framework.Share.shproj
 		SccProjectName4 = HBD.Framework.Share
 		SccLocalPath4 = HBD.Framework.Share
+		SccProjectUniqueName5 = HBD.Framework.Test\\HBD.Framework.Test.csproj
+		SccProjectTopLevelParentUniqueName5 = HBD.Framework.Publish.sln
+		SccProjectName5 = HBD.Framework.Test
+		SccLocalPath5 = HBD.Framework.Test
+		SccProjectUniqueName6 = HBD.Framework.TestSt\\HBD.Framework.Test.St.csproj
+		SccProjectTopLevelParentUniqueName6 = HBD.Framework.Publish.sln
+		SccProjectName6 = HBD.Framework.TestSt
+		SccLocalPath6 = HBD.Framework.TestSt
 	EndGlobalSection
 EndGlobal

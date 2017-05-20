@@ -17,7 +17,7 @@ namespace HBD.Framework.Configuration
     /// <summary>
     ///     ConfigurationManager helps to working with Section in the config file easier than ever.
     /// </summary>
-    public static class ConfigurationManager
+    public static partial class ConfigurationManager
     {
         public static CultureInfo GetDefaultCulture()
         {
@@ -70,14 +70,25 @@ namespace HBD.Framework.Configuration
         ///     Supporting Azure AppSettings from Environment.EnvironmentVariables
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="name"></param>
+        /// <param name="key"></param>
         /// <returns></returns>
-        public static T GetAppSettingValue<T>(string name)
+        public static T GetAppSettingValue<T>(string key)
         {
-            var value = System.Configuration.ConfigurationManager.AppSettings[name]
-                        ?? Environment.GetEnvironmentVariable(name)
-                        ?? Environment.GetEnvironmentVariable($"APPSETTING_{name}");
+            var value = System.Configuration.ConfigurationManager.AppSettings[key]
+                        ?? Environment.GetEnvironmentVariable(key)
+                        ?? Environment.GetEnvironmentVariable($"APPSETTING_{key}");
             return value.ConvertTo<T>();
+        }
+
+        /// <summary>
+        ///     Get AppSetting value from either AppSettings or Environment.EnvironmentVariables and convert to T type.
+        ///     Supporting Azure AppSettings from Environment.EnvironmentVariables
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns>the string value of key</returns>
+        public static string GetAppSettingValue(string key)
+        {
+            return GetAppSettingValue<string>(key);
         }
 
         /// <summary>

@@ -11,10 +11,15 @@
     </description>
     <releaseNotes>
       Version ${NugetVersion}
-      - Enhance ConfigurationManager to support to working with configs on Azure.
+      - Remove CryptionManager as storing the default password in the binary and share to everyone is not recommended. If you are using this class please create an CryptionService instance instead.
+      
+      Version 1.0.10
+      - Enhance ConfigurationManager to support the configs on Azure.
       - Add ConfigurationExtensions allows to Merge the AppSettings and ConnectionStrings from the other files.
+
       Version 1.0.9
       - Add support for .Standard 1.6
+
       Version 1.8.0
       - Add NotAny extension methods.
       - Remove all NotAnyItem extensions as it is not inused and ccausing the ambiguously.
@@ -64,7 +69,7 @@
       </group>
     </dependencies>
     <references></references>
-    <tags></tags>
+    <tags>Framework Adapters Extensions</tags>
   </metadata>
   <files>
     <file src="HBD.Framework\bin\Release\HBD.Framework*" target="lib\net460" />
