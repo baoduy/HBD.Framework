@@ -18,20 +18,10 @@ namespace HBD.Framework
             return false;
         }
 
-        public static bool IsNotNull(this object @this) => !@this.IsNull();
-
-        //public static bool IsNullOrEmpty(this object @this)
-        //{
-        //    if (@this.IsNull()) return true;
-        //    // ReSharper disable once CanBeReplacedWithTryCastAndCheckForNull
-        //    if (@this is string) return string.IsNullOrWhiteSpace((string)@this);
-        //    if (@this.IsStringOrValueType()) return false;
-        //    // ReSharper disable once CanBeReplacedWithTryCastAndCheckForNull
-        //    if (@this is IEnumerable) return ((IEnumerable)@this).IsEmpty();
-        //    return false;
-        //}
-
-        //public static bool IsNotNullOrEmpty(this object @this) => !@this.IsNullOrEmpty();
+        public static bool IsNotNull(this object @this)
+        {
+            return !@this.IsNull();
+        }
 
         #region Assembly Extension
 
@@ -48,7 +38,10 @@ namespace HBD.Framework
         /// <typeparam name="T"></typeparam>
         /// <param name="this"></param>
         /// <returns></returns>
-        public static bool IsDefault<T>(this T @this) where T : struct => @this.Equals(default(T));
+        public static bool IsDefault<T>(this T @this) where T : struct
+        {
+            return @this.Equals(default(T));
+        }
 
         /// <summary>
         ///     Check the struct value is difference with default value or not.
@@ -56,7 +49,10 @@ namespace HBD.Framework
         /// <typeparam name="T"></typeparam>
         /// <param name="this"></param>
         /// <returns></returns>
-        public static bool IsNotDefault<T>(this T @this) where T : struct => !@this.IsDefault();
+        public static bool IsNotDefault<T>(this T @this) where T : struct
+        {
+            return !@this.IsDefault();
+        }
 
         #endregion Assembly Extension
     }

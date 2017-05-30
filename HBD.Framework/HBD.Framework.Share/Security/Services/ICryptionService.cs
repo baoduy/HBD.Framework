@@ -2,7 +2,7 @@
 {
     public interface ICryptionService
     {
-        string Password { get; set; }
+        //string Password { get; set; }
 
         string Decrypt(string encryptedText);
 

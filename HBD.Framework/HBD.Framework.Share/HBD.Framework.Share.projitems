@@ -40,6 +40,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ExpressionExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PropertyExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ReplacementExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\Services\Base64CryptionService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Security\Services\CryptionService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Security\Services\ICryptionService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ShareExtensions.cs" />

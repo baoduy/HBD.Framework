@@ -7,12 +7,15 @@
     <authors>Duy Hoang</authors>
     <owners>Duy Hoang</owners>
     <description>
-      The helpful framework for .Net developers, that included a bunch of helper classes that help to develop the application faster.
+      The effective framework for .Net developers that included a bunch of helper classes that help to develop the application faster.
     </description>
     <releaseNotes>
       Version ${NugetVersion}
-      - Remove CryptionManager as storing the default password in the binary and share to everyone is not recommended. If you are using this class please create an CryptionService instance instead.
-      
+      - Add Base64CryptionService for the simple encryption and description.
+
+      Version 1.0.11
+      - Remove CryptionManager as storing the default password in the binary and share to everyone is not recommended. If you are using this class, please create a CryptionService instance instead.
+
       Version 1.0.10
       - Enhance ConfigurationManager to support the configs on Azure.
       - Add ConfigurationExtensions allows to Merge the AppSettings and ConnectionStrings from the other files.
@@ -22,9 +25,9 @@
 
       Version 1.8.0
       - Add NotAny extension methods.
-      - Remove all NotAnyItem extensions as it is not inused and ccausing the ambiguously.
-      - Add Wildcard class, that help to compare the string with wildcard.
-      * The common extensions, Exceptions and EventArguments.
+      - Remove all NotAnyItem extensions as it is not in use and causing the ambiguously.
+      - Add Wildcard class, that help to compare the string with the wildcard.
+      * The standard extensions, Exceptions, and EventArguments.
       * The Attributes, Collections and Core namespaces classes.
 
       Version 1.0.6
@@ -39,18 +42,17 @@
       - Add SingletonManager.
       - Seperate the HBD.Framework.Data.Excel and HBD.Framework.Security.Azman
       - Add NotNull attributes
-
     </releaseNotes>
     <summary>
       The helpful library for .Net developers which support:
       - Caching
-      - Csv Adapter that allow to interact with Csv files.
-      - Sql Adapter that allow to interact with Sql servers.
-      - OleDb Adapter that allow to interact with Data files.
-      - The common extension methods that will help developers to save time when wring the code.
-      - Remove the JsonExtensions and Json packages as it is not in use anymore.
+      - Csv Adapter allows interacting  with Csv files.
+      - Sql Adapter allows interacting with Sql servers.
+      - OleDb Adapter allows interacting with Data files.
+      - CryptionService allows to encrypt and decrypt the string.
+      - The standard extension methods that will help developers to save the coding time.
 
-      This frameowrk is using for all HBD libraries that had been develop by Duy Hoang.
+      This framework is using for all HBD libraries that had been developing by Duy Hoang.
       More details in here https://github.com/baoduy?tab=repositories
     </summary>
     <language>en-US</language>
