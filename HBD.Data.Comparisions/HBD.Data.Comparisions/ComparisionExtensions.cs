@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace HBD.Data.Comparisons
 {
-    internal static class ComparisionExtensions
+    public static class ComparisionExtensions
     {
         public static bool IsEquals(this object @this, object obj) => @this.CompareTo(obj) == 0;
 
