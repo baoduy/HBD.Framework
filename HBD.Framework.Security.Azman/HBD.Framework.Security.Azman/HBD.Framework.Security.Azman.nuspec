@@ -2,19 +2,19 @@
 <package>
   <metadata>
     <id>HBD.Framework.Security.Azman</id>
-    <version>$version$</version>
+    <version>${NugetVersion}</version>
     <title>HBD.Framework.Security.Azman</title>
     <authors>Duy, Hoang</authors>
     <owners>Duy, Hoang</owners>
     <description>
-      The helpful library for Azman
+      The helpful library to work with Azman for .Net developers.
     </description>
     <releaseNotes>
-      Version 1.0.0
-      - Develop the AzManContext that provides the easy way to working with Azman configuration. 
+      Version ${NugetVersion}
+      - Develop the AzManContext that provides the easy way to working with Azman configuration.
     </releaseNotes>
     <summary>
-      The helpful library for Azman:
+      The helpful library to work with Azman for .Net developers.
     </summary>
     <language>en-US</language>
     <projectUrl>https://github.com/baoduy/HBD.Framework.Security.Azman</projectUrl>
