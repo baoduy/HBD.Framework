@@ -1,6 +1,7 @@
 ﻿#region using
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.IO;
 
 #endregion
 
@@ -13,7 +14,7 @@ namespace HBD.Framework.IO.Tests
         [TestCategory("Fw.IO")]
         public void GetFullPathTest()
         {
-            Assert.IsTrue(PathEx.GetFullPath("TestData").Contains("HBD.Framework.Test"));
+            Assert.IsTrue(Path.GetFullPath("TestData").Contains("HBD.Framework.Test"));
         }
 
         [TestMethod]

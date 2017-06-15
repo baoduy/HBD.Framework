@@ -2,9 +2,9 @@
 
 using System;
 using System.Threading;
-using HBD.Framework.Cache;
-using HBD.Framework.Cache.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using HBD.Framework.Caching;
+using HBD.Framework.Caching.Services;
 
 #endregion
 

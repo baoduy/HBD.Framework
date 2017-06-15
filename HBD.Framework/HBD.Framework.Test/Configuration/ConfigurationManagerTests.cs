@@ -3,7 +3,6 @@
 using System.Configuration;
 using System.Linq;
 using System.Runtime.Caching.Configuration;
-using System.Xml;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 #endregion

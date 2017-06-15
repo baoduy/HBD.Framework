@@ -20,6 +20,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Attributes\EnumStringAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Attributes\AllowNullAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Attributes\NotNullAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Caching\Providers\ICacheProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Caching\Providers\ICacheStorageProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Caching\Services\CacheService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Caching\Services\ICacheService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CollectionExtenstion.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Collections\ChangeTrackingCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Collections\ChangingObservableCollection.cs" />
@@ -31,14 +35,39 @@
     <Compile Include="$(MSBuildThisFileDirectory)Collections\ObservableSortedCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Collections\SimpleMonitor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CommonFuncs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\AssemblyHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\AssemblyStringBuilder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\ChangeTrackingEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\EnumeratorSwaper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\EnvironmentExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\ICloneable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Iconable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\SingletonWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\TypeFinder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Wildcard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Base\DataClientAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Base\DataFileAdapterBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Base\IDataClientAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Base\IDataFileAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\BorderCollapseValue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Common.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\DataClientExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\DataReplacements\IJob.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\DataReplacements\ValueReplacementItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\DataReplacements\ValueReplacementJob.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\EntityConverterExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\EntityConverters\ColumnMappingInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetters\ArrayGetSetter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetters\IGetSetter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetters\IGetSetterCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetters\ObjectGetSetterCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetters\ObjectPropertyGetSetter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetters\ObjectValueGetSetter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DateTimeExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dynamic\DynamicDictionary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ExpressionExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PropertyExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Randoms\RandomGenerator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ReplacementExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Security\Services\Base64CryptionService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Security\Services\CryptionService.cs" />
@@ -80,5 +109,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Text\Pattern.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Text\PatternExtractor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TypeExtenstions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Data\EntityConverters\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Data\DataReplacements\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Dynamic\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Randoms\" />
   </ItemGroup>
 </Project>

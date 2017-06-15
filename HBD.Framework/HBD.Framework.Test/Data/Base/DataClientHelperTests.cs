@@ -15,7 +15,6 @@ namespace HBD.Framework.Data.Base.Tests
     [TestClass]
     public class DataClientHelperTests
     {
-        //IDataParameter param;
         DbDataAdapter adapter;
         IDbCommand command;
         IDbConnection conn;
@@ -81,6 +80,8 @@ namespace HBD.Framework.Data.Base.Tests
                 .Verifiable();
 
             var obj = helperMock.Object;
+
+            Assert.IsNotNull(obj.ConnectionString);
             helperMock.Protected().Verify<DbConnectionStringBuilder>("CreateConnectionString", Times.AtLeast(1), ctr);
         }
 
@@ -94,6 +95,9 @@ namespace HBD.Framework.Data.Base.Tests
             helperMock.Protected().Setup<IDbConnection>("CreateConnection").Verifiable();
 
             var obj = helperMock.Object;
+
+            Assert.IsNull(obj.ConnectionString);
+            Assert.IsNull(obj.Connection);
 
             helperMock.Protected().Verify("CreateConnectionString", Times.Once(), ctr);
             helperMock.Protected().Verify("CreateConnection", Times.Once());
@@ -247,21 +251,6 @@ namespace HBD.Framework.Data.Base.Tests
             helperMock.Verify(c => c.ExecuteScalar(command), Times.Once());
         }
 
-        //[TestMethod()]
-        //[TestCategory("Fw.Data.Base.DataClientHelper")]
-        //public void ExecuteNonQuery_With_Query_VerifyOpenCloseExecuteTable_Test()
-        //{
-        //    var helperMock = new Mock<DataClientHelper>(conn);
-        //    helperMock.Protected().Setup<DbDataAdapter>("CreateAdapter", ItExpr.IsAny<string>(), ItExpr.IsAny<IDictionary<string, object>>())
-        //        .Returns(adapter);
-        //    helperMock.Setup(h => h.ExecuteTable(It.IsAny<string>(), It.IsAny<IDictionary<string, object>>())).CallBase();
-
-        //    using (var h = helperMock.Object)
-        //        Assert.IsNotNull(h.ExecuteTable("SELECT"));
-
-        //    helperMock.Protected().Verify("CreateAdapter", Times.Once(), ItExpr.IsAny<string>(), ItExpr.IsAny<IDictionary<string, object>>());
-        //}
-
         [TestMethod]
         [TestCategory("Fw.Data.Base.DataClientHelper")]
         public void DisposeTest()
@@ -271,12 +260,8 @@ namespace HBD.Framework.Data.Base.Tests
             var conMock = new Mock<DataClientAdapter>(conn) {CallBase = true};
             var h = conMock.Object;
             h.Dispose();
-
-            var priObj = new PrivateObject(h);
-            priObj.SetProperty("Connection", null);
-
-            h.Dispose();
-            Assert.AreEqual(ConnectionState.Broken, h.State);
+           
+            Assert.AreEqual(ConnectionState.Closed, h.State);
 
             Mock.Get(conn).Verify(c => c.Dispose(), Times.Once());
         }

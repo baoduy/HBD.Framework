@@ -22,6 +22,7 @@ namespace HBD.Framework.Collections
     public class ObservableSortedCollection<TKey, T> : ICollection<T>, ICollection, IReadOnlyList<T>,
         INotifyCollectionChanged, INotifyPropertyChanged where T : class, INotifyPropertyChanged
     {
+        private bool _isSorted = false;
         private readonly string _keyPropertyName;
         private readonly Func<T, TKey> _keySelector;
         private const string CountString = "Count";
@@ -48,13 +49,31 @@ namespace HBD.Framework.Collections
 
         protected List<T> InternalList { get; private set; }
 
-        public void CopyTo(Array array, int index) => ((ICollection) InternalList).CopyTo(array, index);
+        private void Sort()
+        {
+            if (_isSorted) return;
+            lock (Monitor)
+            {
+                _isSorted = true;
+                InternalList = InternalList.OrderBy(_keySelector).ToList();
+            }
+        }
 
-        public object SyncRoot => ((ICollection) InternalList).SyncRoot;
+        public void CopyTo(Array array, int index)
+        {
+            this.Sort();
+            ((ICollection)InternalList).CopyTo(array, index);
+        }
 
-        public bool IsSynchronized => ((ICollection) InternalList).IsSynchronized;
+        public object SyncRoot => ((ICollection)InternalList).SyncRoot;
 
-        public IEnumerator<T> GetEnumerator() => InternalList.OrderBy(_keySelector).GetEnumerator();
+        public bool IsSynchronized => ((ICollection)InternalList).IsSynchronized;
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            this.Sort();
+            return this.InternalList.GetEnumerator();
+        }
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
@@ -84,7 +103,11 @@ namespace HBD.Framework.Collections
 
         public virtual bool Contains(T item) => InternalList.Contains(item);
 
-        public virtual void CopyTo(T[] array, int arrayIndex) => InternalList.CopyTo(array, arrayIndex);
+        public virtual void CopyTo(T[] array, int arrayIndex)
+        {
+            this.Sort();
+            InternalList.CopyTo(array, arrayIndex);
+        }
 
         public virtual bool Remove(T item)
         {
@@ -107,13 +130,20 @@ namespace HBD.Framework.Collections
 
         int IReadOnlyCollection<T>.Count => Count;
 
-        public virtual T this[int index] => InternalList[index];
+        public virtual T this[int index]
+        {
+            get
+            {
+                this.Sort();
+                return InternalList[index];
+            }
+        }
 
         protected virtual void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
         {
             if (StopRaisingEvent) return;
-            if (e.Action == NotifyCollectionChangedAction.Add && Count > 1)
-                InternalList = InternalList.OrderBy(_keySelector).ToList();
+
+            this._isSorted = false;
 
             using (Monitor.BlockReentrancy())
             {
@@ -136,11 +166,7 @@ namespace HBD.Framework.Collections
         private void Item_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName != _keyPropertyName || StopRaisingEvent) return;
-
-            lock (Monitor)
-            {
-                InternalList = InternalList.OrderBy(_keySelector).ToList();
-            }
+            this._isSorted = false;
         }
     }
 }

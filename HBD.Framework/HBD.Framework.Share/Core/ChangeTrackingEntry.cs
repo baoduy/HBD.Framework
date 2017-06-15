@@ -66,7 +66,10 @@ namespace HBD.Framework.Core
             lock (OriginalValues)
             {
                 var evnArg = new CancelEventArgs();
+
+#if !NETSTANDARD1_6
                 OnAcceptChange(evnArg);
+#endif
                 if (evnArg.Cancel) return;
 
                 OriginalValues.Clear();
@@ -81,7 +84,11 @@ namespace HBD.Framework.Core
             lock (OriginalValues)
             {
                 var evnArg = new CancelEventArgs();
+
+#if !NETSTANDARD1_6
                 OnUndoChange(evnArg);
+#endif
+
                 if (evnArg.Cancel) return;
 
                 Entity.PropertyChanging -= Entity_PropertyChanging;
@@ -105,6 +112,7 @@ namespace HBD.Framework.Core
             OriginalValues.GetOrAdd(e.PropertyName, Entity.GetValueFromProperty(e.PropertyName));
         }
 
+#if !NETSTANDARD1_6
         public event EventHandler<CancelEventArgs> AcceptChange;
 
         public event EventHandler<CancelEventArgs> UndoChange;
@@ -114,5 +122,6 @@ namespace HBD.Framework.Core
 
         protected virtual void OnUndoChange(CancelEventArgs e)
             => UndoChange?.Invoke(this, e);
+#endif
     }
 }

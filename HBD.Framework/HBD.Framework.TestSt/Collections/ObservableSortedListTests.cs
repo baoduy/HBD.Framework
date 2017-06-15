@@ -28,9 +28,9 @@ namespace HBD.Framework.Collections.Tests
             list.PropertyChanged += (s, e) => propCount += 1;
 
 
-            list.Add(new NotifyPropertyChangedObject {Id = 3});
-            list.Add(new NotifyPropertyChangedObject {Id = 2});
-            list.Add(new NotifyPropertyChangedObject {Id = 1});
+            list.Add(new NotifyPropertyChangedObject { Id = 3 });
+            list.Add(new NotifyPropertyChangedObject { Id = 2 });
+            list.Add(new NotifyPropertyChangedObject { Id = 1 });
 
             Assert.AreEqual(list.Count, 3);
 
@@ -45,6 +45,26 @@ namespace HBD.Framework.Collections.Tests
 
             Assert.IsTrue(collCount == 3);
             Assert.IsTrue(propCount == 6);
+        }
+
+
+        [TestMethod]
+        public void PropertyChangedTest()
+        {
+            var list = new ObservableSortedCollection<int, NotifyPropertyChangedObject>(i => i.Id)
+            {
+                new NotifyPropertyChangedObject {Id = 3,Name="3"},
+                new NotifyPropertyChangedObject {Id = 2,Name="2"},
+                new NotifyPropertyChangedObject {Id = 1,Name="1"}
+            };
+
+            list.First(i => i.Name == "3").Id = 100;
+            list.First(i => i.Name == "2").Id = 50;
+            list.First(i => i.Name == "1").Id = 200;
+
+            Assert.IsTrue(list[0].Name == "2");
+            Assert.IsTrue(list[1].Name == "3");
+            Assert.IsTrue(list[2].Name == "1");
         }
 
         [TestMethod]
@@ -65,9 +85,9 @@ namespace HBD.Framework.Collections.Tests
         [TestMethod]
         public void ContainsTest()
         {
-            var item1 = new NotifyPropertyChangedObject {Id = 3};
-            var item2 = new NotifyPropertyChangedObject {Id = 2};
-            var item3 = new NotifyPropertyChangedObject {Id = 1};
+            var item1 = new NotifyPropertyChangedObject { Id = 3 };
+            var item2 = new NotifyPropertyChangedObject { Id = 2 };
+            var item3 = new NotifyPropertyChangedObject { Id = 1 };
 
             var list = new ObservableSortedCollection<int, NotifyPropertyChangedObject>(i => i.Id)
             {
@@ -84,9 +104,9 @@ namespace HBD.Framework.Collections.Tests
         [TestMethod]
         public void CopyToTest()
         {
-            var item1 = new NotifyPropertyChangedObject {Id = 3};
-            var item2 = new NotifyPropertyChangedObject {Id = 2};
-            var item3 = new NotifyPropertyChangedObject {Id = 1};
+            var item1 = new NotifyPropertyChangedObject { Id = 3 };
+            var item2 = new NotifyPropertyChangedObject { Id = 2 };
+            var item3 = new NotifyPropertyChangedObject { Id = 1 };
 
             var list = new ObservableSortedCollection<int, NotifyPropertyChangedObject>(i => i.Id)
             {
@@ -104,9 +124,9 @@ namespace HBD.Framework.Collections.Tests
         [TestMethod]
         public void RemoveTest()
         {
-            var item1 = new NotifyPropertyChangedObject {Id = 3};
-            var item2 = new NotifyPropertyChangedObject {Id = 2};
-            var item3 = new NotifyPropertyChangedObject {Id = 1};
+            var item1 = new NotifyPropertyChangedObject { Id = 3 };
+            var item2 = new NotifyPropertyChangedObject { Id = 2 };
+            var item3 = new NotifyPropertyChangedObject { Id = 1 };
 
             var list = new ObservableSortedCollection<int, NotifyPropertyChangedObject>(i => i.Id)
             {
@@ -121,5 +141,22 @@ namespace HBD.Framework.Collections.Tests
             Assert.IsTrue(list.Contains(item2));
             Assert.IsFalse(list.Contains(item3));
         }
+
+        //[TestMethod]
+        //public void NotHandle_AnyChanghedEventAfterRemoved_Test()
+        //{
+        //    var item1 = new NotifyPropertyChangedObject { Id = 3 };
+        //    var item2 = new NotifyPropertyChangedObject { Id = 2 };
+        //    var item3 = new NotifyPropertyChangedObject { Id = 1 };
+
+        //    var list = new ObservableSortedCollection<int, NotifyPropertyChangedObject>(i => i.Id)
+        //    {
+        //        item1,
+        //        item2,
+        //        item3
+        //    };
+
+        //    list.Clear();
+        //}
     }
 }

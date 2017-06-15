@@ -1,58 +1,46 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.4
+VisualStudioVersion = 15.0.26606.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{50AD68A2-236B-4323-856B-E47C0638EBD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.4.6", "HBD.Framework\HBD.Framework.4.6.csproj", "{C189DF1C-C95C-45AB-A9DE-A98F7410AD26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CED0D593-F054-49C1-941A-80DFC9D8E299}"
+	ProjectSection(SolutionItems) = preProject
+		HBD.Framework.nuspec = HBD.Framework.nuspec
+		..\ReadMe.md = ..\ReadMe.md
+	EndProjectSection
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HBD.Framework.StShare", "HBD.Framework.Share\HBD.Framework.StShare.shproj", "{F38A3904-623D-45C1-8493-08C193A35F61}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.St2.0", "HBD.Framework.St\HBD.Framework.St2.0.csproj", "{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Tests", "3. Tests", "{35B0F207-95DA-4680-B549-98EBBADAB243}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.Test", "HBD.Framework.Test\HBD.Framework.Test.csproj", "{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework", "HBD.Framework\HBD.Framework.csproj", "{C189DF1C-C95C-45AB-A9DE-A98F7410AD26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.Test.St", "HBD.Framework.TestSt\HBD.Framework.Test.St.csproj", "{A8EB309B-CCAC-444E-AB19-23B513400880}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Shared", "!Shared", "{6AEC9FCA-E4E1-4311-A706-CAF544EA8F3C}"
-	ProjectSection(SolutionItems) = preProject
-		Shared\App.config = Shared\App.config
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Shares", "1. Shares", "{FC33A692-7D33-4235-A4D8-722013A8B34D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{1B32E88E-EE4F-4FCA-88E3-881FDE450437}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Compilations", "2. Compilations", "{8861F8EC-BD3A-47C0-B923-876456118D2D}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Northwind.DB", "Northwin.DB\Northwind.DB.sqlproj", "{7D86E43E-1251-4D35-B03D-D335830650D9}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HBD.Framework.4xShare", "HBD.Framework.4xShare\HBD.Framework.4xShare.shproj", "{14FB9933-A6D0-402C-9D66-555C6466EE3A}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AuditTrail.DB", "AuditTrail.DB\AuditTrail.DB.sqlproj", "{22780D91-EEEE-4187-A195-2552360504D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.4.5", "HBD.Framework.4.5\HBD.Framework.4.5.csproj", "{8F55982B-E66B-43C9-8406-34D45EDDF292}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Northwind", "Northwind", "{527153A2-167B-4B04-9673-5CFC862EC5B4}"
-	ProjectSection(SolutionItems) = preProject
-		Shared\Northwind\Categories.csv = Shared\Northwind\Categories.csv
-		Shared\Northwind\Customers.csv = Shared\Northwind\Customers.csv
-		Shared\Northwind\Employees.csv = Shared\Northwind\Employees.csv
-		Shared\Northwind\Employees_PileDilimiters.csv = Shared\Northwind\Employees_PileDilimiters.csv
-		Shared\Northwind\EmployeeTerritories.csv = Shared\Northwind\EmployeeTerritories.csv
-		Shared\Northwind\Northwind_SchemaInfo.csv = Shared\Northwind\Northwind_SchemaInfo.csv
-		Shared\Northwind\Northwind_SchemaInfo_MaxValues.csv = Shared\Northwind\Northwind_SchemaInfo_MaxValues.csv
-		Shared\Northwind\Order Details.csv = Shared\Northwind\Order Details.csv
-		Shared\Northwind\Orders.csv = Shared\Northwind\Orders.csv
-		Shared\Northwind\Products.csv = Shared\Northwind\Products.csv
-		Shared\Northwind\Region.csv = Shared\Northwind\Region.csv
-		Shared\Northwind\Shippers.csv = Shared\Northwind\Shippers.csv
-		Shared\Northwind\Suppliers.csv = Shared\Northwind\Suppliers.csv
-		Shared\Northwind\Territories.csv = Shared\Northwind\Territories.csv
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.4.7", "HBD.Framework.4.7\HBD.Framework.4.7.csproj", "{3C572D24-BB60-4165-9672-32325B998450}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.Test.St", "HBD.Framework.TestSt\HBD.Framework.Test.St.csproj", "{CE3F84BE-71D6-4AA0-A4D6-93EC636E981B}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HBD.Framework.Share", "HBD.Framework.Share\HBD.Framework.Share.shproj", "{F38A3904-623D-45C1-8493-08C193A35F61}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.St", "HBD.Framework.St\HBD.Framework.St.csproj", "{38BA1FDA-BF43-4D6E-89A2-03DD0CD785D9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A121A8DE-AACE-47E0-BDA0-B5FB76188CC6}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-		HBD.Framework.nuspec = HBD.Framework.nuspec
-		ReadMe.md = ReadMe.md
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.St1.6", "HBD.Framework.St1.6\HBD.Framework.St1.6.csproj", "{C1453A87-90E8-4D03-B645-BBD076F89C92}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		HBD.Framework.4xShare\HBD.Framework.4xShare.projitems*{14fb9933-a6d0-402c-9d66-555c6466ee3a}*SharedItemsImports = 13
+		HBD.Framework.4xShare\HBD.Framework.4xShare.projitems*{3c572d24-bb60-4165-9672-32325b998450}*SharedItemsImports = 4
+		HBD.Framework.Share\HBD.Framework.Share.projitems*{3c572d24-bb60-4165-9672-32325b998450}*SharedItemsImports = 4
+		HBD.Framework.4xShare\HBD.Framework.4xShare.projitems*{8f55982b-e66b-43c9-8406-34d45eddf292}*SharedItemsImports = 4
+		HBD.Framework.Share\HBD.Framework.Share.projitems*{8f55982b-e66b-43c9-8406-34d45eddf292}*SharedItemsImports = 4
+		HBD.Framework.4xShare\HBD.Framework.4xShare.projitems*{c189df1c-c95c-45ab-a9de-a98f7410ad26}*SharedItemsImports = 4
 		HBD.Framework.Share\HBD.Framework.Share.projitems*{c189df1c-c95c-45ab-a9de-a98f7410ad26}*SharedItemsImports = 4
 		HBD.Framework.Share\HBD.Framework.Share.projitems*{f38a3904-623d-45c1-8493-08c193a35f61}*SharedItemsImports = 13
 	EndGlobalSection
@@ -61,81 +49,50 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C189DF1C-C95C-45AB-A9DE-A98F7410AD26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C189DF1C-C95C-45AB-A9DE-A98F7410AD26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C189DF1C-C95C-45AB-A9DE-A98F7410AD26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C189DF1C-C95C-45AB-A9DE-A98F7410AD26}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7D86E43E-1251-4D35-B03D-D335830650D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D86E43E-1251-4D35-B03D-D335830650D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D86E43E-1251-4D35-B03D-D335830650D9}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{7D86E43E-1251-4D35-B03D-D335830650D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D86E43E-1251-4D35-B03D-D335830650D9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7D86E43E-1251-4D35-B03D-D335830650D9}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{22780D91-EEEE-4187-A195-2552360504D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{22780D91-EEEE-4187-A195-2552360504D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{22780D91-EEEE-4187-A195-2552360504D1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{22780D91-EEEE-4187-A195-2552360504D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{22780D91-EEEE-4187-A195-2552360504D1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{22780D91-EEEE-4187-A195-2552360504D1}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{CE3F84BE-71D6-4AA0-A4D6-93EC636E981B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CE3F84BE-71D6-4AA0-A4D6-93EC636E981B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CE3F84BE-71D6-4AA0-A4D6-93EC636E981B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CE3F84BE-71D6-4AA0-A4D6-93EC636E981B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38BA1FDA-BF43-4D6E-89A2-03DD0CD785D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38BA1FDA-BF43-4D6E-89A2-03DD0CD785D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38BA1FDA-BF43-4D6E-89A2-03DD0CD785D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38BA1FDA-BF43-4D6E-89A2-03DD0CD785D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8EB309B-CCAC-444E-AB19-23B513400880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8EB309B-CCAC-444E-AB19-23B513400880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8EB309B-CCAC-444E-AB19-23B513400880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8EB309B-CCAC-444E-AB19-23B513400880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F55982B-E66B-43C9-8406-34D45EDDF292}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F55982B-E66B-43C9-8406-34D45EDDF292}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F55982B-E66B-43C9-8406-34D45EDDF292}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F55982B-E66B-43C9-8406-34D45EDDF292}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C572D24-BB60-4165-9672-32325B998450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C572D24-BB60-4165-9672-32325B998450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C572D24-BB60-4165-9672-32325B998450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C572D24-BB60-4165-9672-32325B998450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1453A87-90E8-4D03-B645-BBD076F89C92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1453A87-90E8-4D03-B645-BBD076F89C92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1453A87-90E8-4D03-B645-BBD076F89C92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1453A87-90E8-4D03-B645-BBD076F89C92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8} = {50AD68A2-236B-4323-856B-E47C0638EBD0}
-		{7D86E43E-1251-4D35-B03D-D335830650D9} = {1B32E88E-EE4F-4FCA-88E3-881FDE450437}
-		{22780D91-EEEE-4187-A195-2552360504D1} = {1B32E88E-EE4F-4FCA-88E3-881FDE450437}
-		{527153A2-167B-4B04-9673-5CFC862EC5B4} = {6AEC9FCA-E4E1-4311-A706-CAF544EA8F3C}
-		{CE3F84BE-71D6-4AA0-A4D6-93EC636E981B} = {50AD68A2-236B-4323-856B-E47C0638EBD0}
+		{C189DF1C-C95C-45AB-A9DE-A98F7410AD26} = {8861F8EC-BD3A-47C0-B923-876456118D2D}
+		{F38A3904-623D-45C1-8493-08C193A35F61} = {FC33A692-7D33-4235-A4D8-722013A8B34D}
+		{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350} = {8861F8EC-BD3A-47C0-B923-876456118D2D}
+		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8} = {35B0F207-95DA-4680-B549-98EBBADAB243}
+		{A8EB309B-CCAC-444E-AB19-23B513400880} = {35B0F207-95DA-4680-B549-98EBBADAB243}
+		{14FB9933-A6D0-402C-9D66-555C6466EE3A} = {FC33A692-7D33-4235-A4D8-722013A8B34D}
+		{8F55982B-E66B-43C9-8406-34D45EDDF292} = {8861F8EC-BD3A-47C0-B923-876456118D2D}
+		{3C572D24-BB60-4165-9672-32325B998450} = {8861F8EC-BD3A-47C0-B923-876456118D2D}
+		{C1453A87-90E8-4D03-B645-BBD076F89C92} = {8861F8EC-BD3A-47C0-B923-876456118D2D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Security.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Security.AzMan.5.0.505.0\lib\NET35
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 9
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://steven2412.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = HBD.Framework.Test\\HBD.Framework.Test.csproj
-		SccProjectTopLevelParentUniqueName1 = HBD.Framework.sln
-		SccProjectName1 = HBD.Framework.Test
-		SccLocalPath1 = HBD.Framework.Test
-		SccProjectUniqueName2 = HBD.Framework\\HBD.Framework.csproj
-		SccProjectName2 = HBD.Framework
-		SccLocalPath2 = HBD.Framework
-		SccProjectUniqueName3 = HBD.Framework.Share\\HBD.Framework.Share.shproj
-		SccProjectName3 = HBD.Framework.Share
-		SccLocalPath3 = HBD.Framework.Share
-		SccProjectUniqueName4 = HBD.Framework.St\\HBD.Framework.St.csproj
-		SccProjectName4 = HBD.Framework.St
-		SccLocalPath4 = HBD.Framework.St
-		SccProjectUniqueName5 = HBD.Framework.Share\\HBD.Framework.Share.projitems
-		SccProjectTopLevelParentUniqueName5 = HBD.Framework.Share\\HBD.Framework.Share.shproj
-		SccProjectName5 = HBD.Framework.Share
-		SccLocalPath5 = HBD.Framework.Share
-		SccProjectUniqueName6 = HBD.Framework.TestSt\\HBD.Framework.Test.St.csproj
-		SccProjectTopLevelParentUniqueName6 = HBD.Framework.sln
-		SccProjectName6 = HBD.Framework.TestSt
-		SccLocalPath6 = HBD.Framework.TestSt
-		SccProjectUniqueName7 = AuditTrail.DB\\AuditTrail.DB.sqlproj
-		SccProjectTopLevelParentUniqueName7 = HBD.Framework.sln
-		SccProjectName7 = AuditTrail.DB
-		SccLocalPath7 = AuditTrail.DB
-		SccProjectUniqueName8 = Northwin.DB\\Northwind.DB.sqlproj
-		SccProjectTopLevelParentUniqueName8 = HBD.Framework.sln
-		SccProjectName8 = Northwin.DB
-		SccLocalPath8 = Northwin.DB
 	EndGlobalSection
 EndGlobal

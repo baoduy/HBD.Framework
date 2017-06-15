@@ -1,7 +1,6 @@
 ﻿#region using
 
 using System;
-using System.Reflection;
 using HBD.Framework.Test.TestObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

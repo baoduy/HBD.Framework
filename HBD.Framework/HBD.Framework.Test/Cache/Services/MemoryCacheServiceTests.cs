@@ -1,10 +1,10 @@
 ﻿#region using
 
 using System;
-using HBD.Framework.Cache;
-using HBD.Framework.Cache.Services;
 using HBD.Framework.Test.TestObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using HBD.Framework.Caching.Services;
+using HBD.Framework.Caching;
 
 #endregion
 

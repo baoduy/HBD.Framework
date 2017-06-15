@@ -11,6 +11,11 @@
     </description>
     <releaseNotes>
       Version ${NugetVersion}
+      - Improve the performance of ObservableSortedCollection.
+      - Widely support the .Net Framework from 4.5 to 4.7 and .Net Standard from 1.6 to 2.0
+      - Moved the GravatarAdapter to HBD.Web, this library will be publish soon.
+      
+      Version 1.0.12
       - Add Base64CryptionService for the simple encryption and description.
 
       Version 1.0.11
@@ -62,19 +67,30 @@
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <copyright>Copyright 2017</copyright>
     <dependencies>
+      <group targetFramework=".NETFramework4.5.0"/>
       <group targetFramework=".NETFramework4.6.0"/>
+      <group targetFramework=".NETFramework4.7.0"/>
       <group targetFramework=".NETStandard1.6">
         <dependency id="NETStandard.Library" version="1.6.1" />
         <dependency id="System.Data.Common" version="4.3.0"/>
         <dependency id="Microsoft.CSharp" version="4.3.0" />
         <dependency id="System.ComponentModel" version="4.3.0" />
       </group>
+      <group targetFramework="NETStandard2.0">
+        <dependency id="NETStandard.Library" version="2.0.0-preview1-25301-01" />
+        <!--<dependency id="Microsoft.CSharp" version="4.3.0" />
+        <dependency id="System.Data.Common" version="4.3.0"/>
+        <dependency id="System.ComponentModel" version="4.3.0" />-->
+      </group>
     </dependencies>
     <references></references>
     <tags>Framework Adapters Extensions</tags>
   </metadata>
   <files>
-    <file src="HBD.Framework\bin\Release\HBD.Framework*" target="lib\net460" />
-    <file src="HBD.Framework.St\bin\Release\netstandard1.6\HBD.Framework*" target="lib\netstandard1.6" />
+    <file src="HBD.Framework.4.5\bin\Release\HBD.Framework*" target="lib\net45" />
+    <file src="HBD.Framework\bin\Release\HBD.Framework*" target="lib\net46" />
+    <file src="HBD.Framework.4.7\bin\Release\HBD.Framework*" target="lib\net47" />
+    <file src="HBD.Framework.St1.6\bin\Release\netstandard1.6\HBD.Framework*" target="lib\netstandard1.6" />
+    <file src="HBD.Framework.St\bin\Release\netstandard2.0\HBD.Framework*" target="lib\netstandard2.0" />
   </files>
 </package>

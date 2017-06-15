@@ -8,8 +8,6 @@ namespace HBD.Framework.IO
 {
     public partial class PathEx
     {
-       
-
         public static bool IsPathExisted(string path)
         {
             if (path.IsNullOrEmpty()) return false;
