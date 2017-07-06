@@ -1,98 +1,108 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26606.0
+VisualStudioVersion = 15.0.26621.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.4.6", "HBD.Framework\HBD.Framework.4.6.csproj", "{C189DF1C-C95C-45AB-A9DE-A98F7410AD26}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Shares", "1. Shares", "{823F3FD2-CF00-4E20-B7C2-E887806AAD1A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CED0D593-F054-49C1-941A-80DFC9D8E299}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Compilations", "2. Compilations", "{FAB94CFA-C4FD-4C68-8D1B-8578F71A7854}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Tests", "3. Tests", "{96624F17-2540-4E77-853F-7EE8320983D9}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HBD.Framework.GlobalShare", "HBD.Framework.GlobalShare\HBD.Framework.GlobalShare.shproj", "{9F839A3C-CB2D-4AFC-919C-89B2BF36E341}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HBD.Framework.4xShare", "HBD.Framework.4xShare\HBD.Framework.4xShare.shproj", "{60D5394F-70F8-416E-8C7A-CBDABD1580C1}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HBD.Framework.StShare", "HBD.Framework.StShare\HBD.Framework.StShare.shproj", "{40741B59-1DF4-46E1-ACD7-10FDB3CFD255}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.St2.0", "HBD.Framework.St2.0\HBD.Framework.St2.0.csproj", "{3537F44C-263D-43FC-8F55-8E9A13F30784}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.St1.6", "HBD.Framework.St1.6\HBD.Framework.St1.6.csproj", "{462A69F4-7154-46B3-A010-9E130C189D57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.4x", "HBD.Framework.4x\HBD.Framework.4x.csproj", "{57374123-5A07-4698-950C-3CC1E40266FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.4xTests", "HBD.Framework.4xTests\HBD.Framework.4xTests.csproj", "{17C3A736-14CE-4F60-B605-25FA55110C92}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.StTests", "HBD.Framework.StTests\HBD.Framework.StTests.csproj", "{E4ABA463-ECA1-4078-BC23-01913B259A4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E190D9BA-826E-4E0C-AD85-64B52A07DD20}"
 	ProjectSection(SolutionItems) = preProject
 		HBD.Framework.nuspec = HBD.Framework.nuspec
-		..\ReadMe.md = ..\ReadMe.md
 	EndProjectSection
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HBD.Framework.StShare", "HBD.Framework.Share\HBD.Framework.StShare.shproj", "{F38A3904-623D-45C1-8493-08C193A35F61}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shares", "Shares", "{E7EE8814-3F86-4360-BD70-ACE78480EEA6}"
+	ProjectSection(SolutionItems) = preProject
+		Shared\App.config = Shared\App.config
+	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.St2.0", "HBD.Framework.St\HBD.Framework.St2.0.csproj", "{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Tests", "3. Tests", "{35B0F207-95DA-4680-B549-98EBBADAB243}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.Test", "HBD.Framework.Test\HBD.Framework.Test.csproj", "{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.Test.St", "HBD.Framework.TestSt\HBD.Framework.Test.St.csproj", "{A8EB309B-CCAC-444E-AB19-23B513400880}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Shares", "1. Shares", "{FC33A692-7D33-4235-A4D8-722013A8B34D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Compilations", "2. Compilations", "{8861F8EC-BD3A-47C0-B923-876456118D2D}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HBD.Framework.4xShare", "HBD.Framework.4xShare\HBD.Framework.4xShare.shproj", "{14FB9933-A6D0-402C-9D66-555C6466EE3A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.4.5", "HBD.Framework.4.5\HBD.Framework.4.5.csproj", "{8F55982B-E66B-43C9-8406-34D45EDDF292}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.4.7", "HBD.Framework.4.7\HBD.Framework.4.7.csproj", "{3C572D24-BB60-4165-9672-32325B998450}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.St1.6", "HBD.Framework.St1.6\HBD.Framework.St1.6.csproj", "{C1453A87-90E8-4D03-B645-BBD076F89C92}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Northwind", "Northwind", "{2E74F94E-BB9D-4F22-8248-03E7EA269EE7}"
+	ProjectSection(SolutionItems) = preProject
+		Shared\Northwind\Categories.csv = Shared\Northwind\Categories.csv
+		Shared\Northwind\Customers.csv = Shared\Northwind\Customers.csv
+		Shared\Northwind\Employees.csv = Shared\Northwind\Employees.csv
+		Shared\Northwind\Employees_PileDilimiters.csv = Shared\Northwind\Employees_PileDilimiters.csv
+		Shared\Northwind\EmployeeTerritories.csv = Shared\Northwind\EmployeeTerritories.csv
+		Shared\Northwind\Northwind_SchemaInfo.csv = Shared\Northwind\Northwind_SchemaInfo.csv
+		Shared\Northwind\Northwind_SchemaInfo_MaxValues.csv = Shared\Northwind\Northwind_SchemaInfo_MaxValues.csv
+		Shared\Northwind\Order Details.csv = Shared\Northwind\Order Details.csv
+		Shared\Northwind\Orders.csv = Shared\Northwind\Orders.csv
+		Shared\Northwind\Products.csv = Shared\Northwind\Products.csv
+		Shared\Northwind\Region.csv = Shared\Northwind\Region.csv
+		Shared\Northwind\Shippers.csv = Shared\Northwind\Shippers.csv
+		Shared\Northwind\Suppliers.csv = Shared\Northwind\Suppliers.csv
+		Shared\Northwind\Territories.csv = Shared\Northwind\Territories.csv
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		HBD.Framework.4xShare\HBD.Framework.4xShare.projitems*{14fb9933-a6d0-402c-9d66-555c6466ee3a}*SharedItemsImports = 13
-		HBD.Framework.4xShare\HBD.Framework.4xShare.projitems*{3c572d24-bb60-4165-9672-32325b998450}*SharedItemsImports = 4
-		HBD.Framework.Share\HBD.Framework.Share.projitems*{3c572d24-bb60-4165-9672-32325b998450}*SharedItemsImports = 4
-		HBD.Framework.4xShare\HBD.Framework.4xShare.projitems*{8f55982b-e66b-43c9-8406-34d45eddf292}*SharedItemsImports = 4
-		HBD.Framework.Share\HBD.Framework.Share.projitems*{8f55982b-e66b-43c9-8406-34d45eddf292}*SharedItemsImports = 4
-		HBD.Framework.4xShare\HBD.Framework.4xShare.projitems*{c189df1c-c95c-45ab-a9de-a98f7410ad26}*SharedItemsImports = 4
-		HBD.Framework.Share\HBD.Framework.Share.projitems*{c189df1c-c95c-45ab-a9de-a98f7410ad26}*SharedItemsImports = 4
-		HBD.Framework.Share\HBD.Framework.Share.projitems*{f38a3904-623d-45c1-8493-08c193a35f61}*SharedItemsImports = 13
+		HBD.Framework.StShare\HBD.Framework.StShare.projitems*{40741b59-1df4-46e1-acd7-10fdb3cfd255}*SharedItemsImports = 13
+		HBD.Framework.4xShare\HBD.Framework.4xShare.projitems*{57374123-5a07-4698-950c-3cc1e40266fe}*SharedItemsImports = 4
+		HBD.Framework.GlobalShare\HBD.Framework.GlobalShare.projitems*{57374123-5a07-4698-950c-3cc1e40266fe}*SharedItemsImports = 4
+		HBD.Framework.4xShare\HBD.Framework.4xShare.projitems*{60d5394f-70f8-416e-8c7a-cbdabd1580c1}*SharedItemsImports = 13
+		HBD.Framework.GlobalShare\HBD.Framework.GlobalShare.projitems*{9f839a3c-cb2d-4afc-919c-89b2bf36e341}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C189DF1C-C95C-45AB-A9DE-A98F7410AD26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C189DF1C-C95C-45AB-A9DE-A98F7410AD26}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C189DF1C-C95C-45AB-A9DE-A98F7410AD26}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C189DF1C-C95C-45AB-A9DE-A98F7410AD26}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A8EB309B-CCAC-444E-AB19-23B513400880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A8EB309B-CCAC-444E-AB19-23B513400880}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A8EB309B-CCAC-444E-AB19-23B513400880}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A8EB309B-CCAC-444E-AB19-23B513400880}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F55982B-E66B-43C9-8406-34D45EDDF292}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F55982B-E66B-43C9-8406-34D45EDDF292}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F55982B-E66B-43C9-8406-34D45EDDF292}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F55982B-E66B-43C9-8406-34D45EDDF292}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3C572D24-BB60-4165-9672-32325B998450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C572D24-BB60-4165-9672-32325B998450}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C572D24-BB60-4165-9672-32325B998450}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C572D24-BB60-4165-9672-32325B998450}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C1453A87-90E8-4D03-B645-BBD076F89C92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1453A87-90E8-4D03-B645-BBD076F89C92}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1453A87-90E8-4D03-B645-BBD076F89C92}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1453A87-90E8-4D03-B645-BBD076F89C92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3537F44C-263D-43FC-8F55-8E9A13F30784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3537F44C-263D-43FC-8F55-8E9A13F30784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3537F44C-263D-43FC-8F55-8E9A13F30784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3537F44C-263D-43FC-8F55-8E9A13F30784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{462A69F4-7154-46B3-A010-9E130C189D57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{462A69F4-7154-46B3-A010-9E130C189D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{462A69F4-7154-46B3-A010-9E130C189D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{462A69F4-7154-46B3-A010-9E130C189D57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57374123-5A07-4698-950C-3CC1E40266FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57374123-5A07-4698-950C-3CC1E40266FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57374123-5A07-4698-950C-3CC1E40266FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57374123-5A07-4698-950C-3CC1E40266FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17C3A736-14CE-4F60-B605-25FA55110C92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17C3A736-14CE-4F60-B605-25FA55110C92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17C3A736-14CE-4F60-B605-25FA55110C92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17C3A736-14CE-4F60-B605-25FA55110C92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4ABA463-ECA1-4078-BC23-01913B259A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4ABA463-ECA1-4078-BC23-01913B259A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4ABA463-ECA1-4078-BC23-01913B259A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4ABA463-ECA1-4078-BC23-01913B259A4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C189DF1C-C95C-45AB-A9DE-A98F7410AD26} = {8861F8EC-BD3A-47C0-B923-876456118D2D}
-		{F38A3904-623D-45C1-8493-08C193A35F61} = {FC33A692-7D33-4235-A4D8-722013A8B34D}
-		{D7C0C0C9-E6EB-49A9-87EF-3ED7A4C70350} = {8861F8EC-BD3A-47C0-B923-876456118D2D}
-		{AB5FA558-B100-4A7F-AFE0-27D7935F3BC8} = {35B0F207-95DA-4680-B549-98EBBADAB243}
-		{A8EB309B-CCAC-444E-AB19-23B513400880} = {35B0F207-95DA-4680-B549-98EBBADAB243}
-		{14FB9933-A6D0-402C-9D66-555C6466EE3A} = {FC33A692-7D33-4235-A4D8-722013A8B34D}
-		{8F55982B-E66B-43C9-8406-34D45EDDF292} = {8861F8EC-BD3A-47C0-B923-876456118D2D}
-		{3C572D24-BB60-4165-9672-32325B998450} = {8861F8EC-BD3A-47C0-B923-876456118D2D}
-		{C1453A87-90E8-4D03-B645-BBD076F89C92} = {8861F8EC-BD3A-47C0-B923-876456118D2D}
+		{9F839A3C-CB2D-4AFC-919C-89B2BF36E341} = {823F3FD2-CF00-4E20-B7C2-E887806AAD1A}
+		{60D5394F-70F8-416E-8C7A-CBDABD1580C1} = {823F3FD2-CF00-4E20-B7C2-E887806AAD1A}
+		{40741B59-1DF4-46E1-ACD7-10FDB3CFD255} = {823F3FD2-CF00-4E20-B7C2-E887806AAD1A}
+		{3537F44C-263D-43FC-8F55-8E9A13F30784} = {FAB94CFA-C4FD-4C68-8D1B-8578F71A7854}
+		{462A69F4-7154-46B3-A010-9E130C189D57} = {FAB94CFA-C4FD-4C68-8D1B-8578F71A7854}
+		{57374123-5A07-4698-950C-3CC1E40266FE} = {FAB94CFA-C4FD-4C68-8D1B-8578F71A7854}
+		{17C3A736-14CE-4F60-B605-25FA55110C92} = {96624F17-2540-4E77-853F-7EE8320983D9}
+		{E4ABA463-ECA1-4078-BC23-01913B259A4C} = {96624F17-2540-4E77-853F-7EE8320983D9}
+		{E7EE8814-3F86-4360-BD70-ACE78480EEA6} = {E190D9BA-826E-4E0C-AD85-64B52A07DD20}
+		{2E74F94E-BB9D-4F22-8248-03E7EA269EE7} = {E7EE8814-3F86-4360-BD70-ACE78480EEA6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Security.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Security.AzMan.5.0.505.0\lib\NET35
+		SolutionGuid = {DAE6BB77-E730-4052-9CBC-BF8DF33386C7}
 	EndGlobalSection
 EndGlobal

@@ -1,19 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup Label="SharedProjectFile_SccProperties">
-    <SharedProjectFile_ProjectGuid>{eb5f81c4-596e-4e45-833a-984b907156e6}</SharedProjectFile_ProjectGuid>
-    <SharedProjectFile_SccProjectName>SAK</SharedProjectFile_SccProjectName>
-    <SharedProjectFile_SccAuxPath>SAK</SharedProjectFile_SccAuxPath>
-    <SharedProjectFile_SccLocalPath>SAK</SharedProjectFile_SccLocalPath>
-    <SharedProjectFile_SccProvider>SAK</SharedProjectFile_SccProvider>
-  </PropertyGroup>
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>14fb9933-a6d0-402c-9d66-555c6466ee3a</SharedGUID>
+    <SharedGUID>60d5394f-70f8-416e-8c7a-cbdabd1580c1</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>HBD.Framework.4xShare</Import_RootNamespace>
+    <Import_RootNamespace>HBD.Framework</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Caching\CacheManager.cs" />

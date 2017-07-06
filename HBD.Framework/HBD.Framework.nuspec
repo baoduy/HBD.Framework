@@ -22,7 +22,7 @@
       - Remove CryptionManager as storing the default password in the binary and share to everyone is not recommended. If you are using this class, please create a CryptionService instance instead.
 
       Version 1.0.10
-      - Enhance ConfigurationManager to support the configs on Azure.
+      - Enhance ConfigurationManager to support the configures on Azure.
       - Add ConfigurationExtensions allows to Merge the AppSettings and ConnectionStrings from the other files.
 
       Version 1.0.9
@@ -31,9 +31,9 @@
       Version 1.8.0
       - Add NotAny extension methods.
       - Remove all NotAnyItem extensions as it is not in use and causing the ambiguously.
-      - Add Wildcard class, that help to compare the string with the wildcard.
+      - Add Wild-card class, that help to compare the string with the wild-card.
       * The standard extensions, Exceptions, and EventArguments.
-      * The Attributes, Collections and Core namespaces classes.
+      * The Attributes, Collections and Core name-spaces classes.
 
       Version 1.0.6
       - Add NotFoundException.
@@ -41,11 +41,11 @@
       Version 1.0.5
       - Add method to get ChangeTrackingEntry into ChangeTrackingCollection.
       - Add ICancelableNotifyPropertyChanging and apply for NotifyPropertyChange object.
-      - Add TableHtmlGeneration that helps to generate a Html table from IGetSetterCollection, copy to clipboard. That table can be past to Word, Excel easily.
+      - Add TableHtmlGeneration that helps to generate a HTML table from IGetSetterCollection, copy to clipboard. That table can be past to Word, Excel easily.
       - Add ObservableSortedCollection
       - Add SingletonWrapper.
       - Add SingletonManager.
-      - Seperate the HBD.Framework.Data.Excel and HBD.Framework.Security.Azman
+      - Separate the HBD.Framework.Data.Excel and HBD.Framework.Security.Azman
       - Add NotNull attributes
     </releaseNotes>
     <summary>
@@ -67,9 +67,7 @@
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <copyright>Copyright 2017</copyright>
     <dependencies>
-      <group targetFramework=".NETFramework4.5.0"/>
-      <group targetFramework=".NETFramework4.6.0"/>
-      <group targetFramework=".NETFramework4.7.0"/>
+      <group targetFramework=".NETFramework4.5.2"/>
       <group targetFramework=".NETStandard1.6">
         <dependency id="NETStandard.Library" version="1.6.1" />
         <dependency id="System.Data.Common" version="4.3.0"/>
@@ -78,19 +76,14 @@
       </group>
       <group targetFramework="NETStandard2.0">
         <dependency id="NETStandard.Library" version="2.0.0-preview1-25301-01" />
-        <!--<dependency id="Microsoft.CSharp" version="4.3.0" />
-        <dependency id="System.Data.Common" version="4.3.0"/>
-        <dependency id="System.ComponentModel" version="4.3.0" />-->
       </group>
     </dependencies>
     <references></references>
     <tags>Framework Adapters Extensions</tags>
   </metadata>
   <files>
-    <file src="HBD.Framework.4.5\bin\Release\HBD.Framework*" target="lib\net45" />
-    <file src="HBD.Framework\bin\Release\HBD.Framework*" target="lib\net46" />
-    <file src="HBD.Framework.4.7\bin\Release\HBD.Framework*" target="lib\net47" />
-    <file src="HBD.Framework.St1.6\bin\Release\netstandard1.6\HBD.Framework*" target="lib\netstandard1.6" />
-    <file src="HBD.Framework.St\bin\Release\netstandard2.0\HBD.Framework*" target="lib\netstandard2.0" />
+    <file src="HBD.Framework.4x\bin\Release\HBD.Framework*" target="lib\net452" exclude="**\*.pdb"/>
+    <file src="HBD.Framework.St1.6\bin\Release\netstandard1.6\HBD.Framework*" target="lib\netstandard1.6" exclude="**\*.pdb"/>
+    <file src="HBD.Framework.St2.0\bin\Release\netstandard2.0\HBD.Framework*" target="lib\netstandard2.0" exclude="**\*.pdb"/>
   </files>
 </package>
