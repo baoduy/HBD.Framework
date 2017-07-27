@@ -12,7 +12,7 @@ namespace HBD.Framework.Caching.Providers
     public class RegionMemoryCache : ObjectCache, ICacheProvider
     {
         private bool _isDisposed;
-        private volatile IDictionary<string, MemoryCache> _regions = new Dictionary<string, MemoryCache>();
+        private readonly IDictionary<string, MemoryCache> _regions = new Dictionary<string, MemoryCache>();
         public override DefaultCacheCapabilities DefaultCacheCapabilities => GetCache(null).DefaultCacheCapabilities;
         public override string Name => "RegionMemoryCache";
 

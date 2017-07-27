@@ -28,6 +28,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Collections\ObservableSortedCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Collections\SimpleMonitor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CommonFuncs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compress\InternalExtentions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compress\IZipAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compress\Zip.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compress\ZipAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compress\ZipCompressOption.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compress\ZipExtractOption.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compress\ZipOption.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\AssemblyHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\AssemblyStringBuilder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\ChangeTrackingEntry.cs" />
@@ -53,19 +60,28 @@
     <Compile Include="$(MSBuildThisFileDirectory)Core\SingletonWrapper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\TypeFinder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Wildcard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataTableExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\Base\DataClientAdapter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\Base\DataFileAdapterBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\Base\IDataClientAdapter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\Base\IDataFileAdapter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\BorderCollapseValue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ColumnNamingType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\Common.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Csv\CsvAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Csv\CsvOption.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\DataClientExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\DataReplacements\IJob.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\DataReplacements\ValueReplacementItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\DataReplacements\ValueReplacementJob.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\EntityConverterExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\EntityConverters\ColumnMappingInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetterExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetters\ArrayGetSetter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetters\ArrayGetSetterCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetters\DataColumnGetSetter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetters\DataRowGetSetter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetters\DataTableGetSetterCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetters\IGetSetter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetters\IGetSetterCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetters\ObjectGetSetterCollection.cs" />
@@ -84,6 +100,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)IO\FileEx.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IO\PathEx.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PropertyExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Randoms\NameRepo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Randoms\RandomGenerator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ReplacementExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Security\Services\Base64CryptionService.cs" />
@@ -101,6 +118,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Text\ParenthesisExtractor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Text\Pattern.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Text\PatternExtractor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Text\TagPatternExtractor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TypeExtenstions.cs" />
   </ItemGroup>
 </Project>

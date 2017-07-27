@@ -58,7 +58,7 @@ namespace HBD.Framework.Dynamic
             if (Objects?.NotAny() == true) return false;
 
             result = (from b in Objects
-                let val = b.GetValueFromProperty(propertName)
+                let val = b.PropertyValue(propertName)
                 where val != null
                 select val).FirstOrDefault();
 

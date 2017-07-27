@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace HBD.Framework.Text
 {
-    public interface IPatternExtractor : IEnumerable<IPattern>
+    public interface IPatternExtractor<TPattern> : IEnumerable<TPattern> where TPattern : IPattern
     {
     }
 }

@@ -1,6 +1,5 @@
 ﻿#region using
 
-using System.Text.RegularExpressions;
 
 #endregion
 
@@ -9,13 +8,15 @@ namespace HBD.Framework.Text
     /// <summary>
     ///     Extract Text from Patterns "(Text)"
     /// </summary>
-    public class ParenthesisExtractor : PatternExtractor
+    public class ParenthesisExtractor : TagPatternExtractor
     {
         public ParenthesisExtractor(string originalString)
             : base(originalString)
         {
         }
 
-        protected override Regex Regex => new Regex(@"\(([^\)]+)\)", RegexOptions.IgnoreCase);
+        protected internal override char BeginCharacter => '(';
+
+        protected internal override char EndCharacter => ')';
     }
 }

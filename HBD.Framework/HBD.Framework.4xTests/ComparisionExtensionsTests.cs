@@ -1,5 +1,4 @@
-﻿using HBD.Framework.Extensions;
-using HBD.Framework.Test.TestObjects;
+﻿using HBD.Framework.Test.TestObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;

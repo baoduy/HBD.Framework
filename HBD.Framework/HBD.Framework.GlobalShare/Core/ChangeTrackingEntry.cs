@@ -94,7 +94,7 @@ namespace HBD.Framework.Core
                 Entity.PropertyChanging -= Entity_PropertyChanging;
                 Entity.PropertyChanged -= Entity_PropertyChanged;
 
-                foreach (var item in OriginalValues) Entity.SetValueToProperty(item.Key, item.Value);
+                foreach (var item in OriginalValues) Entity.SetPropertyValue(item.Key, item.Value);
 
                 Entity.PropertyChanging += Entity_PropertyChanging;
                 Entity.PropertyChanged += Entity_PropertyChanged;
@@ -109,7 +109,7 @@ namespace HBD.Framework.Core
         private void Entity_PropertyChanging(object sender, CancelablePropertyChangingEventArgs e)
         {
             if (e.Cancel) return;
-            OriginalValues.GetOrAdd(e.PropertyName, Entity.GetValueFromProperty(e.PropertyName));
+            OriginalValues.GetOrAdd(e.PropertyName, Entity.PropertyValue(e.PropertyName));
         }
 
 #if !NETSTANDARD1_6

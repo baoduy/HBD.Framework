@@ -31,7 +31,11 @@ namespace HBD.Framework
 
             return @this.GetType()
                 .GetTypeInfo()
-                .GetProperty(propertyName, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);
+                .GetProperty(propertyName, 
+                    BindingFlags.IgnoreCase 
+                    | BindingFlags.Public 
+                    | BindingFlags.NonPublic 
+                    | BindingFlags.Instance);
         }
 
         public static IEnumerable<PropertyAttributeInfo<TAttribute>> GetProperties<TAttribute>(this object @this,
@@ -42,17 +46,16 @@ namespace HBD.Framework
             {
                 var att = p.GetCustomAttribute<TAttribute>(inherit);
                 if (att == null) continue;
-                yield return new PropertyAttributeInfo<TAttribute> {Attribute = att, PropertyInfo = p};
+                yield return new PropertyAttributeInfo<TAttribute> { Attribute = att, PropertyInfo = p };
             }
         }
 
         #region GetValues
 
-        public static object GetValueFromProperty<T>(this T obj, string propertyName) where T : class
+        public static object PropertyValue<T>(this T obj, string propertyName) where T : class
         {
             if (obj == null || propertyName.IsNullOrEmpty()) return null;
-
-            var props = propertyName.Contains(".") ? propertyName.Split('.') : new[] {propertyName};
+            var props = propertyName.Contains(".") ? propertyName.Split('.') : new[] { propertyName };
 
             object currentObj = obj;
             foreach (var p in props)
@@ -67,14 +70,14 @@ namespace HBD.Framework
 
         #region SetValues
 
-        public static bool SetValueToProperty(this object @this, string propertyName, object value)
+        public static bool SetPropertyValue(this object @this, string propertyName, object value)
         {
             if (@this == null || propertyName.IsNullOrEmpty()) return false;
             var property = @this.GetProperty(propertyName);
-            return @this.SetValueToProperty(property, value);
+            return @this.SetPropertyValue(property, value);
         }
 
-        internal static bool SetValueToProperty(this object @this, PropertyInfo property, object value)
+        internal static bool SetPropertyValue(this object @this, PropertyInfo property, object value)
         {
             if (@this == null || property == null) return false;
             try

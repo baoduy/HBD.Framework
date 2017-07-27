@@ -72,6 +72,7 @@ namespace HBD.Framework.Tests
             var i = new TestItem();
             var ex = i.ToEqualsExpress("Name", "Details");
             var props = ex.ExtractProperties().ToArray();
+
             Assert.IsTrue(props.Length == 2);
             Assert.IsTrue(props[0].Name == "Name");
             Assert.IsTrue(props[1].Name == "Details");

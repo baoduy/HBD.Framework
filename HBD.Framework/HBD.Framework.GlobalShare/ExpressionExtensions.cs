@@ -102,7 +102,7 @@ namespace HBD.Framework
             dynamic expression = null;
             foreach (var p in propertyNames.Where(a => a.IsNotNullOrEmpty()))
             {
-                var value = @this.GetValueFromProperty(p);
+                var value = @this.PropertyValue(p);
                 var left = Expression.Property(pe, p);
                 var right = Expression.Constant(value);
 

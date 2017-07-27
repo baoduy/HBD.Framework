@@ -73,15 +73,20 @@ namespace HBD.Framework.IO
             }
         }
 
-        public static void MoveAllFilesAndFoldersTo(this DirectoryInfo @this, string destinationDirectory)
+        /// <summary>
+        /// Copy whole directort to new location.
+        /// </summary>
+        /// <param name="this"></param>
+        /// <param name="destination"></param>
+        public static void CopyTo(this DirectoryInfo @this, string destination, bool overwrite = true)
         {
-            Directory.CreateDirectory(destinationDirectory);
+            Directory.CreateDirectory(destination);
+
+            foreach (var f in @this.GetFiles())
+                f.CopyTo(Path.Combine(destination, f.Name), overwrite);
 
             foreach (var d in @this.GetDirectories())
-                d.MoveTo(Path.Combine(destinationDirectory, d.Name));
-            foreach (var f in @this.GetFiles())
-                f.MoveTo(Path.Combine(destinationDirectory, f.Name));
-            @this.Delete();
+                d.CopyTo(Path.Combine(destination, d.Name), overwrite);
         }
 
         public static bool DirectoryIsExists(this string @this)

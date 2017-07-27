@@ -13,6 +13,7 @@ using HBD.Framework.Data.SqlClient.Base;
 using Microsoft.QualityTools.Testing.Fakes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using HBD.Framework.Data;
 
 #endregion
 
@@ -70,11 +71,11 @@ namespace HBD.Framework.Test.Data.SqlClient
                     (s, c) =>
                     {
                         if (s.CommandText.ContainsIgnoreCase("FROM      Information_Schema.Columns C"))
-                            return new CsvAdapter("TestData\\DataBaseInfo\\SchemaInfo.csv").Read().CreateDataReader();
+                            return new CsvAdapter("TestData\\DataBaseInfo\\SchemaInfo.csv").Read().ToDataTable().CreateDataReader();
 
                         if (s.CommandText.ContainsIgnoreCase("SELECT MaxValue"))
                             return
-                                new CsvAdapter("TestData\\DataBaseInfo\\MaxOfPrimaryKeys.csv").Read().CreateDataReader();
+                                new CsvAdapter("TestData\\DataBaseInfo\\MaxOfPrimaryKeys.csv").Read().ToDataTable().CreateDataReader();
 
                         return null;
                     };
@@ -101,8 +102,8 @@ namespace HBD.Framework.Test.Data.SqlClient
 
                         using (var ex = new CsvAdapter("TestData\\DataBaseInfo\\DataBaseInfo.csv"))
                         {
-                            var dt = ex.ReadData();
-                            return dt.CreateDataReader();
+                            var dt = ex.Read();
+                            return dt.ToDataTable().CreateDataReader();
                         }
                     };
 

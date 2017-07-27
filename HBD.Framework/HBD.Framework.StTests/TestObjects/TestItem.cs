@@ -51,6 +51,9 @@ namespace HBD.Framework.Test.TestObjects
 
         public int Id { get; set; }
         public string Name { get; set; }
+
+        private object PrivateObj { get; set; } = new object();
+        protected object ProtectedObj { get; set; } = new object();
     }
 
     public enum TestEnum

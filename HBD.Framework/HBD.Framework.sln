@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26621.2
+VisualStudioVersion = 15.0.26711.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Shares", "1. Shares", "{823F3FD2-CF00-4E20-B7C2-E887806AAD1A}"
 EndProject
@@ -51,6 +51,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Northwind", "Northwind", "{
 		Shared\Northwind\Shippers.csv = Shared\Northwind\Shippers.csv
 		Shared\Northwind\Suppliers.csv = Shared\Northwind\Suppliers.csv
 		Shared\Northwind\Territories.csv = Shared\Northwind\Territories.csv
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SonarQube", "SonarQube", "{379AA6B4-39FF-4497-9712-0BE03F8B1F8F}"
+	ProjectSection(SolutionItems) = preProject
+		SonarQube\HBD.FrameworkCSharp.ruleset = SonarQube\HBD.FrameworkCSharp.ruleset
+		SonarQube\SolutionBinding.sqconfig = SonarQube\SolutionBinding.sqconfig
 	EndProjectSection
 EndProject
 Global

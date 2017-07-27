@@ -22,6 +22,8 @@ namespace HBD.Framework.Data.GetSetters
 
         public object OriginalObject { get; }
 
+        public int Count { get { EnsureColumnInfos(); return _columnInfos.Length; } }
+
         public object this[string name]
         {
             get

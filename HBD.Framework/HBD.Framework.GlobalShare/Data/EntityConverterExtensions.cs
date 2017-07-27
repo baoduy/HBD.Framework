@@ -21,7 +21,7 @@ namespace HBD.Framework.Data
         /// <returns></returns>
         internal static IEnumerable<ColumnMappingInfo> GetColumnMapping(Type type)
         {
-            foreach (var p in type.GetProperties().Where(p => p.CanWrite))
+            foreach (var p in type.GetTypeInfo().GetProperties())
             {
                 var fieldName = p.Name;
 
@@ -68,7 +68,7 @@ namespace HBD.Framework.Data
                         var value = @this[p.FieldName];
                         if (value.IsNull()) continue;
 
-                        entity.SetValueToProperty(p.PropertyInfo, value);
+                        entity.SetPropertyValue(p.PropertyInfo, value);
                         hasValue = true;
                     }
                     catch (Exception)

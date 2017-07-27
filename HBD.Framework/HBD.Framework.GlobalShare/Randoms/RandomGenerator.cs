@@ -17,7 +17,7 @@ namespace HBD.Framework.Randoms
         public static string String(int length = 0)
         {
             if (length <= 0)
-                length = Int(10, byte.MaxValue);
+                length = Int(10, 100);
 
             var sb = new StringBuilder(length);
             for (var i = 0; i < length; i++)

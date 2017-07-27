@@ -39,7 +39,7 @@
       <HintPath>..\packages\DocumentFormat.OpenXml.2.7.1\lib\net45\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
     <Reference Include="HBD.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\HBD.Framework.1.0.12\lib\net460\HBD.Framework.dll</HintPath>
+      <HintPath>..\packages\HBD.Framework.2.0.0-preview3\lib\net452\HBD.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,16 +53,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\CellIndex.cs" />
-    <Compile Include="Base\DefaultStyles.cs" />
-    <Compile Include="Base\ExcelAdapterOption.cs" />
-    <Compile Include="Base\SheetInfo.cs" />
-    <Compile Include="DrawingExtensions.cs" />
-    <Compile Include="Excel2003Adapter.cs" />
-    <Compile Include="ExcelAdapter.cs" />
-    <Compile Include="ExcelExtensions.cs" />
-    <Compile Include="GetSetters\ExcelRowGetSetter.cs" />
-    <Compile Include="GetSetters\ExcelSheetGetSetter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,5 +60,7 @@
     <None Include="HBD.Framework.Data.Excel.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
+  <Import Project="..\HBD.Framework.Data.Excel.4x\HBD.Framework.Data.Excel.4x.projitems" Label="Shared" />
+  <Import Project="..\HBD.Framework.Data.Excel.GlobalShared\HBD.Framework.Data.Excel.GlobalShared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

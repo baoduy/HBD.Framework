@@ -10,6 +10,6 @@ namespace HBD.Framework.Data.GetSetters
     {
         object this[string name] { get; set; }
         object this[int index] { get; set; }
-        //int Count { get; }
+        int Count { get; }
     }
 }

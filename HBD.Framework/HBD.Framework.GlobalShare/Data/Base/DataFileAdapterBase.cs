@@ -1,6 +1,6 @@
 ﻿#region using
 
-using System.Data;
+using HBD.Framework.Data.GetSetters;
 
 #endregion
 
@@ -19,11 +19,10 @@ namespace HBD.Framework.Data.Base
 
         public string DocumentFile { get; }
 
-#if !NETSTANDARD1_6
-        public abstract DataSet ReadData(bool firstRowIsColumnName = true);
+        public abstract IGetSetterCollection Read(bool firstRowIsHeader = true);
 
-        public abstract void WriteData(DataSet data, bool ignoreHeader = true);
-#endif
+        public abstract void Write(IGetSetterCollection data, bool ignoreHeader = false);
+
         public abstract void Save();
     }
 }

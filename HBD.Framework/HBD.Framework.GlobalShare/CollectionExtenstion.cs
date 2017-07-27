@@ -12,9 +12,10 @@ namespace HBD.Framework
 {
     public static class CollectionExtenstion
     {
-        public static IReadOnlyList<T> ToReadOnly<T>([AllowNull] this IEnumerable<T> @this)
+        public static IReadOnlyCollection<T> ToReadOnly<T>([AllowNull] this IEnumerable<T> @this)
         {
             if (@this == null) return null;
+            if (@this is IReadOnlyCollection<T>) return (IReadOnlyCollection<T>)@this;
             var list = @this as IList<T> ?? @this.ToList();
             return new ReadOnlyCollection<T>(list);
         }

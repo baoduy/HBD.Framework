@@ -14,6 +14,8 @@ namespace HBD.Framework.Data.GetSetters
     {
         private readonly IList _collection;
 
+        public int Count => _collection.Count;
+
         public ArrayGetSetter(IList collection)
         {
             Guard.ArgumentIsNotNull(collection, nameof(collection));

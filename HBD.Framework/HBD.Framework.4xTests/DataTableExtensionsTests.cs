@@ -88,35 +88,25 @@ namespace HBD.Framework.Tests
         public void LoadFromCSV_Employees_Test()
         {
             var tb = new DataTable();
-            tb.LoadFromCsv("TestData\\Northwind\\Employees_PileDilimiters.csv", op => op.Dilimiters = new[] {"|"});
+            tb.LoadFromCsv("TestData\\Northwind\\Employees_PileDilimiters.csv", op => op.Delimiter = "|");
             Assert.IsTrue(tb.Columns.Count >= 10);
             Assert.IsTrue(tb.Rows.Count >= 9);
         }
 
         [TestMethod]
         [TestCategory("Fw.DataTableExtensions")]
+        [ExpectedException(typeof(ArgumentNullException))]
         public void LoadFromCSV_NullDataTable_Test()
         {
-            var tb = ((DataTable) null).LoadFromCsv("TestData\\Northwind\\Employees.csv", op => op.Dilimiters = new[] {"|"});
-            Assert.IsNull(tb);
+            var tb = ((DataTable)null).LoadFromCsv("TestData\\Northwind\\Employees.csv", op => op.Delimiter = "|" );
         }
 
         [TestMethod]
         [TestCategory("Fw.DataTableExtensions")]
+        [ExpectedException(typeof(FileNotFoundException))]
         public void LoadFromCSV_CsvFileNotExisted_Test()
         {
-            var tb = new DataTable().LoadFromCsv("TestData\\AAA.csv", op => op.Dilimiters = new[] {"|"});
-            Assert.IsTrue(tb.Rows.Count == 0);
-        }
-
-        [TestMethod]
-        [TestCategory("Fw.DataTableExtensions")]
-        public void LoadFromCSV_FixedLenghTextFile_Test()
-        {
-            var tb = new DataTable();
-            tb.LoadFromCsv("TestData\\FixedLenghTextFile.txt", op => op.FieldWidths = new[] {10, 17, 10});
-            Assert.IsTrue(tb.Columns.Count == 3);
-            Assert.IsTrue(tb.Rows.Count == 3);
+            var tb = new DataTable().LoadFromCsv("TestData\\AAA.csv", op => op.Delimiter = "|" );
         }
 
         [TestMethod]

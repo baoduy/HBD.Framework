@@ -10,5 +10,6 @@ namespace HBD.Framework.Data.GetSetters
     {
         IGetSetter Header { get; }
         string Name { get; }
+        int Count { get; }
     }
 }

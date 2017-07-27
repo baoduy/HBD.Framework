@@ -36,11 +36,11 @@ namespace HBD.Framework.Test.Cache
         public void TestDefault_Expiry_Instance()
         {
             //Cache 5 secs
-            CacheManager.Default.AddOrUpdate("123", new object(), new TimeSpan(0, 0, 5));
+            CacheManager.Default.AddOrUpdate("123", new object(), new TimeSpan(0, 0, 2));
             Assert.IsNotNull(CacheManager.Default.Get("123"));
 
             //Delay 6 secs Cache item should be null.
-            Thread.Sleep(new TimeSpan(0, 0, 6));
+            Thread.Sleep(new TimeSpan(0, 0, 3));
             Assert.IsNull(CacheManager.Default.Get("123"));
         }
     }

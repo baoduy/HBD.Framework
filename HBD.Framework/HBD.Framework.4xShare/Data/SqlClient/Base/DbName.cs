@@ -15,7 +15,7 @@ namespace HBD.Framework.Data.SqlClient.Base
     ///     This class had been defined to standardize the name for both that elements to easier to compare and the standard
     ///     format is [ShemaName].[TableName].
     /// </summary>
-    public class DbName : IEquatable<DbName>, IEquatable<string>
+    public sealed class DbName : IEquatable<DbName>, IEquatable<string>
     {
         private const string DefaultSchema = "dbo";
 

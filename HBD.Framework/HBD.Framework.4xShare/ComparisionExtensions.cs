@@ -122,17 +122,6 @@ namespace HBD.Framework.Extensions
             return ((IEnumerable)obj).Cast<object>().Any(@this.IsEquals);
         }
 
-        private static bool IsGreaterThan(this object @this, object obj)
-            => @this.CompareTo(CompareOperation.GreaterThan, obj);
-
-        private static bool IsGreaterThanOrEquals(this object @this, object obj)
-            => @this.CompareTo(CompareOperation.GreaterThanOrEquals, obj);
-
-        private static bool IsLessThan(this object @this, object obj) => @this.CompareTo(CompareOperation.LessThan, obj);
-
-        private static bool IsLessThanOrEquals(this object @this, object obj)
-            => @this.CompareTo(CompareOperation.LessThanOrEquals, obj);
-
         #endregion Object comparision methods
     }
 

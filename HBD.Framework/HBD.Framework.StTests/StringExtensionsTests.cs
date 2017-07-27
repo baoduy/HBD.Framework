@@ -149,6 +149,16 @@ namespace HBD.Framework.Tests
         }
 
         [TestMethod]
+        public void SplitWords_With_MultiLine_Test()
+        {
+            var splits = @"Hoang
+    Bao
+    Duy".SplitWords();
+
+            Assert.AreEqual(3, splits.Length);
+        }
+
+        [TestMethod]
         public void ContainsItemIgnoreCaseTest()
         {
             var list = new[] {"Hoang", "bAo", "duy"};

@@ -237,7 +237,7 @@ namespace HBD.Framework
         }
 
         public static string[] SplitWords(this string @this)
-            => @this.ConsolidateWords().Split(' ');
+            => @this.ConsolidateWords().Split(new[] { ' ', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
         /// <summary>
         ///     Insert the space to between 2 words.

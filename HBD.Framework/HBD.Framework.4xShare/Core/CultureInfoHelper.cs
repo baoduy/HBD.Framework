@@ -19,7 +19,7 @@ namespace HBD.Framework.Core
             if (values?.NotAny() == true) return values;
             values = Resources.ResourceManager.GetString(key)
                 ?.Split(new[] {',', ';'}, StringSplitOptions.RemoveEmptyEntries);
-            CacheManager.Default.SetValueToProperty(key, values);
+            CacheManager.Default.SetPropertyValue(key, values);
             return values;
         }
 
@@ -31,7 +31,7 @@ namespace HBD.Framework.Core
             if (values?.NotAny() == true) return values;
             values = Resources.ResourceManager.GetString(key)
                 ?.Split(new[] {',', ';'}, StringSplitOptions.RemoveEmptyEntries);
-            CacheManager.Default.SetValueToProperty(key, values);
+            CacheManager.Default.SetPropertyValue(key, values);
             return values;
         }
 

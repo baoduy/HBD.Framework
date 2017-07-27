@@ -30,6 +30,8 @@ namespace HBD.Framework.Data.GetSetters
         public string Name => typeof(T).Name;
         public IGetSetter Header => new ObjectPropertyGetSetter(OriginalCollection.FirstOrDefault());
 
+        public int Count => OriginalCollection.Count;
+
         public IEnumerator<IGetSetter> GetEnumerator()
         {
             foreach (var obj in OriginalCollection)

@@ -25,13 +25,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Core\BackgroundThreadHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\CultureInfoHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\UserPrincipalHelper.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)DataTableExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Data\Csv\Base\CsvOptions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Data\Csv\CsvAdapter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetterExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetters\DataColumnGetSetter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetters\DataRowGetSetter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Data\GetSetters\DataTableGetSetterCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\HtmlGeneration\BorderStyleValues.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\HtmlGeneration\DirectionValues.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\HtmlGeneration\FontStyleValues.cs" />
@@ -78,5 +71,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Security\Auths\LogonType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Security\Auths\SafeTokenHandle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StyleCollectionExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Data\GetSetters\" />
   </ItemGroup>
 </Project>
