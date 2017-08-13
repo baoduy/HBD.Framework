@@ -8,6 +8,4 @@
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>HBD.Framework</Import_RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-  </ItemGroup>
 </Project>

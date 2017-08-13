@@ -1,9 +1,7 @@
 ﻿#region using
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
@@ -17,156 +15,113 @@ namespace HBD.Framework.Collections
     ///     The Observable SortedList
     ///     Note: TKey is not allows to duplicated.
     /// </summary>
-    /// <typeparam name="TKey"></typeparam>
     /// <typeparam name="T"></typeparam>
-    public class ObservableSortedCollection<TKey, T> : ICollection<T>, ICollection, IReadOnlyList<T>,
-        INotifyCollectionChanged, INotifyPropertyChanged where T : class, INotifyPropertyChanged
+    /// <typeparam name="TKey"></typeparam>
+    public class ObservableSortedCollection<TKey, T> : System.Collections.ObjectModel.ObservableCollection<T> where T : class, INotifyPropertyChanged
     {
-        private bool _isSorted = false;
+        private readonly IComparer<TKey> _compare;
         private readonly string _keyPropertyName;
         private readonly Func<T, TKey> _keySelector;
-        private const string CountString = "Count";
-        private const string IndexerName = "Item[]";
 
-        public ObservableSortedCollection(Expression<Func<T, TKey>> keySelector) : this(new List<T>(), keySelector)
+        public ObservableSortedCollection(Expression<Func<T, TKey>> keySelector, IComparer<TKey> compare = null)
         {
-        }
-
-        public ObservableSortedCollection(List<T> list, Expression<Func<T, TKey>> keySelector)
-        {
+            _compare = compare;
             Guard.ArgumentIsNotNull(keySelector, nameof(keySelector));
-            Guard.ArgumentIsNotNull(list, nameof(list));
 
-            Monitor = new SimpleMonitor();
             _keyPropertyName = keySelector.ExtractPropertyNames().FirstOrDefault();
             _keySelector = keySelector.Compile();
-            InternalList = list;
         }
 
-        protected bool StopRaisingEvent { get; set; } = false;
-
-        protected SimpleMonitor Monitor { get; }
-
-        protected List<T> InternalList { get; private set; }
-
-        private void Sort()
+        private int GetIndex(T item)
         {
-            if (_isSorted) return;
-            lock (Monitor)
+            //No item to compare then just add the item in.
+            if (this.Count <= 0) return 0;
+
+            var key = _keySelector.Invoke(item);
+            var compare = _compare ?? Comparer<TKey>.Default;
+
+            if (!ReferenceEquals(this[this.Count - 1], item))
             {
-                _isSorted = true;
-                InternalList = InternalList.OrderBy(_keySelector).ToList();
+                var lastKey = _keySelector.Invoke(this[this.Count - 1]);
+
+                //If the key of Item is greater than or equals last item in the list.
+                //Then add item to the end.
+                if (compare.Compare(key, lastKey) >= 0)
+                    return this.Contains(item) ? this.Count - 1 : this.Count;
             }
+
+            var current = this.Count - 2;
+            while (current >= 0)
+            {
+                var k = _keySelector.Invoke(this[current]);
+
+                //if k <= key
+                var r = compare.Compare(k, key);
+                if (r < 0)
+                    return current + 1;
+                else if (r == 0)
+                    return current;
+
+                current--;
+            }
+
+            //Insert to the first position.
+            return 0;
         }
 
-        public void CopyTo(Array array, int index)
+        protected override void InsertItem(int index, T item)
         {
-            this.Sort();
-            ((ICollection)InternalList).CopyTo(array, index);
-        }
+            var newIndex = GetIndex(item);
 
-        public object SyncRoot => ((ICollection)InternalList).SyncRoot;
+            if (newIndex < 0)
+                newIndex = index;
 
-        public bool IsSynchronized => ((ICollection)InternalList).IsSynchronized;
-
-        public IEnumerator<T> GetEnumerator()
-        {
-            this.Sort();
-            return this.InternalList.GetEnumerator();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-
-        public virtual void Add(T item)
-        {
-            Monitor.CheckReentrancy(CollectionChanged);
-
-            InternalList.Add(item);
             item.PropertyChanged += Item_PropertyChanged;
 
-            OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, item));
-            OnPropertyChanged();
+            base.InsertItem(newIndex, item);
         }
 
-        public virtual void Clear()
+        protected override void SetItem(int index, T item)
         {
-            Monitor.CheckReentrancy(CollectionChanged);
-
-            foreach (var item in InternalList)
-                item.PropertyChanged -= Item_PropertyChanged;
-
-            InternalList.Clear();
-
-            OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
-            OnPropertyChanged();
-        }
-
-        public virtual bool Contains(T item) => InternalList.Contains(item);
-
-        public virtual void CopyTo(T[] array, int arrayIndex)
-        {
-            this.Sort();
-            InternalList.CopyTo(array, arrayIndex);
-        }
-
-        public virtual bool Remove(T item)
-        {
-            Monitor.CheckReentrancy(CollectionChanged);
-            if (!InternalList.Remove(item)) return false;
-
-            item.PropertyChanged -= Item_PropertyChanged;
-
-            OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Remove, item));
-            OnPropertyChanged();
-
-            return true;
-        }
-
-        public virtual int Count => InternalList.Count;
-
-        public bool IsReadOnly => false;
-        public event NotifyCollectionChangedEventHandler CollectionChanged;
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        int IReadOnlyCollection<T>.Count => Count;
-
-        public virtual T this[int index]
-        {
-            get
-            {
-                this.Sort();
-                return InternalList[index];
-            }
-        }
-
-        protected virtual void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
-        {
-            if (StopRaisingEvent) return;
-
-            this._isSorted = false;
-
-            using (Monitor.BlockReentrancy())
-            {
-                CollectionChanged?.Invoke(this, e);
-            }
-        }
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            if (StopRaisingEvent) return;
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        private void OnPropertyChanged()
-        {
-            OnPropertyChanged(IndexerName);
-            OnPropertyChanged(CountString);
+            this.RemoveAt(index);
+            this.InsertItem(index, item);
         }
 
         private void Item_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName != _keyPropertyName || StopRaisingEvent) return;
-            this._isSorted = false;
+            if (e.PropertyName.NotEqualsIgnoreCase(_keyPropertyName)) return;
+
+            var item = sender as T;
+            if (item == null) return;
+
+            var current = this.IndexOf(item);
+            var index = GetIndex(item);
+
+            if (current == index) return;
+            base.Move(current, index);
+        }
+
+        protected override void RemoveItem(int index)
+        {
+            var item = this[index];
+            item.PropertyChanged -= Item_PropertyChanged;
+
+            base.RemoveItem(index);
+        }
+
+        protected override void ClearItems()
+        {
+            foreach (var item in this)
+                item.PropertyChanged -= Item_PropertyChanged;
+            base.ClearItems();
+        }
+    }
+
+    public class ObservableSortedCollection<T> : ObservableSortedCollection<int, T> where T : class, INotifyPropertyChanged
+    {
+        public ObservableSortedCollection(Expression<Func<T, int>> keySelector, IComparer<int> compare = null)
+            : base(keySelector, compare)
+        {
         }
     }
 }

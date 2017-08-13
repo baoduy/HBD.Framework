@@ -10,7 +10,6 @@ using System.Text;
 using HBD.Framework.Core;
 using HBD.Framework.Data.Base;
 using HBD.Framework.Data.SqlClient.Extensions;
-using HBD.Framework.Caching;
 
 #endregion
 
@@ -40,12 +39,6 @@ namespace HBD.Framework.Data.SqlClient.Base
         public virtual IReadOnlyCollection<DatabaseInfo> GetDataBaseInfos()
         {
             IReadOnlyCollection<DatabaseInfo> schemas;
-            if (CacheManager.Default.IsContains(CacheAllSchemaNameKey))
-            {
-                schemas = CacheManager.Default.Get<IReadOnlyCollection<DatabaseInfo>>(CacheAllSchemaNameKey);
-                if (schemas == null) CacheManager.Default.Remove(CacheAllSchemaNameKey);
-                else return schemas;
-            }
 
             var list = new List<DatabaseInfo>();
             using (var reader = ExecuteReader(QueryAllSchemaNames))
@@ -55,7 +48,6 @@ namespace HBD.Framework.Data.SqlClient.Base
             }
 
             schemas = list;
-            CacheManager.Default.AddOrUpdate(CacheAllSchemaNameKey, schemas);
             return schemas;
         }
 
@@ -82,8 +74,6 @@ namespace HBD.Framework.Data.SqlClient.Base
         private const string FieldRowCount = "Row_Count";
         private const string FieldIsTable = "Is_Table";
 
-        private const string CacheSchemaInfoKey = "SchemaInfoOf_";
-        private const string CacheAllSchemaNameKey = "AllSchemaNames";
         #endregion Fields
 
         #region QueryAllSchemaNames
@@ -206,14 +196,7 @@ ORDER BY C.Ordinal_Position;";
             }
             Guard.ArgumentIsNotNull(databaseName, nameof(databaseName));
 
-            var cacheKey = CacheSchemaInfoKey + databaseName;
             SchemaInfo schema;
-            if (CacheManager.Default.IsContains(cacheKey))
-            {
-                schema = CacheManager.Default.Get<SchemaInfo>(cacheKey);
-                if (schema == null) CacheManager.Default.Remove(cacheKey);
-                else return schema;
-            }
 
             using (var reader = ExecuteReader(QuerySchemaInfo))
             {
@@ -302,20 +285,7 @@ ORDER BY C.Ordinal_Position;";
             }
 
             schema = GetMaxPrimaryKeyValues(schema);
-            CacheManager.Default.AddOrUpdate(cacheKey, schema);
             return schema;
-        }
-
-        /// <summary>
-        ///     Clear all cache items that in CacheManager.Default.
-        /// </summary>
-        public virtual void ClearCacheItems()
-        {
-            CacheManager.Default.Remove(CacheAllSchemaNameKey);
-            foreach (
-                var key in
-                CacheManager.Default.GetAllKeys().Where(n => n.StartsWithIgnoreCase(CacheSchemaInfoKey)).ToList())
-                CacheManager.Default.Remove(key);
         }
 
         /// <summary>

@@ -42,14 +42,7 @@ namespace HBD.Framework.IO
         public static void MoveTo(string destination, params string[] files)
         {
             foreach (var f in files)
-                try
-                {
-                    MoveTo(f, destination);
-                }
-                catch
-                {
-                    // ignored
-                }
+                MoveTo(f, destination);
         }
 
         /// <summary>
@@ -61,16 +54,11 @@ namespace HBD.Framework.IO
         public static void ArchiveFiles(string destination, params string[] files)
         {
             foreach (var f in files)
-                try
-                {
-                    var desFileName =
-                        $"{Path.GetFileName(f)}_{DateTime.Now:yyyy.MMM.dd hhmmss}.file";
-                    MoveTo(desFileName, destination);
-                }
-                catch
-                {
-                    // ignored
-                }
+            {
+                var desFileName =
+                    $"{Path.GetFileName(f)}_{DateTime.Now:yyyy.MMM.dd hhmmss}.file";
+                MoveTo(desFileName, destination);
+            }
         }
 
         public static bool FileIsExists(this string @this)

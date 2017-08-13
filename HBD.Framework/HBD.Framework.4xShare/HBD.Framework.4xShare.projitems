@@ -9,9 +9,6 @@
     <Import_RootNamespace>HBD.Framework</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Caching\CacheManager.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Caching\Providers\RegionMemoryCache.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Caching\Services\MemoryCacheService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ColorExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CommonExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ComparisionExtensions.cs" />

@@ -3,7 +3,6 @@ using HBD.Framework.Data.GetSetters;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace HBD.Framework.StTests.Data.GetSetters
 {

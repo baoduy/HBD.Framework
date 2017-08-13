@@ -34,7 +34,7 @@ namespace HBD.Framework.Core
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-        public TypeFinder InheritedFrom(params Type[] types)
+        public TypeFinder DeliveredFrom(params Type[] types)
         {
             _inheritedFrom = types;
             return this;

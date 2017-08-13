@@ -131,6 +131,9 @@ namespace HBD.Framework
         public static bool EqualsIgnoreCase(this string @this, string value)
             => @this?.Equals(value, StringComparison.OrdinalIgnoreCase) == true;
 
+        public static bool NotEqualsIgnoreCase(this string @this, string value)
+            => !@this.EqualsIgnoreCase(value);
+
         public static bool ContainsIgnoreCase(this string @this, string value)
             => @this?.IndexOf(value, StringComparison.OrdinalIgnoreCase) >= 0;
 

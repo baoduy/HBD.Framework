@@ -13,10 +13,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Attributes\AllowNullAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Attributes\EnumStringAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Attributes\NotNullAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Caching\Providers\ICacheProvider.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Caching\Providers\ICacheStorageProvider.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Caching\Services\CacheService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Caching\Services\ICacheService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CollectionExtenstion.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Collections\ChangeTrackingCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Collections\ChangingObservableCollection.cs" />
@@ -36,7 +32,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Compress\ZipExtractOption.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Compress\ZipOption.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\AssemblyHelper.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\AssemblyStringBuilder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\ChangeTrackingEntry.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\EnumeratorSwaper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\EnvironmentExtension.cs" />
@@ -57,7 +52,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Core\IValidationable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\NotifyPropertyChange.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\PropertyAttributeInfo.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\SingletonWrapper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\TypeFinder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Wildcard.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DataTableExtensions.cs" />
@@ -108,7 +102,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Security\Services\ICryptionService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ShareExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SimpleMonitorExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)SingletonManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StringExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StringExtensions.ExtractDateTime.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Text\AngledBracketsExtractor.cs" />

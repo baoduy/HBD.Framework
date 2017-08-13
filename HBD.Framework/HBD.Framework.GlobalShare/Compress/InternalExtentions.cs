@@ -1,5 +1,4 @@
 ﻿using ICSharpCode.SharpZipLib.Zip;
-using System;
 using System.IO;
 
 namespace HBD.Framework.Compress

@@ -17,8 +17,11 @@
       - Improve pattern extractors.
       - Make Csv Adapter support all version of framework. Thanks to CsvHelper.
       - Add Zip helper for all the .Net Framework, allow to zip files or folders with password.
-      - Rename GetValueFromProperty extention method to PropertyValue and update logic allows to get the value of private property.
-      - Rename SetValueFromProperty extention method to SetPropertyValue and update logic allows to set the value to private property.
+      - Rename GetValueFromProperty extension method to PropertyValue and update logic allows to get the value of private property.
+      - Rename SetValueFromProperty extension method to SetPropertyValue and update logic allows to set the value to private property.
+      - Enhance and hot-fix ObservableSortedCollection is not working property with WPF app.
+      - Moved the Caching to HBD.Caching package. It is available on Nuget.org as well.
+      - Move the SingletonManaget to HBD.Singleton package. It is available on Nuget.org as well.
       
       Version 1.0.12
       - Add Base64CryptionService for the simple encryption and description.
@@ -78,14 +81,14 @@
       </group>
       <group targetFramework=".NETStandard1.6">
         <dependency id="NETStandard.Library" version="1.6.1" />
-        <dependency id="Microsoft.CSharp" version="4.4.0-preview2-25405-01" />
+        <dependency id="Microsoft.CSharp" version="4.4.0" />
         <dependency id="System.ComponentModel" version="4.3.0" />
         <dependency id="System.Data.Common" version="4.3.0"/>
         <dependency id="CsvHelper" version="2.16.3.0" />
       </group>
       <group targetFramework="NETStandard2.0">
-        <dependency id="NETStandard.Library" version="2.0.0-preview1-25301-01" />
-        <dependency id="Microsoft.CSharp" version="4.4.0-preview2-25405-01" />
+        <dependency id="NETStandard.Library" version="2.0.0" />
+        <dependency id="Microsoft.CSharp" version="4.4.0" />
         <dependency id="CsvHelper" version="2.16.3.0" />
       </group>
     </dependencies>

@@ -1,11 +1,13 @@
 ﻿#region using
 
 using HBD.Framework.Core;
+using System.Diagnostics;
 
 #endregion
 
 namespace HBD.Framework.Test.TestObjects
 {
+    [DebuggerDisplay("Id = {Id}")]
     public class NotifyPropertyChangedObject : NotifyPropertyChange
     {
         private int _id;

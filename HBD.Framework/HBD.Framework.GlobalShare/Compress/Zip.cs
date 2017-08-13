@@ -1,7 +1,6 @@
 ﻿
 using HBD.Framework.Attributes;
 using HBD.Framework.Core;
-using System.IO;
 
 namespace HBD.Framework.Compress
 {

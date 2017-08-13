@@ -67,10 +67,7 @@ namespace HBD.Framework.IO
         public static void DeleteFiles(this DirectoryInfo @this)
         {
             foreach (var f in @this.GetFiles())
-            {
-                if (!f.Exists) continue;
                 f.Delete();
-            }
         }
 
         /// <summary>
