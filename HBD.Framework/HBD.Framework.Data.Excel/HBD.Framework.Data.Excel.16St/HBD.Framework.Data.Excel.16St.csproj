@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <AssemblyName>HBD.Framework.Data.Excel</AssemblyName>
+    <RootNamespace>HBD.Framework.Data.Excel</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="..\HBD.Framework.Data.Excel.GlobalShared\HBD.Framework.Data.Excel.GlobalShared.projitems" Label="Shared" />
+
+  <Import Project="..\HBD.Framework.Data.Excel.St\HBD.Framework.Data.Excel.St.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.7.1" />
+    <PackageReference Include="HBD.Framework" Version="2.0.0-preview3" />
+  </ItemGroup>
+
+</Project>
