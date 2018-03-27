@@ -53,6 +53,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Core\NotifyPropertyChange.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\PropertyAttributeInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\TypeFinder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\UserPrincipalHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Wildcard.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DataTableExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\Base\DataClientAdapter.cs" />

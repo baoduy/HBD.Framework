@@ -35,22 +35,22 @@ namespace HBD.Framework.Collections
         private int GetIndex(T item)
         {
             //No item to compare then just add the item in.
-            if (this.Count <= 0) return 0;
+            if (Count <= 0) return 0;
 
             var key = _keySelector.Invoke(item);
             var compare = _compare ?? Comparer<TKey>.Default;
 
-            if (!ReferenceEquals(this[this.Count - 1], item))
+            if (!ReferenceEquals(this[Count - 1], item))
             {
-                var lastKey = _keySelector.Invoke(this[this.Count - 1]);
+                var lastKey = _keySelector.Invoke(this[Count - 1]);
 
                 //If the key of Item is greater than or equals last item in the list.
                 //Then add item to the end.
                 if (compare.Compare(key, lastKey) >= 0)
-                    return this.Contains(item) ? this.Count - 1 : this.Count;
+                    return Contains(item) ? Count - 1 : Count;
             }
 
-            var current = this.Count - 2;
+            var current = Count - 2;
             while (current >= 0)
             {
                 var k = _keySelector.Invoke(this[current]);
@@ -83,8 +83,8 @@ namespace HBD.Framework.Collections
 
         protected override void SetItem(int index, T item)
         {
-            this.RemoveAt(index);
-            this.InsertItem(index, item);
+            RemoveAt(index);
+            InsertItem(index, item);
         }
 
         private void Item_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -94,11 +94,11 @@ namespace HBD.Framework.Collections
             var item = sender as T;
             if (item == null) return;
 
-            var current = this.IndexOf(item);
+            var current = IndexOf(item);
             var index = GetIndex(item);
 
             if (current == index) return;
-            base.Move(current, index);
+            Move(current, index);
         }
 
         protected override void RemoveItem(int index)

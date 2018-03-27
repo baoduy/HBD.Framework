@@ -9,7 +9,7 @@ namespace HBD.Framework.Compress
     {
         protected internal IList<string> Inputs { get; } = new List<string>();
         protected internal string OutputFile { get; private set; }
-        protected internal ZipLevel Level { get; private set; } = Framework.Compress.ZipLevel.BestCompress;
+        protected internal ZipLevel Level { get; private set; } = Compress.ZipLevel.BestCompress;
         internal ZipFileOption FileOption { get; private set; } = ZipFileOption.Default;
 
         protected internal ZipCompressOption(params string[] filesOrDirectories)
@@ -29,19 +29,19 @@ namespace HBD.Framework.Compress
 
         public ZipCompressOption ZipLevel(ZipLevel level)
         {
-            this.Level = level;
+            Level = level;
             return this;
         }
 
         public ZipCompressOption OverwriteIfExisted()
         {
-            this.FileOption = ZipFileOption.OverwriteIfExisted;
+            FileOption = ZipFileOption.OverwriteIfExisted;
             return this;
         }
 
         public ZipCompressOption AppendIfExisted()
         {
-            this.FileOption = ZipFileOption.AppendIfExisted;
+            FileOption = ZipFileOption.AppendIfExisted;
             return this;
         }
 

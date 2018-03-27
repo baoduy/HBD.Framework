@@ -9,7 +9,7 @@ using System.Web;
 
 namespace HBD.Framework.Core
 {
-    public static class UserPrincipalHelper
+    public static partial class UserPrincipalHelper
     {
         public static WindowsIdentity User
             =>
@@ -20,18 +20,7 @@ namespace HBD.Framework.Core
         public static string UserName => User.Name;
         public static string UserNameWithoutDomain => GetUserNameWithoutDomain(User.Name);
 
-        public static string GetUserNameWithoutDomain(string userName)
-        {
-            if (userName.IsNullOrEmpty()) return userName;
-            var index = userName.LastIndexOf("\\", StringComparison.Ordinal);
-            if (index > 0 && index < userName.Length) return userName.Substring(index + 1);
 
-            index = userName.IndexOf("@", StringComparison.Ordinal);
-            if (index > 0 && index < userName.Length)
-                return userName.Substring(0, index);
-
-            return userName;
-        }
 
         /// <summary>
         ///     Find User in Machine and Domain

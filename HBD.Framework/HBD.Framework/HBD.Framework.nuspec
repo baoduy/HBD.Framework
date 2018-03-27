@@ -11,12 +11,15 @@
     </description>
     <releaseNotes>
       Version ${NugetVersion}
+      - Move SqlClient to HBD.Services.SqlClient package
+      - Add the extention methods for IPrincipal
+
+      Version 2.1.0
       - Stop support .Net Standard 1.6
       - Move Csv helper to HBD.Services.Csv package
       - Move SSDT to HBD.Services.Ssdt package
       - Move Random generation to HBD.Services.Random packages
       - Move HtmlGeneration to HBD.Services.HtmlGeneration packages
-
 
       Version 2.0.0
       - Improve the performance of ObservableSortedCollection.

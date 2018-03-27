@@ -87,11 +87,7 @@
     <Compile Include="DataTableExtensionsTests.cs" />
     <Compile Include="Data\Base\CommonTests.cs" />
     <Compile Include="Data\Base\DataClientHelperTests.cs" />
-    <Compile Include="Data\Base\SchemaInfoTests.cs" />
-    <Compile Include="Data\Base\TableNameTests.cs" />
-    <Compile Include="Data\Base\TestSchemaInfo.cs" />
     <Compile Include="Data\OleDb\OleDbHelperTests.cs" />
-    <Compile Include="Data\SqlClient\SqlClientHelperTests.cs" />
     <Compile Include="Dynamic\DynamicDictionaryTests.cs" />
     <Compile Include="Exceptions\InvalidExceptionTests.cs" />
     <Compile Include="ExpressionExtensionsTests.cs" />
