@@ -1,20 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29311.281
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Tests", "3. Tests", "{96624F17-2540-4E77-853F-7EE8320983D9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.St2.0", "HBD.Framework.St2.0\HBD.Framework.St2.0.csproj", "{3537F44C-263D-43FC-8F55-8E9A13F30784}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.4xTests", "HBD.Framework.4xTests\HBD.Framework.4xTests.csproj", "{17C3A736-14CE-4F60-B605-25FA55110C92}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.StTests", "HBD.Framework.StTests\HBD.Framework.StTests.csproj", "{E4ABA463-ECA1-4078-BC23-01913B259A4C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E190D9BA-826E-4E0C-AD85-64B52A07DD20}"
-	ProjectSection(SolutionItems) = preProject
-		HBD.Framework.nuspec = HBD.Framework.nuspec
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shares", "Shares", "{E7EE8814-3F86-4360-BD70-ACE78480EEA6}"
 	ProjectSection(SolutionItems) = preProject
@@ -45,7 +40,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SonarQube", "SonarQube", "{
 		SonarQube\SolutionBinding.sqconfig = SonarQube\SolutionBinding.sqconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBD.Framework.WpfApp", "HBD.Framework.WpfApp\HBD.Framework.WpfApp.csproj", "{7C0B66CA-08C9-41CE-B413-59F343B7547D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.Extensions", "HBD.Framework.Extensions\HBD.Framework.Extensions.csproj", "{A2830909-6531-49F9-A093-41F39F680AFB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HBD.Framework.Extensions.Tests", "HBD.Framework.Extensions.Tests\HBD.Framework.Extensions.Tests.csproj", "{02CF76F0-AC7D-4506-A109-9173EBDE9F11}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Projects", "1. Projects", "{7975598C-9020-4046-AB84-000FC7A9E0B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,28 +56,29 @@ Global
 		{3537F44C-263D-43FC-8F55-8E9A13F30784}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3537F44C-263D-43FC-8F55-8E9A13F30784}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3537F44C-263D-43FC-8F55-8E9A13F30784}.Release|Any CPU.Build.0 = Release|Any CPU
-		{17C3A736-14CE-4F60-B605-25FA55110C92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{17C3A736-14CE-4F60-B605-25FA55110C92}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{17C3A736-14CE-4F60-B605-25FA55110C92}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{17C3A736-14CE-4F60-B605-25FA55110C92}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E4ABA463-ECA1-4078-BC23-01913B259A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E4ABA463-ECA1-4078-BC23-01913B259A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4ABA463-ECA1-4078-BC23-01913B259A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4ABA463-ECA1-4078-BC23-01913B259A4C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7C0B66CA-08C9-41CE-B413-59F343B7547D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C0B66CA-08C9-41CE-B413-59F343B7547D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C0B66CA-08C9-41CE-B413-59F343B7547D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C0B66CA-08C9-41CE-B413-59F343B7547D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2830909-6531-49F9-A093-41F39F680AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2830909-6531-49F9-A093-41F39F680AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2830909-6531-49F9-A093-41F39F680AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2830909-6531-49F9-A093-41F39F680AFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02CF76F0-AC7D-4506-A109-9173EBDE9F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02CF76F0-AC7D-4506-A109-9173EBDE9F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02CF76F0-AC7D-4506-A109-9173EBDE9F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02CF76F0-AC7D-4506-A109-9173EBDE9F11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{17C3A736-14CE-4F60-B605-25FA55110C92} = {96624F17-2540-4E77-853F-7EE8320983D9}
+		{3537F44C-263D-43FC-8F55-8E9A13F30784} = {7975598C-9020-4046-AB84-000FC7A9E0B4}
 		{E4ABA463-ECA1-4078-BC23-01913B259A4C} = {96624F17-2540-4E77-853F-7EE8320983D9}
 		{E7EE8814-3F86-4360-BD70-ACE78480EEA6} = {E190D9BA-826E-4E0C-AD85-64B52A07DD20}
 		{2E74F94E-BB9D-4F22-8248-03E7EA269EE7} = {E7EE8814-3F86-4360-BD70-ACE78480EEA6}
-		{7C0B66CA-08C9-41CE-B413-59F343B7547D} = {96624F17-2540-4E77-853F-7EE8320983D9}
+		{A2830909-6531-49F9-A093-41F39F680AFB} = {7975598C-9020-4046-AB84-000FC7A9E0B4}
+		{02CF76F0-AC7D-4506-A109-9173EBDE9F11} = {96624F17-2540-4E77-853F-7EE8320983D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DAE6BB77-E730-4052-9CBC-BF8DF33386C7}

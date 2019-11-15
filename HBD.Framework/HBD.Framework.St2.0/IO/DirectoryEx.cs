@@ -54,11 +54,11 @@ namespace HBD.Framework.IO
         /// <summary>
         ///     Delete All Files and Sub Folders inside Folder
         /// </summary>
-        /// <param name="rootDiractory">Folder location</param>
-        public static void CleanupDirectory(string rootDiractory)
+        /// <param name="rootDirectory">Folder location</param>
+        public static void CleanupDirectory(string rootDirectory)
         {
-            DeleteFiles(rootDiractory);
-            DeleteSubDirectories(rootDiractory);
+            DeleteFiles(rootDirectory);
+            DeleteSubDirectories(rootDirectory);
         }
 
         /// <summary>
@@ -71,10 +71,11 @@ namespace HBD.Framework.IO
         }
 
         /// <summary>
-        /// Copy whole directort to new location.
+        /// Copy whole directory to new location.
         /// </summary>
         /// <param name="this"></param>
         /// <param name="destination"></param>
+        /// <param name="overwrite"></param>
         public static void CopyTo(this DirectoryInfo @this, string destination, bool overwrite = true)
         {
             Directory.CreateDirectory(destination);

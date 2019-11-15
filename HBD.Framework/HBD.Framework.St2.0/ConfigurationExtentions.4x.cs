@@ -5,8 +5,8 @@ using System.Reflection;
 
 namespace HBD.Framework
 {
-     #if !NETSTANDARD2_0
-    public static class ConfigurationExtentions
+#if !NETSTANDARD2_0
+    public static class ConfigurationExtensions
     {
         /// <summary>
         ///     Merge AppSettings
@@ -51,5 +51,5 @@ namespace HBD.Framework
                 memberInfo.SetValue(@this, true);
         }
     }
-    #endif
+#endif
 }

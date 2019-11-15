@@ -1,0 +1,105 @@
+﻿using HBD.Framework.Extensions.Tests.TestObjects;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+
+namespace HBD.Framework.Extensions.Tests
+{
+    [TestClass]
+    public class TypeExtenstionTests
+    {
+        #region Public Methods
+
+        [TestMethod]
+        [TestCategory("Fw.Extensions")]
+        public void ChangeType_WithNull_Test()
+        {
+            Assert.IsNull("123".ChangeType(null));
+            Assert.IsNull(((object) null).ChangeType(typeof(object)));
+        }
+
+        [TestMethod]
+        public void ChangeTypeTest()
+        {
+            Assert.AreEqual("12".ChangeType<decimal>(), 12);
+            Assert.AreEqual(123.ChangeType<string>(), "123");
+            Assert.AreEqual(1.ChangeType<bool>(), true);
+            Assert.AreEqual(0.ChangeType<bool>(), false);
+            Assert.AreEqual(true.ChangeType<bool>(), true);
+            Assert.AreEqual(false.ChangeType<bool>(), false);
+        }
+
+        [TestMethod]
+        public void ConvertTo_for_Boolean()
+        {
+            Assert.IsTrue("1".ConvertTo<bool>());
+            Assert.IsFalse("0".ConvertTo<bool>());
+            Assert.IsTrue("True".ConvertTo<bool>());
+            Assert.IsFalse("False".ConvertTo<bool>());
+            Assert.IsTrue("true".ConvertTo<bool>());
+            Assert.IsFalse("false".ConvertTo<bool>());
+
+            Assert.AreEqual("1".ConvertTo<int>(), 1);
+            Assert.AreEqual("1.2".ConvertTo<decimal>(), (decimal) 1.2);
+
+            Assert.IsNull("".ConvertTo<object>());
+        }
+
+        [TestMethod]
+        [TestCategory("Fw.Extensions")]
+        public void IsAssignableFrom_Test()
+        {
+            Assert.IsTrue(typeof(Attribute).IsAssignableFrom<TestAttribute>());
+            Assert.IsFalse(typeof(TypeExtenstionTests).IsAssignableFrom<TestAttribute>());
+            Assert.IsFalse(((Type) null).IsAssignableFrom<TestAttribute>());
+            Assert.IsFalse(typeof(TypeExtenstionTests).IsAssignableFrom(null));
+        }
+
+        [TestMethod]
+        [TestCategory("Fw.Extensions")]
+        public void IsNotAssignableFrom_Test()
+        {
+            Assert.IsFalse(typeof(Attribute).IsNotAssignableFrom<TestAttribute>());
+            Assert.IsTrue(typeof(TypeExtenstionTests).IsNotAssignableFrom<TestAttribute>());
+            Assert.IsTrue(((Type) null).IsNotAssignableFrom<TestAttribute>());
+            Assert.IsFalse(typeof(TypeExtenstionTests).IsNotAssignableFrom(null));
+        }
+
+        [TestMethod]
+        [TestCategory("Fw.Extensions")]
+        public void IsNotNumericType_WithObject5_Test()
+        {
+            Assert.IsTrue(new object().IsNotNumericType());
+            Assert.IsFalse(float.MaxValue.IsNotNumericType());
+            Assert.IsTrue(string.Empty.IsNotNumericType());
+        }
+
+        [TestMethod]
+        public void IsNotNumericTypeTest()
+        {
+            Assert.IsTrue("AAA".IsNotNumber());
+            Assert.IsTrue("123.12.".IsNotNumber());
+            Assert.IsTrue("-123.99-".IsNotNumber());
+            Assert.IsTrue("123,,123,123.99".IsNotNumber());
+        }
+
+        [TestMethod]
+        [TestCategory("Fw.Extensions")]
+        public void IsNumericType_WithType_Test()
+        {
+            Assert.IsFalse(((Type) null).IsNumericType());
+            Assert.IsTrue(typeof(float).IsNumericType());
+            Assert.IsFalse(typeof(string).IsNumericType());
+        }
+
+        [TestMethod]
+        public void IsNumericTypeTest()
+        {
+            Assert.IsTrue("123".IsNumber());
+            Assert.IsTrue("123.12".IsNumber());
+            Assert.IsTrue("-123.99".IsNumber());
+            Assert.IsTrue("123,123,123.99".IsNumber());
+        }
+
+        #endregion Public Methods
+    }
+}

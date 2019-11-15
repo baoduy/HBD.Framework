@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using HBD.Framework.Core;
+using HBD.Framework.Extensions;
 
 #endregion
 

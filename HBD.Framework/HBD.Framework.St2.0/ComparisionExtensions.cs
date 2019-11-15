@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Linq;
+using HBD.Framework.Extensions;
 
-namespace HBD.Framework.Extensions
+namespace HBD.Framework
 {
     public static class ComparisionExtensions
     {

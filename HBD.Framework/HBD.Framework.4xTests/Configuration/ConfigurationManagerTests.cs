@@ -40,7 +40,7 @@ namespace HBD.Framework.Configuration.Tests
 
         [TestInitialize]
         [TestCategory("Fw.Config")]
-        public void Initialiser()
+        public void Initialise()
         {
             System.Configuration.ConfigurationManager.AppSettings["TestIntValue"] = "123";
             System.Configuration.ConfigurationManager.AppSettings["TestTrueValue"] = "True";

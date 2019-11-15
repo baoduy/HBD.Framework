@@ -2,6 +2,7 @@
 
 using System;
 using System.Text;
+using HBD.Framework.Extensions;
 
 #endregion
 
@@ -17,7 +18,8 @@ namespace HBD.Framework.Exceptions
         {
             var builder = new StringBuilder();
             if (names?.NotAny() == true) builder.Append("Value");
-            else
+            else 
+                // ReSharper disable once PossibleNullReferenceException
                 for (var i = 0; i < names.Length; i++)
                 {
                     if (builder.Length > 0)

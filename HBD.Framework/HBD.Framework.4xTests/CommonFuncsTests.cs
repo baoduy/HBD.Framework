@@ -14,95 +14,95 @@ namespace HBD.Framework.Test
         [ExpectedException(typeof(ArgumentException))]
         public void GetColumnName_Exception()
         {
-            CommonFuncs.GetColumnName(-1);
+            CommonFunctions.GetColumnName(-1);
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void GetExcelColumnName_Exception()
         {
-            CommonFuncs.GetExcelColumnName(-1);
+            CommonFunctions.GetExcelColumnName(-1);
         }
 
         [TestMethod]
         public void GetColumnLabel_Test()
         {
-            Assert.AreEqual("F1", CommonFuncs.GetColumnName(0));
-            Assert.AreEqual("F2", CommonFuncs.GetColumnName(1));
-            Assert.AreEqual("F26", CommonFuncs.GetColumnName(25));
+            Assert.AreEqual("F1", CommonFunctions.GetColumnName(0));
+            Assert.AreEqual("F2", CommonFunctions.GetColumnName(1));
+            Assert.AreEqual("F26", CommonFunctions.GetColumnName(25));
         }
 
         [TestMethod]
         public void GetExcelColumnLabel_Test()
         {
-            Assert.AreEqual("A", CommonFuncs.GetExcelColumnName(0));
-            Assert.AreEqual("B", CommonFuncs.GetExcelColumnName(1));
-            Assert.AreEqual("Z", CommonFuncs.GetExcelColumnName(25));
+            Assert.AreEqual("A", CommonFunctions.GetExcelColumnName(0));
+            Assert.AreEqual("B", CommonFunctions.GetExcelColumnName(1));
+            Assert.AreEqual("Z", CommonFunctions.GetExcelColumnName(25));
 
-            Assert.AreEqual("AA", CommonFuncs.GetExcelColumnName(26));
-            Assert.AreEqual("BA", CommonFuncs.GetExcelColumnName(52));
-            Assert.AreEqual("ZA", CommonFuncs.GetExcelColumnName(26 * 26));
-            Assert.AreEqual("ZZ", CommonFuncs.GetExcelColumnName(26 * 26 + 25));
+            Assert.AreEqual("AA", CommonFunctions.GetExcelColumnName(26));
+            Assert.AreEqual("BA", CommonFunctions.GetExcelColumnName(52));
+            Assert.AreEqual("ZA", CommonFunctions.GetExcelColumnName(26 * 26));
+            Assert.AreEqual("ZZ", CommonFunctions.GetExcelColumnName(26 * 26 + 25));
 
-            Assert.AreEqual("AAA", CommonFuncs.GetExcelColumnName(26 * 27));
-            Assert.AreEqual("AAZ", CommonFuncs.GetExcelColumnName(26 * 27 + 25));
-            Assert.AreEqual("ALA", CommonFuncs.GetExcelColumnName(26 * 38));
-            Assert.AreEqual("YZA", CommonFuncs.GetExcelColumnName(26 * 26 * 26));
-            Assert.AreEqual("YZZ", CommonFuncs.GetExcelColumnName(26 * 26 * 26 + 25));
+            Assert.AreEqual("AAA", CommonFunctions.GetExcelColumnName(26 * 27));
+            Assert.AreEqual("AAZ", CommonFunctions.GetExcelColumnName(26 * 27 + 25));
+            Assert.AreEqual("ALA", CommonFunctions.GetExcelColumnName(26 * 38));
+            Assert.AreEqual("YZA", CommonFunctions.GetExcelColumnName(26 * 26 * 26));
+            Assert.AreEqual("YZZ", CommonFunctions.GetExcelColumnName(26 * 26 * 26 + 25));
 
-            Assert.AreEqual("ZAA", CommonFuncs.GetExcelColumnName(26 * 26 * 26 + 26));
-            Assert.AreEqual("ZZZ", CommonFuncs.GetExcelColumnName(26 * 26 * 27 + 25));
+            Assert.AreEqual("ZAA", CommonFunctions.GetExcelColumnName(26 * 26 * 26 + 26));
+            Assert.AreEqual("ZZZ", CommonFunctions.GetExcelColumnName(26 * 26 * 27 + 25));
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void GetColumnIndex_Exception()
         {
-            CommonFuncs.GetColumnIndex("");
+            CommonFunctions.GetColumnIndex("");
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void GetExcelColumnIndex_Exception()
         {
-            CommonFuncs.GetExcelColumnIndex("");
+            CommonFunctions.GetExcelColumnIndex("");
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void GetExcelColumnIndex_ArgumentOutOfRangeException()
         {
-            CommonFuncs.GetExcelColumnIndex("A123Z");
+            CommonFunctions.GetExcelColumnIndex("A123Z");
         }
 
         [TestMethod]
         public void GetColumnIndex_Test()
         {
-            Assert.AreEqual(0, CommonFuncs.GetColumnIndex("F1"));
-            Assert.AreEqual(9, CommonFuncs.GetColumnIndex("F10"));
-            Assert.AreEqual(99, CommonFuncs.GetColumnIndex("F100"));
+            Assert.AreEqual(0, CommonFunctions.GetColumnIndex("F1"));
+            Assert.AreEqual(9, CommonFunctions.GetColumnIndex("F10"));
+            Assert.AreEqual(99, CommonFunctions.GetColumnIndex("F100"));
         }
 
         [TestMethod]
         public void GetExcelColumnIndex_Test()
         {
-            Assert.AreEqual(0, CommonFuncs.GetExcelColumnIndex("A"));
-            Assert.AreEqual(1, CommonFuncs.GetExcelColumnIndex("B"));
-            Assert.AreEqual(25, CommonFuncs.GetExcelColumnIndex("Z"));
+            Assert.AreEqual(0, CommonFunctions.GetExcelColumnIndex("A"));
+            Assert.AreEqual(1, CommonFunctions.GetExcelColumnIndex("B"));
+            Assert.AreEqual(25, CommonFunctions.GetExcelColumnIndex("Z"));
 
-            Assert.AreEqual(26, CommonFuncs.GetExcelColumnIndex("AA"));
-            Assert.AreEqual(52, CommonFuncs.GetExcelColumnIndex("BA"));
-            Assert.AreEqual(26 * 26, CommonFuncs.GetExcelColumnIndex("ZA"));
-            Assert.AreEqual(26 * 26 + 25, CommonFuncs.GetExcelColumnIndex("ZZ"));
+            Assert.AreEqual(26, CommonFunctions.GetExcelColumnIndex("AA"));
+            Assert.AreEqual(52, CommonFunctions.GetExcelColumnIndex("BA"));
+            Assert.AreEqual(26 * 26, CommonFunctions.GetExcelColumnIndex("ZA"));
+            Assert.AreEqual(26 * 26 + 25, CommonFunctions.GetExcelColumnIndex("ZZ"));
 
-            Assert.AreEqual(26 * 27, CommonFuncs.GetExcelColumnIndex("AAA"));
-            Assert.AreEqual(26 * 27 + 25, CommonFuncs.GetExcelColumnIndex("AAZ"));
-            Assert.AreEqual(26 * 38, CommonFuncs.GetExcelColumnIndex("ALA"));
-            Assert.AreEqual(26 * 26 * 26, CommonFuncs.GetExcelColumnIndex("YZA"));
-            Assert.AreEqual(26 * 26 * 26 + 25, CommonFuncs.GetExcelColumnIndex("YZZ"));
+            Assert.AreEqual(26 * 27, CommonFunctions.GetExcelColumnIndex("AAA"));
+            Assert.AreEqual(26 * 27 + 25, CommonFunctions.GetExcelColumnIndex("AAZ"));
+            Assert.AreEqual(26 * 38, CommonFunctions.GetExcelColumnIndex("ALA"));
+            Assert.AreEqual(26 * 26 * 26, CommonFunctions.GetExcelColumnIndex("YZA"));
+            Assert.AreEqual(26 * 26 * 26 + 25, CommonFunctions.GetExcelColumnIndex("YZZ"));
 
-            Assert.AreEqual(26 * 26 * 26 + 26, CommonFuncs.GetExcelColumnIndex("ZAA"));
-            Assert.AreEqual(26 * 26 * 27 + 25, CommonFuncs.GetExcelColumnIndex("ZZZ"));
+            Assert.AreEqual(26 * 26 * 26 + 26, CommonFunctions.GetExcelColumnIndex("ZAA"));
+            Assert.AreEqual(26 * 26 * 27 + 25, CommonFunctions.GetExcelColumnIndex("ZZZ"));
         }
     }
 }

@@ -4,6 +4,7 @@ using System;
 using System.Data;
 using HBD.Framework.Core;
 using HBD.Framework.Data.GetSetters;
+using HBD.Framework.Extensions;
 
 #endregion
 
@@ -39,7 +40,7 @@ namespace HBD.Framework
         public static DataColumn AddAutoIncrement(this DataColumnCollection @this, string columnName = null)
         {
             Guard.ArgumentIsNotNull(@this, "DataColumnCollection");
-            if (columnName.IsNullOrEmpty()) columnName = CommonFuncs.GetExcelColumnName(@this.Count);
+            if (columnName.IsNullOrEmpty()) columnName = CommonFunctions.GetExcelColumnName(@this.Count);
 
             var col = new DataColumn(columnName, typeof(int)) {AutoIncrement = true};
             @this.Add(col);
@@ -63,12 +64,12 @@ namespace HBD.Framework
                 switch (namingType)
                 {
                     case ColumnNamingType.ExcelType:
-                        name = CommonFuncs.GetExcelColumnName(i);
+                        name = CommonFunctions.GetExcelColumnName(i);
                         break;
 
                     case ColumnNamingType.FieldType:
                     case ColumnNamingType.Auto:
-                        name = CommonFuncs.GetColumnName(i);
+                        name = CommonFunctions.GetColumnName(i);
                         break;
 
                     default:

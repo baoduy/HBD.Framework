@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using HBD.Framework.Extensions;
 using HBD.Framework.Test.TestObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

@@ -1,5 +1,6 @@
 ﻿#region using
 
+using HBD.Framework.Extensions;
 using System.IO;
 
 #endregion

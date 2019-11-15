@@ -11,6 +11,7 @@ using System.Net.Configuration;
 using System.Web;
 using System.Web.Configuration;
 using System.Web.Hosting;
+using HBD.Framework.Extensions;
 
 #endregion
 

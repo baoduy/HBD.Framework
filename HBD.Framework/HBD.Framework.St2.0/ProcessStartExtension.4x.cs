@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace HBD.Framework
 {
-    #if !NETSTANDARD2_0
+#if !NETSTANDARD2_0
     public static class ProcessStartExtension
     {
         public static string Run(this ProcessStartInfo @this)
@@ -25,5 +25,5 @@ namespace HBD.Framework
             }
         }
     }
-    #endif
+#endif
 }

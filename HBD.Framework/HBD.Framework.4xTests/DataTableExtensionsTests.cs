@@ -2,12 +2,13 @@
 
 using System;
 using System.Data;
+using HBD.Framework.Extensions;
 using HBD.Framework.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 #endregion
 
-namespace HBD.Framework.Tests
+namespace HBD.Framework._4xTests
 {
     [TestClass]
     public class DataTableExtensionsTests

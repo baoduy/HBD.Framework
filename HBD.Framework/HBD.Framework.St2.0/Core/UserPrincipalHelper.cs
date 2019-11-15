@@ -1,5 +1,6 @@
 ﻿#region using
 
+using HBD.Framework.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,25 +33,12 @@ namespace HBD.Framework.Core
             var givenName = ClaimOfType(user, ClaimTypes.GivenName);
 
             if (string.IsNullOrWhiteSpace(surname) && string.IsNullOrWhiteSpace(givenName))
-                return GetUserNameWithoutDomain(Name(user));
+                return Name(user).WithoutDomain();
 
             if (string.IsNullOrWhiteSpace(surname) || string.IsNullOrWhiteSpace(givenName))
                 return $"{givenName ?? string.Empty}{surname ?? string.Empty}";
 
             return $"{givenName} {surname}";
-        }
-
-        public static string GetUserNameWithoutDomain(string userName)
-        {
-            if (userName.IsNullOrEmpty()) return userName;
-            var index = userName.LastIndexOf("\\", StringComparison.Ordinal);
-            if (index > 0 && index < userName.Length) return userName.Substring(index + 1);
-
-            index = userName.IndexOf("@", StringComparison.Ordinal);
-            if (index > 0 && index < userName.Length)
-                return userName.Substring(0, index);
-
-            return userName;
         }
     }
 }

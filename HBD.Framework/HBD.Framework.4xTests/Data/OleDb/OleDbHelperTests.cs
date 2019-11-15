@@ -14,6 +14,7 @@ namespace HBD.Framework.Data.OleDb.Tests
         /// </summary>
         [TestMethod]
         [TestCategory("Fw.Data.OleDb")]
+        [Ignore]
         public void Can_ReadExcel_To_DataTable_Test()
         {
             const string connString =

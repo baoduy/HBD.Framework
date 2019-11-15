@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HBD.Framework.Core;
 using HBD.Framework.Data.EntityConverters;
+using HBD.Framework.Extensions;
 
 #endregion
 

@@ -1,25 +1,28 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <AssemblyName>HBD.Framework</AssemblyName>
     <RootNamespace>HBD.Framework</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Duy Hoang</Authors>
-    <Company>HBD</Company>
+    <Company>drunkcoding</Company>
     <Description>The effective framework for .Net developers that included a bunch of helper classes that help to develop the application faster.
 
 
       This framework is using for all HBD libraries that had been developing by Duy Hoang.
       More details in here https://github.com/baoduy?tab=repositories</Description>
-    <Copyright>@2018</Copyright>
+    <Copyright>@2019 drunkcoding</Copyright>
     <PackageProjectUrl>https://github.com/baoduy/HBD.Framework</PackageProjectUrl>
-    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageLicense>https://opensource.org/licenses/MIT</PackageLicense>
     <PackageIconUrl>https://raw.githubusercontent.com/baoduy/Images/master/NugetLogo.PNG</PackageIconUrl>
     <RepositoryUrl>https://github.com/baoduy/HBD.Framework</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
-    <PackageTags>Framework,Adapters,Extensions</PackageTags>
-    <PackageReleaseNotes>Version 2.1.2.1
+    <PackageTags>Framework, Adapters, Extensions</PackageTags>
+    <PackageReleaseNotes>Version 2.2.0
+      - Move common extensions to HBD.Framework.Extensions
+
+Version 2.1.2.1
       - Fix COnfigurationManager.GetSection issues.
 
 Version 2.1.2
@@ -81,7 +84,7 @@ Version 2.1.1
       - Add SingletonManager.
       - Separate the HBD.Framework.Data.Excel and HBD.Framework.Security.Azman
       - Add NotNull attributes</PackageReleaseNotes>
-    <Version>2.1.2.1</Version>
+    <Version>2.2.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -108,6 +111,11 @@ Version 2.1.1
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.CSharp" Version="4.4.1" />
+    <PackageReference Include="HBD.Framework.Extensions" Version="1.0.2" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HBD.Framework.Extensions\HBD.Framework.Extensions.csproj" />
   </ItemGroup>
 </Project>

@@ -3,6 +3,7 @@
 using System;
 using System.IO;
 using HBD.Framework.Core;
+using HBD.Framework.Extensions;
 
 #endregion
 

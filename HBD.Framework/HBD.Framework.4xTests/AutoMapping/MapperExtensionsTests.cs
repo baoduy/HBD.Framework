@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using HBD.Framework.Data;
+using HBD.Framework.Extensions;
 using HBD.Framework.Test.TestObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
